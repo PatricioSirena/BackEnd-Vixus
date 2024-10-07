@@ -1,6 +1,20 @@
 const express = require('express')
-const route = express.Router()
+const router = express.Router()
 
-// route.post('/', createUser)
+router.post('/')
 
-module.exports = route
+router.post('/userState/:userId')
+
+router.post('/login')
+
+router.post('/profilePicture')
+
+router.get('/')
+
+router.get('/:userId')
+
+router.put('/')
+
+router.delete('/:userId')
+
+module.exports = router
