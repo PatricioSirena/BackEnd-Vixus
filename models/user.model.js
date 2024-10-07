@@ -18,6 +18,11 @@ const UserSchema = new Schema({
         required: true,
         trim: true
     },
+    phone: {
+        type: Number,
+        required: true,
+        trim: true
+    },
     profilePicture:{
         type: String,
         default: ''
