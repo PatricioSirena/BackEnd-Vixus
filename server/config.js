@@ -1,4 +1,4 @@
-require('../db/dbConfig')
+const dbConection = require('../db/dbConfig')
 const express = require('express')
 const path = require('path')
 const cors = require('cors')
@@ -8,8 +8,13 @@ class Server {
     constructor(){
         this.app = express()
         this.port = process.env.PORT || 4041
+        this.conectDb()
         this.middlewares()
         this.routes()
+    }
+
+    async conectDb(){
+        await dbConection()
     }
 
     middlewares(){
