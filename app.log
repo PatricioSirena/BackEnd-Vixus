@@ -1,0 +1,926 @@
+[2024-10-08T21:11:07.600] [INFO] default - { name: 'Remera', price: 15000, description: 'Remera de algodon' }
+[2024-10-08T21:11:17.363] [INFO] default - { name: 'Remera', price: 15000, description: 'Remera de algodon' }
+[2024-10-08T21:12:40.076] [INFO] default - {
+  name: 'Remera',
+  price: 15000,
+  description: 'Remera de algodon',
+  color: '',
+  size: '',
+  active: false,
+  inStock: 0,
+  mainPicture: '',
+  galery: [],
+  _id: new ObjectId('6705ca789c8341caf710eb86')
+}
+[2024-10-09T19:21:43.673] [ERROR] default - Error: product validation failed: size: `` is not a valid enum value for path `size`.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    size: ValidatorError: `` is not a valid enum value for path `size`.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'size',
+      value: '',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'product validation failed'
+}
+[2024-10-09T20:35:48.938] [ERROR] default - Error: product validation failed: size: `` is not a valid enum value for path `size`.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    size: ValidatorError: `` is not a valid enum value for path `size`.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'size',
+      value: '',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'product validation failed'
+}
+[2024-10-09T20:42:15.006] [ERROR] default - Error: product validation failed: size: `` is not a valid enum value for path `size`.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    size: ValidatorError: `` is not a valid enum value for path `size`.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'size',
+      value: '',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'product validation failed'
+}
+[2024-10-09T20:58:05.629] [INFO] default - {
+  _id: new ObjectId('6707155db1f9307bacc293a2'),
+  name: 'Remera',
+  price: 15000,
+  description: 'Remera de algodon',
+  color: '',
+  size: '',
+  active: false,
+  inStock: 0,
+  mainPicture: '',
+  galery: [],
+  __v: 0
+}
+[2024-10-09T20:58:20.178] [INFO] default - {
+  _id: new ObjectId('6707155db1f9307bacc293a2'),
+  name: 'Remera',
+  price: 15000,
+  description: 'Remera de algodon',
+  color: '',
+  size: '',
+  active: false,
+  inStock: 0,
+  mainPicture: '',
+  galery: [],
+  __v: 0
+}
+[2024-10-09T20:58:56.836] [INFO] default - Promise { <pending> }
+[2024-10-09T20:58:56.938] [INFO] default - {
+  _id: new ObjectId('6707155db1f9307bacc293a2'),
+  name: 'Remera',
+  price: 15000,
+  description: 'Remera de algodon',
+  color: '',
+  size: '',
+  active: false,
+  inStock: 0,
+  mainPicture: '',
+  galery: [],
+  __v: 0
+}
+[2024-10-09T20:59:20.009] [INFO] default - {
+  _id: new ObjectId('6707155db1f9307bacc293a2'),
+  name: 'Remera',
+  price: 15000,
+  description: 'Remera de algodon',
+  color: '',
+  size: '',
+  active: false,
+  inStock: 0,
+  mainPicture: '',
+  galery: [],
+  __v: 0
+}
+[2024-10-09T20:59:20.017] [INFO] default - undefined
+[2024-10-09T21:18:41.135] [INFO] default - { msg: 'Producto activado con exito' }
+[2024-10-10T11:48:23.708] [INFO] default - null
+[2024-10-10T12:19:17.207] [INFO] default - {
+  _id: new ObjectId('6707e937046b6ed2f2fe79e3'),
+  firstName: 'Patricio',
+  lastName: 'Sirena',
+  email: 'pato@gmail.com',
+  password: '$2b$10$0hAvMJWBv7M8ogAsEOpIsuH5pqiQDU7H4pRfL4F6UlUC2txZgR24q',
+  phone: 1234,
+  profilePicture: '',
+  passwordToken: null,
+  active: true,
+  role: 'user',
+  cartId: '6707e937046b6ed2f2fe79e4',
+  favoriteId: '6707e937046b6ed2f2fe79e5',
+  __v: 0
+}
+[2024-10-10T12:24:56.654] [INFO] default - {
+  _id: new ObjectId('6707e937046b6ed2f2fe79e3'),
+  firstName: 'Patricio',
+  lastName: 'Sirena',
+  email: 'pato@gmail.com',
+  password: '$2b$10$0hAvMJWBv7M8ogAsEOpIsuH5pqiQDU7H4pRfL4F6UlUC2txZgR24q',
+  phone: 1234,
+  profilePicture: '',
+  passwordToken: null,
+  active: true,
+  role: 'user',
+  cartId: '6707e937046b6ed2f2fe79e4',
+  favoriteId: '6707e937046b6ed2f2fe79e5',
+  __v: 0
+}
+[2024-10-10T12:25:04.652] [INFO] default - null
+[2024-10-10T12:51:52.289] [INFO] default - Promise { <pending> }
+[2024-10-10T12:52:13.096] [INFO] default - { msg: 'Usuario desactivado' }
+[2024-10-10T12:52:31.021] [INFO] default - { msg: 'Usuario activado' }
+[2024-10-11T18:11:55.191] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.users index: userName_1 dup key: { userName: null }
+    at InsertOneOperation.execute (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\collection.js:154:16) {
+  errorResponse: {
+    index: 0,
+    code: 11000,
+    errmsg: 'E11000 duplicate key error collection: test.users index: userName_1 dup key: { userName: null }',
+    keyPattern: { userName: 1 },
+    keyValue: { userName: null }
+  },
+  index: 0,
+  code: 11000,
+  keyPattern: { userName: 1 },
+  keyValue: { userName: null },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2024-10-11T18:12:25.401] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.users index: userName_1 dup key: { userName: null }
+    at InsertOneOperation.execute (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\collection.js:154:16) {
+  errorResponse: {
+    index: 0,
+    code: 11000,
+    errmsg: 'E11000 duplicate key error collection: test.users index: userName_1 dup key: { userName: null }',
+    keyPattern: { userName: 1 },
+    keyValue: { userName: null }
+  },
+  index: 0,
+  code: 11000,
+  keyPattern: { userName: 1 },
+  keyValue: { userName: null },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2024-10-11T18:12:30.118] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.users index: userName_1 dup key: { userName: null }
+    at InsertOneOperation.execute (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\collection.js:154:16) {
+  errorResponse: {
+    index: 0,
+    code: 11000,
+    errmsg: 'E11000 duplicate key error collection: test.users index: userName_1 dup key: { userName: null }',
+    keyPattern: { userName: 1 },
+    keyValue: { userName: null }
+  },
+  index: 0,
+  code: 11000,
+  keyPattern: { userName: 1 },
+  keyValue: { userName: null },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2024-10-11T18:45:36.657] [INFO] default - { id: '670995622e2db3e7509113c4', role: 'user', iat: 1728683038 }
+[2024-10-11T18:49:00.797] [INFO] default - undefined
+[2024-10-11T18:55:17.315] [ERROR] default - TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:51:74
+    at Proxy.find (<anonymous>)
+    at Object.addProductToCart (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:51:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async addToCart (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:44:24)
+[2024-10-11T19:02:24.770] [INFO] default - {
+  quantity: 1,
+  product: {
+    _id: new ObjectId('670718fc19d4417be7646478'),
+    name: 'Remera',
+    price: 15000,
+    description: 'Remera de algodon',
+    color: '',
+    size: '',
+    active: true,
+    inStock: 0,
+    mainPicture: '',
+    galery: [],
+    __v: 0
+  }
+}
+[2024-10-11T19:05:35.038] [INFO] default - undefined
+[2024-10-11T19:07:28.030] [INFO] default - undefined
+[2024-10-11T19:07:28.036] [INFO] default - {
+  _id: new ObjectId('670995622e2db3e7509113c5'),
+  userId: '670995622e2db3e7509113c4',
+  products: [ { quantity: 1, product: [Object] } ],
+  __v: 1
+}
+[2024-10-11T19:08:43.309] [INFO] default - undefined
+[2024-10-11T19:09:43.317] [INFO] default - {
+  quantity: 1,
+  product: {
+    _id: new ObjectId('670718fc19d4417be7646478'),
+    name: 'Remera',
+    price: 15000,
+    description: 'Remera de algodon',
+    color: '',
+    size: '',
+    active: true,
+    inStock: 0,
+    mainPicture: '',
+    galery: [],
+    __v: 0
+  }
+}
+[2024-10-11T21:25:28.719] [INFO] default - {
+  quantity: 1,
+  product: {
+    _id: new ObjectId('670718fc19d4417be7646478'),
+    name: 'Remera',
+    price: 15000,
+    description: 'Remera de algodon',
+    color: '',
+    size: '',
+    active: true,
+    inStock: 0,
+    mainPicture: '',
+    galery: [],
+    __v: 0
+  }
+}
+[2024-10-11T21:26:43.970] [INFO] default - {
+  quantity: 1,
+  product: {
+    _id: new ObjectId('670718fc19d4417be7646478'),
+    name: 'Remera',
+    price: 15000,
+    description: 'Remera de algodon',
+    color: '',
+    size: '',
+    active: true,
+    inStock: 0,
+    mainPicture: '',
+    galery: [],
+    __v: 0
+  }
+}
+[2024-10-11T21:26:47.714] [INFO] default - {
+  quantity: 1,
+  product: {
+    _id: new ObjectId('670718fc19d4417be7646478'),
+    name: 'Remera',
+    price: 15000,
+    description: 'Remera de algodon',
+    color: '',
+    size: '',
+    active: true,
+    inStock: 0,
+    mainPicture: '',
+    galery: [],
+    __v: 0
+  }
+}
+[2024-10-11T21:27:26.060] [INFO] default - {
+  quantity: 1,
+  product: {
+    _id: new ObjectId('670718fc19d4417be7646478'),
+    name: 'Remera',
+    price: 15000,
+    description: 'Remera de algodon',
+    color: '',
+    size: '',
+    active: true,
+    inStock: 0,
+    mainPicture: '',
+    galery: [],
+    __v: 0
+  }
+}
+[2024-10-11T21:27:28.928] [INFO] default - {
+  quantity: 1,
+  product: {
+    _id: new ObjectId('670718fc19d4417be7646478'),
+    name: 'Remera',
+    price: 15000,
+    description: 'Remera de algodon',
+    color: '',
+    size: '',
+    active: true,
+    inStock: 0,
+    mainPicture: '',
+    galery: [],
+    __v: 0
+  }
+}
+[2024-10-11T21:27:32.363] [INFO] default - {
+  quantity: 1,
+  product: {
+    _id: new ObjectId('670718fc19d4417be7646478'),
+    name: 'Remera',
+    price: 15000,
+    description: 'Remera de algodon',
+    color: '',
+    size: '',
+    active: true,
+    inStock: 0,
+    mainPicture: '',
+    galery: [],
+    __v: 0
+  }
+}
+[2024-10-11T21:28:25.243] [INFO] default - {
+  quantity: 1,
+  product: {
+    _id: new ObjectId('670718fc19d4417be7646478'),
+    name: 'Remera',
+    price: 15000,
+    description: 'Remera de algodon',
+    color: '',
+    size: '',
+    active: true,
+    inStock: 0,
+    mainPicture: '',
+    galery: [],
+    __v: 0
+  }
+}
+[2024-10-11T21:28:27.848] [INFO] default - {
+  quantity: 1,
+  product: {
+    _id: new ObjectId('670718fc19d4417be7646478'),
+    name: 'Remera',
+    price: 15000,
+    description: 'Remera de algodon',
+    color: '',
+    size: '',
+    active: true,
+    inStock: 0,
+    mainPicture: '',
+    galery: [],
+    __v: 0
+  }
+}
+[2024-10-11T21:29:15.271] [INFO] default - {
+  quantity: 1,
+  product: {
+    _id: new ObjectId('670718fc19d4417be7646478'),
+    name: 'Remera',
+    price: 15000,
+    description: 'Remera de algodon',
+    color: '',
+    size: '',
+    active: true,
+    inStock: 0,
+    mainPicture: '',
+    galery: [],
+    __v: 0
+  }
+}
+[2024-10-11T21:29:15.277] [INFO] default - 0
+[2024-10-12T22:22:16.240] [ERROR] default - CastError: Cast to ObjectId failed for value "670a8e74a2778dcd35e948dr" (type string) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:379:32)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.deleteProductFromFavorite (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:120:25) {
+  stringValue: '"670a8e74a2778dcd35e948dr"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: '670a8e74a2778dcd35e948dr',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:379:32)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string'
+}
+[2024-10-12T22:23:02.126] [ERROR] default - ReferenceError: cart is not defined
+    at Object.deleteProductFromFavorite (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:132:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async delFromFavorite (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:89:24)
+[2024-10-12T22:23:52.746] [ERROR] default - CastError: Cast to ObjectId failed for value "670a8e74a2778dcd35e948dr" (type string) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:379:32)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.deleteProductFromFavorite (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:120:25) {
+  stringValue: '"670a8e74a2778dcd35e948dr"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: '670a8e74a2778dcd35e948dr',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:379:32)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string'
+}
+[2024-10-13T18:05:13.938] [INFO] default - null
+[2024-10-13T18:07:21.287] [INFO] default - {
+  _id: new ObjectId('670718fc19d4417be7646478'),
+  name: 'Remera',
+  price: 15000,
+  description: 'Remera de algodon',
+  color: '',
+  size: '',
+  active: true,
+  inStock: 0,
+  mainPicture: '',
+  galery: [],
+  __v: 0
+}
+[2024-10-13T18:08:17.758] [INFO] default - {
+  _id: new ObjectId('670718fc19d4417be7646478'),
+  name: 'Remera',
+  price: 16000,
+  description: 'Remera de algodon',
+  color: 'Negra',
+  size: '',
+  active: true,
+  inStock: 0,
+  mainPicture: '',
+  galery: [],
+  __v: 0
+}
+[2024-10-13T18:10:28.517] [INFO] default - {
+  _id: new ObjectId('670718fc19d4417be7646478'),
+  name: 'Remera',
+  price: 16000,
+  description: 'Remera de algodon',
+  color: 'Negra',
+  size: '',
+  active: true,
+  inStock: 0,
+  mainPicture: '',
+  galery: [],
+  __v: 0
+}
+[2024-10-13T19:05:03.426] [INFO] default - null
+[2024-10-13T20:10:39.887] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'getCart' }" (type Object) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.getOneProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:152:25) {
+  stringValue: `"{ _id: 'getCart' }"`,
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: { _id: 'getCart' },
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:20:14)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'Object'
+}
+[2024-10-13T20:11:41.056] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'getCart' }" (type Object) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.getOneProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:152:25) {
+  stringValue: `"{ _id: 'getCart' }"`,
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: { _id: 'getCart' },
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:20:14)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'Object'
+}
+[2024-10-13T20:12:36.915] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'getCart' }" (type Object) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.getOneProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:152:25) {
+  stringValue: `"{ _id: 'getCart' }"`,
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: { _id: 'getCart' },
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:20:14)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'Object'
+}
+[2024-10-13T20:16:45.463] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'getCart' }" (type Object) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.getOneProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:152:25) {
+  stringValue: `"{ _id: 'getCart' }"`,
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: { _id: 'getCart' },
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:20:14)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'Object'
+}
+[2024-10-13T20:18:26.352] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'getCart' }" (type Object) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.getOneProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:152:25) {
+  stringValue: `"{ _id: 'getCart' }"`,
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: { _id: 'getCart' },
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:20:14)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'Object'
+}
+[2024-10-13T20:19:27.981] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'getCart' }" (type Object) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.getOneProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:152:25) {
+  stringValue: `"{ _id: 'getCart' }"`,
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: { _id: 'getCart' },
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:20:14)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'Object'
+}
+[2024-10-13T20:21:17.554] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'getCart' }" (type Object) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.getOneProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:152:25) {
+  stringValue: `"{ _id: 'getCart' }"`,
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: { _id: 'getCart' },
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:20:14)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'Object'
+}
+[2024-10-13T20:22:16.971] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'getCart' }" (type Object) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.getOneProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:152:25) {
+  stringValue: `"{ _id: 'getCart' }"`,
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: { _id: 'getCart' },
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:20:14)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'Object'
+}
+[2024-10-13T20:25:17.820] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'getCart' }" (type Object) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.getOneProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:152:25) {
+  stringValue: `"{ _id: 'getCart' }"`,
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: { _id: 'getCart' },
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:20:14)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'Object'
+}
+[2024-10-13T20:29:25.803] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'getCart' }" (type Object) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.getOneProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:152:25) {
+  stringValue: `"{ _id: 'getCart' }"`,
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: { _id: 'getCart' },
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:20:14)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'Object'
+}
+[2024-10-13T20:31:14.769] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'getCart' }" (type Object) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.getOneProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:152:25) {
+  stringValue: `"{ _id: 'getCart' }"`,
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: { _id: 'getCart' },
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:20:14)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'Object'
+}
+[2024-10-13T20:32:31.979] [INFO] default - 670995622e2db3e7509113c4
+[2024-10-13T20:39:04.250] [INFO] default - {
+  _id: new ObjectId('670995622e2db3e7509113c5'),
+  userId: '670995622e2db3e7509113c4',
+  products: [
+    { quantity: 2, product: [Object] },
+    { quantity: 3, product: [Object] }
+  ],
+  __v: 6
+}
+[2024-10-14T20:40:28.888] [INFO] default - {
+  _id: new ObjectId('6707e937046b6ed2f2fe79e3'),
+  firstName: 'Patricio',
+  lastName: 'Sirena',
+  email: 'patoadmin@gmail.com',
+  password: '$2b$10$0hAvMJWBv7M8ogAsEOpIsuH5pqiQDU7H4pRfL4F6UlUC2txZgR24q',
+  phone: 1234,
+  profilePicture: '',
+  passwordToken: null,
+  active: true,
+  role: 'admin',
+  cartId: '6707e937046b6ed2f2fe79e4',
+  favoriteId: '6707e937046b6ed2f2fe79e5',
+  __v: 0
+}
+[2024-10-14T20:40:36.543] [INFO] default - {
+  _id: new ObjectId('6707e937046b6ed2f2fe79e3'),
+  firstName: 'Patricio',
+  lastName: 'Sirena',
+  email: 'patoadmin@gmail.com',
+  password: '$2b$10$0hAvMJWBv7M8ogAsEOpIsuH5pqiQDU7H4pRfL4F6UlUC2txZgR24q',
+  phone: 1234,
+  profilePicture: '',
+  passwordToken: null,
+  active: true,
+  role: 'admin',
+  cartId: '6707e937046b6ed2f2fe79e4',
+  favoriteId: '6707e937046b6ed2f2fe79e5',
+  __v: 0
+}
+[2024-10-14T21:09:04.117] [INFO] default - {
+  _id: new ObjectId('670995622e2db3e7509113c4'),
+  firstName: 'Patricio',
+  lastName: 'Sirena',
+  email: 'patouser@gmail.com',
+  password: '$2b$10$cpnZ.yhW74sxzk65zMt0PeWBsvqFCY5eroOf0YhXFTulX9sag1OFS',
+  phone: 1234,
+  profilePicture: '',
+  passwordToken: null,
+  active: true,
+  role: 'user',
+  cartId: '670995622e2db3e7509113c5',
+  favoriteId: '670995622e2db3e7509113c6',
+  __v: 0
+}
+[2024-10-14T21:22:45.925] [INFO] default - { firstName: 'Patricio', lastName: 'Sirena', phone: 12345678 }
+[2024-10-14T21:23:28.148] [INFO] default - { firstName: 'Patricio', lastName: 'Sirena', phone: 12345678 }
+[2024-10-14T21:24:00.207] [INFO] default - {
+  firstName: 'Patricio',
+  lastName: 'Sirena',
+  phone: 12345678,
+  active: false
+}
+[2024-10-14T21:24:05.696] [INFO] default - {
+  firstName: 'Patricio',
+  lastName: 'Sirena',
+  phone: 12345678,
+  active: true
+}
+[2024-10-14T21:24:17.168] [INFO] default - { firstName: 'Patricio', lastName: 'Sirena', phone: 123456 }
+[2024-10-15T11:27:03.273] [INFO] default - null

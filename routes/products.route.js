@@ -1,34 +1,51 @@
 const express = require('express')
 const router = express.Router()
+const { createProduct,
+    // setMainPicture,
+    // addProductImage,
+    productState,
+    addToCart,
+    delFromCart,
+    addToFavorite,
+    delFromFavorite,
+    getCart,
+    getFavorites,
+    getProducts,
+    getOneProduct,
+    updateProduct,
+    // delProductImage,
+    deleteProduct } = require('../controllers/products.controllers')
+const auth = require('../middlewares/auth')
 
-router.post('/')
 
-router.post('/mainPicture/:productId')
+router.post('/', auth('admin'), createProduct)
 
-router.post('/addProductImage/:productId')
+// router.post('/mainPicture/:productId', setMainPicture)
 
-router.post('/productState/:productId')
+// router.post('/addProductImage/:productId', addProductImage)
 
-router.post('/addToCart/:productId')
+router.post('/productState/:productId', auth('admin'), productState)
 
-router.post('/delFromCart/:productId')
+router.post('/addToCart/:productId', auth('user'), addToCart)
 
-router.post('/addToFavorite/:productId')
+router.post('/delFromCart/:productId', auth('user'), delFromCart)
 
-router.post('/delFromFavorite/:productId')
+router.post('/addToFavorite/:productId', auth('user'), addToFavorite)
 
-router.get('/')
+router.post('/delFromFavorite/:productId', auth('user'), delFromFavorite)
 
-router.get('/:productId')
+router.get('/getCart', auth('user'), getCart)
 
-router.get('/getCart')
+router.get('/getFavorites', auth('user'), getFavorites)
 
-router.get('/getFavorites')
+router.get('/', getProducts)
 
-router.put('/:productId')
+router.get('/:productId', getOneProduct)
 
-router.delete('/delProductImage/:productId/galery/:imageId')
+router.put('/:productId', auth('admin'), updateProduct)
 
-router.delete('/:productId')
+// router.delete('/delProductImage/:productId/galery/:imageId', auth('admin'), delProductImage)
+
+router.delete('/:productId', auth('admin'), deleteProduct)
 
 module.exports = router

@@ -1,20 +1,32 @@
 const express = require('express')
 const router = express.Router()
+const {
+    createUser,
+    userState,
+    login,
+    // setProfilePicture,
+    getUsers,
+    getOneUser,
+    updateUser,
+    deleteUser
+} = require('../controllers/users.controllers')
+const auth = require('../middlewares/auth')
 
-router.post('/')
 
-router.post('/userState/:userId')
+router.post('/', createUser)
 
-router.post('/login')
+router.post('/userState/:userId', auth('admin'), userState)
 
-router.post('/profilePicture')
+router.post('/login', login)
 
-router.get('/')
+// router.post('/profilePicture', setProfilePicture)
 
-router.get('/:userId')
+router.get('/', auth('admin'), getUsers)
 
-router.put('/')
+router.get('/getUser', auth('user'), getOneUser)
 
-router.delete('/:userId')
+router.put('/', auth('user'), updateUser)
+
+router.delete('/:userId', auth('admin'), deleteUser)
 
 module.exports = router
