@@ -1,14 +1,13 @@
 const jwt = require('jsonwebtoken')
+const logger = require('../helpers/logger')
 
 module.exports = (role) => (req, res, next) => {
     const token = req.header('auth')
-    console.log(token)
     if (!token) {
         return res.status(409).json({ msg: 'No recibimos el token para autorizarlo' })
     }
     try {         
             const verify = jwt.verify(token, process.env.JWT_KEY)
-
             if(role === verify.role) {
                 req.userId = verify.id
                 return next()
