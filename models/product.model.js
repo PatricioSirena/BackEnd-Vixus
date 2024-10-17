@@ -29,11 +29,7 @@ const ProductSchema = new Schema({
     },
     active: {
         type: Boolean,
-        default: false
-    },
-    inStock: {
-        type: Number,
-        default: 0
+        default: true
     },
     mainPicture:{
         type: String,
