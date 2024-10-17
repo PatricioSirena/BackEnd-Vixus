@@ -4,6 +4,7 @@ const FavModel = require('../models/favorite.model')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const logger = require('../helpers/logger')
+const {registroUsuario} = require('../helpers/nodemailer.messages')
 
 const register = async (body) => {
     try {
@@ -25,6 +26,7 @@ const register = async (body) => {
         await user.save()
         await userCart.save()
         await userFav.save()
+        registroUsuario(user.email)
         return 201
 
     } catch (error) {
