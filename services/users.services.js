@@ -124,10 +124,13 @@ const userToUpdate = async (userId, body) =>{
 
 const userToDelete = async (userId) =>{
     try {
-        const deletedUser = await UserModel.findByIdAndDelete({_id: userId})
-        if(deletedUser === null){
+        const user = await UserModel.findById(userId)
+        if(user === null){
             return 404
         } else{
+            await UserModel.findByIdAndDelete(userId)
+            await FavModel.findByIdAndDelete({_id: user.favoriteId})
+            await CartModel.findByIdAndDelete({_id: user.cartId})
             return {msg: 'Usuario eliminado'}
         }
     } catch (error) {

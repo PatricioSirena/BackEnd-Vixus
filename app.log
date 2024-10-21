@@ -924,3 +924,182 @@
 }
 [2024-10-14T21:24:17.168] [INFO] default - { firstName: 'Patricio', lastName: 'Sirena', phone: 123456 }
 [2024-10-15T11:27:03.273] [INFO] default - null
+[2024-10-17T21:01:32.665] [ERROR] default - Error: user validation failed: fullName: Path `fullName` is required.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    fullName: ValidatorError: Path `fullName` is required.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'fullName',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'user validation failed'
+}
+[2024-10-17T21:02:13.142] [ERROR] default - Error: user validation failed: fullName: Path `fullName` is required.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    fullName: ValidatorError: Path `fullName` is required.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'fullName',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'user validation failed'
+}
+[2024-10-17T21:02:23.347] [ERROR] default - Error: user validation failed: fullName: Path `fullName` is required.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    fullName: ValidatorError: Path `fullName` is required.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'fullName',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'user validation failed'
+}
+[2024-10-17T21:02:25.386] [ERROR] default - Error: user validation failed: fullName: Path `fullName` is required.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    fullName: ValidatorError: Path `fullName` is required.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'fullName',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'user validation failed'
+}
+[2024-10-17T21:03:55.997] [INFO] default - {
+  _id: new ObjectId('6711a5bdb2af20481af99596'),
+  fullName: 'Patricio Sirena',
+  email: 'patouser@gmail.com',
+  password: '$2b$10$IUJFu4VAK4z8PrykjXsRzutKL.cox/tXT2/DUGGE8kL9/PDuYmd4a',
+  phone: 1234567,
+  passwordToken: null,
+  active: true,
+  role: 'user',
+  cartId: '6711a5bdb2af20481af99597',
+  favoriteId: '6711a5bdb2af20481af99598',
+  __v: 0
+}
+[2024-10-17T21:04:39.496] [INFO] default - null
+[2024-10-17T21:23:06.120] [ERROR] default - ObjectParameterError: Parameter "filter" to findOne() must be an object, got "6711a8d1ff3b4c4a67a7cd22" (type string)
+    at Query.findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2666:16)
+    at Function.findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:2039:13)
+    at Object.delProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:208:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async deleteProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:173:24)
+[2024-10-17T21:23:30.599] [INFO] default - {
+  _id: new ObjectId('6711a8d1ff3b4c4a67a7cd23'),
+  productId: '6711a8d1ff3b4c4a67a7cd22',
+  quantity: 0,
+  __v: 0
+}
+[2024-10-17T21:23:57.500] [INFO] default - {
+  _id: new ObjectId('6711a8d1ff3b4c4a67a7cd23'),
+  productId: '6711a8d1ff3b4c4a67a7cd22',
+  quantity: 0,
+  __v: 0
+}
+[2024-10-17T21:23:57.507] [INFO] default - {
+  _id: new ObjectId('6711a8d1ff3b4c4a67a7cd22'),
+  name: 'Chomba lisa',
+  price: 24000,
+  description: 'Chomba lisa de algodon o pique',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: '',
+  galery: [],
+  __v: 0
+}
+[2024-10-18T11:43:34.856] [INFO] default - {
+  _id: new ObjectId('671128c00722e76114071e07'),
+  userId: '671128c00722e76114071e05',
+  products: [ '67127184b6cccd9eb8533a53', '671271a4b6cccd9eb8533a59' ],
+  __v: 2
+}
+[2024-10-18T11:44:49.764] [INFO] default - [ '671271a4b6cccd9eb8533a59' ]
+[2024-10-18T11:50:26.708] [ERROR] default - MongooseError: Invalid update pipeline operator: "0"
+    at castPipelineOperator (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\helpers\query\castUpdate.js:164:9)
+    at castUpdate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\helpers\query\castUpdate.js:58:22)
+    at model.Query._castUpdate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4669:10)
+    at model.Query._findOneAndUpdate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:3379:23)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.deleteProductFromFavorite (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:130:13)
+    at async delFromFavorite (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:89:24)
+[2024-10-18T11:56:35.793] [ERROR] default - MongooseError: Invalid update pipeline operator: "0"
+    at castPipelineOperator (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\helpers\query\castUpdate.js:164:9)
+    at castUpdate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\helpers\query\castUpdate.js:58:22)
+    at model.Query._castUpdate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4669:10)
+    at model.Query._findOneAndUpdate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:3379:23)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.deleteProductFromFavorite (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:130:13)
+    at async delFromFavorite (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:89:24)
+[2024-10-18T12:01:31.184] [INFO] default - [ '67127184b6cccd9eb8533a53', '671271a4b6cccd9eb8533a59' ]
+[2024-10-18T12:02:38.482] [INFO] default - [ '671271a4b6cccd9eb8533a59' ]

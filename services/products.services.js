@@ -1,14 +1,17 @@
 const ProductModel = require('../models/product.model')
 const CartModel = require('../models/cart.model')
 const FavModel = require('../models/favorite.model')
+const StockModel = require('../models/stock.model.js')
 const logger = require('../helpers/logger')
 
 const newProduct = async (body) => {
     try {
         const productExist = await ProductModel.findOne({ name: body.name })
         if (productExist === null) {
-            const result = new ProductModel(body)
-            await result.save()
+            const product = new ProductModel(body)
+            const productStock = new StockModel({productId: product._id})
+            await product.save()
+            await productStock.save()
             return 201
         } else {
             return 400
@@ -46,9 +49,9 @@ const addProductToCart = async (userId, productId) => {
         } else if (product === null) {
             return { statusCode: 400, msg: 'No encontramos el producto en la base de datos' }
         } else {
-            const productInCart = cart.products.find((obj) => obj.product._id.toString() === productId)
+            const productInCart = cart.products.find((obj) => obj.idProduct.toString() === productId)
             if (productInCart === undefined) {
-                cart.products.push({ quantity: 1, product })
+                cart.products.push({ quantity: 1, idProduct: product._id })
                 await cart.save()
                 return { statusCode: 200, msg: 'Producto agregado al carrito' }
             } else {
@@ -71,7 +74,7 @@ const deleteProductFromCart = async (userId, productId) => {
         } else if (product === null) {
             return { statusCode: 400, msg: 'No encontramos el producto en la base de datos' }
         }
-        const productInCart = cart.products.find((obj) => obj.product._id.toString() === productId)
+        const productInCart = cart.products.find((obj) => obj.idProduct.toString() === productId)
         if (productInCart === undefined) {
             return { statusCode: 404, msg: 'No encontramos el producto en el carrito' }
         } else {
@@ -80,7 +83,7 @@ const deleteProductFromCart = async (userId, productId) => {
                 await CartModel.findByIdAndUpdate({ _id: cart._id }, cart)
                 return { statusCode: 200, msg: `La cantidad de ${product.name} en el carrito es ${productInCart.quantity}` }
             } else {
-                const productPosition = cart.products.findIndex((obj) => obj.product._id.toString() === productId)
+                const productPosition = cart.products.findIndex((obj) => obj.idProduct.toString() === productId)
                 cart.products.splice(productPosition, 1)
                 await cart.save()
                 return { statusCode: 200, msg: 'Producto eliminado del carrito' }
@@ -100,13 +103,12 @@ const addProductToFavorite = async (userId, productId) => {
         } else if (product === null) {
             return { statusCode: 400, msg: 'No encontramos el producto en la base de datos' }
         } else {
-            const productInFav = favorite.products.find((obj) => obj._id.toString() === productId)
-            if (productInFav === undefined) {
-                favorite.products.push(product)
+            if (favorite.products.includes(productId)) {
+                return { statusCode: 401, msg: 'El producto ya se encuentra en favoritos' }
+            } else {
+                favorite.products.push(productId)
                 await favorite.save()
                 return { statusCode: 200, msg: 'Producto agregado a favoritos' }
-            } else {
-                return { statusCode: 401, msg: 'El producto ya se encuentra en favoritos' }
             }
         }
     } catch (error) {
@@ -123,14 +125,13 @@ const deleteProductFromFavorite = async (userId, productId) => {
         } else if (product === null) {
             return { statusCode: 400, msg: 'No encontramos el producto en la base de datos' }
         }
-        const productInFav = favorite.products.find((obj) => obj._id.toString() === productId)
-        if (productInFav === undefined) {
-            return { statusCode: 404, msg: 'No encontramos el producto en favoritos' }
+        if (favorite.products.includes(productId)) {
+            const newFavorite = favorite.products.filter(item => item !== productId)
+            favorite.products = newFavorite
+            await favorite.save()
+            return { statusCode: 200, msg: 'Producto eliminado de favoritos' }
         } else {
-                const productPosition = favorite.products.findIndex((obj) => obj._id.toString() === productId)
-                favorite.products.splice(productPosition, 1)
-                await favorite.save()
-                return { statusCode: 200, msg: 'Producto eliminado de favoritos' }
+            return { statusCode: 404, msg: 'No encontramos el producto en favoritos' }
             }
     } catch (error) {
         logger.error(error)
@@ -139,7 +140,7 @@ const deleteProductFromFavorite = async (userId, productId) => {
 
 const getUserCart = async (userId) =>{
     try {
-        const cart = await CartModel.findOne({userId: userId})
+        const cart = await CartModel.findOne({userId})
         if(cart === null){
             return 404
         } else{
@@ -201,10 +202,13 @@ const productUpdate = async (productId, body) =>{
 
 const delProduct = async (productId) =>{
     try {
-        const productToDelete = await ProductModel.findByIdAndDelete({_id: productId})
-        if(productToDelete === null){
+        const product = await ProductModel.findById(productId)
+        if(product === null){
             return 404
         } else{
+            const productStock = await StockModel.findOne({productId})
+            await ProductModel.findByIdAndDelete(productId)
+            await StockModel.findByIdAndDelete(productStock._id)
             return 200
         }
     } catch (error) {
