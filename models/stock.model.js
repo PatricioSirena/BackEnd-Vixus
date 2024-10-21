@@ -2,7 +2,7 @@ const {model, Schema} = require('mongoose')
 
 const StockSchema = new Schema({
     productId: {
-        type: string,
+        type: String,
         required: true,
         uniquie: true
     },
