@@ -46,14 +46,6 @@ const login = async (req, res) => {
     }
 }
 
-// const setProfilePicture = async (req, res) =>{
-//     try {
-
-//     } catch (error) {
-//         res.status(500).json(error)
-//     }
-// }
-
 const getUsers = async (req, res) => {
     try {
         const result = await userServices.getAllUsers()
@@ -108,7 +100,6 @@ module.exports = {
     createUser,
     userState,
     login,
-    // setProfilePicture,
     getUsers,
     getOneUser,
     updateUser,

@@ -14,21 +14,21 @@ const createProduct = async (req, res) => {
     }
 }
 
-// const setMainPicture = async (req, res) =>{
-//     try {
+const setMainPicture = async (req, res) =>{
+    try {
 
-//     } catch (error) {
-//         res.status(500).json(error)
-//     }
-// }
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
 
-// const addProductImage = async (req, res) =>{
-//     try {
+const addProductImage = async (req, res) =>{
+    try {
 
-//     } catch (error) {
-//         res.status(500).json(error)
-//     }
-// }
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
 
 const productState = async (req, res) => {
     try {
@@ -160,13 +160,13 @@ const updateProduct = async (req, res) => {
     }
 }
 
-// const delProductImage = async (req, res) => {
-//     try {
+const delProductImage = async (req, res) => {
+    try {
 
-//     } catch (error) {
-//         res.status(500).json(error)
-//     }
-// }
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
 
 const deleteProduct = async (req, res) => {
     try {
@@ -183,8 +183,8 @@ const deleteProduct = async (req, res) => {
 
 module.exports = {
     createProduct,
-    // setMainPicture,
-    // addProductImage,
+    setMainPicture,
+    addProductImage,
     productState,
     addToCart,
     delFromCart,
@@ -195,6 +195,6 @@ module.exports = {
     getProducts,
     getOneProduct,
     updateProduct,
-    // delProductImage,
+    delProductImage,
     deleteProduct
 }

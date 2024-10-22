@@ -4,7 +4,6 @@ const {
     createUser,
     userState,
     login,
-    // setProfilePicture,
     getUsers,
     getOneUser,
     updateUser,
@@ -18,8 +17,6 @@ router.post('/', createUser)
 router.post('/userState/:userId', auth('admin'), userState)
 
 router.post('/login', login)
-
-// router.post('/profilePicture', setProfilePicture)
 
 router.get('/', auth('admin'), getUsers)
 

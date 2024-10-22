@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const { createProduct,
-    // setMainPicture,
-    // addProductImage,
+    setMainPicture,
+    addProductImage,
     productState,
     addToCart,
     delFromCart,
@@ -13,16 +13,17 @@ const { createProduct,
     getProducts,
     getOneProduct,
     updateProduct,
-    // delProductImage,
+    delProductImage,
     deleteProduct } = require('../controllers/products.controllers')
 const auth = require('../middlewares/auth')
+const multer = require('../middlewares/multer')
 
 
 router.post('/', auth('admin'), createProduct)
 
-// router.post('/mainPicture/:productId', setMainPicture)
+router.post('/mainPicture/:productId', multer.single('image'), setMainPicture)
 
-// router.post('/addProductImage/:productId', addProductImage)
+router.post('/addProductImage/:productId', multer.single('image'), addProductImage)
 
 router.post('/productState/:productId', auth('admin'), productState)
 
@@ -44,7 +45,7 @@ router.get('/:productId', getOneProduct)
 
 router.put('/:productId', auth('admin'), updateProduct)
 
-// router.delete('/delProductImage/:productId/galery/:imageId', auth('admin'), delProductImage)
+router.delete('/delProductImage/:productId/galery/:imageId', auth('admin'), delProductImage)
 
 router.delete('/:productId', auth('admin'), deleteProduct)
 

@@ -1103,3 +1103,4 @@
     at async delFromFavorite (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:89:24)
 [2024-10-18T12:01:31.184] [INFO] default - [ '67127184b6cccd9eb8533a53', '671271a4b6cccd9eb8533a59' ]
 [2024-10-18T12:02:38.482] [INFO] default - [ '671271a4b6cccd9eb8533a59' ]
+[2024-10-22T20:52:10.555] [INFO] default - .webp
