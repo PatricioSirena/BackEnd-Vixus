@@ -16,7 +16,14 @@ const createProduct = async (req, res) => {
 
 const setMainPicture = async (req, res) =>{
     try {
-
+        const result = await productServices.mainProductImage(req.params.productId, req.file)
+        if(result === 400){
+            res.status(400).json({msg: 'No recibimos ninguna imagen'})
+        } else if(result === 404){
+            res.status(404).json({msg: 'No encontramos el producto en la base de datos'})
+        } else{
+            res.status(200).json({msg: 'Imagen de portada cargada correctamente'})
+        }
     } catch (error) {
         res.status(500).json(error)
     }
@@ -24,7 +31,14 @@ const setMainPicture = async (req, res) =>{
 
 const addProductImage = async (req, res) =>{
     try {
-
+        const result = await productServices.newProductImage(req.params.productId, req.file)
+        if(result === 400){
+            res.status(400).json({msg: 'No recibimos ninguna imagen'})
+        } else if(result === 404){
+            res.status(404).json({msg: 'No encontramos el producto en la base de datos'})
+        } else{
+            res.status(200).json({msg: 'Imagen agregada correctamente'})
+        }
     } catch (error) {
         res.status(500).json(error)
     }
@@ -162,7 +176,14 @@ const updateProduct = async (req, res) => {
 
 const delProductImage = async (req, res) => {
     try {
-
+        const result = await productServices.deleteImageFromProduct(req.params.productId, req.params.imageId)
+        if(result === 404){
+            res.status(404).json({msg: 'No encontramos el producto en la base de datos'})
+        } else if(result === 400){
+            res.status(400).json({msg: 'No encontramos la imagen en el producto'})
+        } else{
+            res.status(200).json({msg: 'Imagen eliminada del producto'})
+        }
     } catch (error) {
         res.status(500).json(error)
     }
