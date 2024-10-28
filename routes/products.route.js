@@ -21,9 +21,9 @@ const multer = require('../middlewares/multer')
 
 router.post('/', auth('admin'), createProduct)
 
-router.post('/mainPicture/:productId', multer.single('image'), setMainPicture)
+router.post('/mainPicture/:productId', auth('admin'), multer.single('image'), setMainPicture)
 
-router.post('/addProductImage/:productId', multer.single('image'), addProductImage)
+router.post('/addProductImage/:productId', auth('admin'), multer.single('image'), addProductImage)
 
 router.post('/productState/:productId', auth('admin'), productState)
 

@@ -33,7 +33,7 @@ const ProductSchema = new Schema({
     },
     mainPicture:{
         type: String,
-        default: ''
+        default: null
     },
     galery: {
         type: Array

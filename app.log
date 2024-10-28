@@ -1104,3 +1104,566 @@
 [2024-10-18T12:01:31.184] [INFO] default - [ '67127184b6cccd9eb8533a53', '671271a4b6cccd9eb8533a59' ]
 [2024-10-18T12:02:38.482] [INFO] default - [ '671271a4b6cccd9eb8533a59' ]
 [2024-10-22T20:52:10.555] [INFO] default - .webp
+[2024-10-23T20:29:28.240] [INFO] default - undefined
+[2024-10-23T20:39:55.998] [INFO] default - undefined
+[2024-10-23T20:42:15.946] [INFO] default - .webp
+[2024-10-26T23:47:24.278] [INFO] default - .webp
+[2024-10-26T23:47:47.591] [INFO] default - .jpeg
+[2024-10-27T00:05:47.317] [INFO] default - .jpeg
+[2024-10-27T00:05:47.433] [ERROR] default - ReferenceError: cloudinary is not defined
+    at Object.mainProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:33:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async setMainPicture (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:19:24)
+[2024-10-27T00:15:40.916] [INFO] default - .jpeg
+[2024-10-27T00:15:41.013] [ERROR] default - ReferenceError: cloudinary is not defined
+    at Object.mainProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:33:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async setMainPicture (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:19:24)
+[2024-10-27T00:17:02.147] [INFO] default - .jpeg
+[2024-10-27T00:17:03.363] [INFO] default - {
+  asset_id: '6d895f0f0d219c456102708778b2bfe3',
+  public_id: 'whjxc0h8tri7fo5h5z2q',
+  version: 1729999022,
+  version_id: '1c247715b6b1a3b38a780562bf40450b',
+  signature: '0d80ed97e45ca9082856ea0997cca3c05f7ec748',
+  width: 225,
+  height: 225,
+  format: 'jpg',
+  resource_type: 'image',
+  created_at: '2024-10-27T03:17:02Z',
+  tags: [],
+  bytes: 4080,
+  type: 'upload',
+  etag: '816d972d94f2b36633a31212c501de1d',
+  placeholder: false,
+  url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1729999022/whjxc0h8tri7fo5h5z2q.jpg',
+  secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1729999022/whjxc0h8tri7fo5h5z2q.jpg',
+  asset_folder: '',
+  display_name: 'whjxc0h8tri7fo5h5z2q',
+  original_filename: 'ea54480d21a2b8b7408491e5a11da60d',
+  api_key: '995914146915358'
+}
+[2024-10-27T00:20:05.884] [INFO] default - .jpeg
+[2024-10-27T00:20:07.252] [INFO] default - https://res.cloudinary.com/dkp3sew2y/image/upload/v1729999206/lm3cjtwdli9lhgfdgdwo.jpg
+[2024-10-27T00:20:07.256] [INFO] default - 
+[2024-10-27T00:22:25.849] [INFO] default - https://res.cloudinary.com/dkp3sew2y/image/upload/v1729999345/epssh6jtv24cl6qvnyyj.jpg
+[2024-10-27T00:22:25.854] [INFO] default - 
+[2024-10-27T00:26:58.849] [INFO] default - 
+[2024-10-27T00:26:59.662] [ERROR] default - {
+  message: 'Missing required parameter - public_id',
+  name: 'Error',
+  http_code: 400
+}
+[2024-10-27T00:27:51.454] [INFO] default - 
+[2024-10-27T00:35:11.041] [ERROR] default - Error: product validation failed: mainPicture: Cast to string failed for value "{
+  asset_id: '5624b53a6f403edfc117746d67fea5c3',
+  public_id: 'vnshmu7zra5v4b4z5g7k',
+  version: 1730000110,
+  version_id: '9ce5102a9b2f5fba054e5edef95bd7ca',
+  signature: 'd4fb81e698e85ddfcc4037f6de3e9450343d993c',
+  width: 225,
+  height: 225,
+  format: 'jpg',
+  resource_type: 'image',
+  created_at: '2024-10-27T03:35:10Z',
+  tags: [],
+  bytes: 4080,
+  type: 'upload',
+  etag: '816d972d94f2b36633a31212c501de1d',
+  placeholder: false,
+  url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1730000110/vnshmu7zra5v4b4z5g7k.jpg',
+  secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1730000110/vnshmu7zra5v4b4z5g7k.jpg',
+  asset_folder: '',
+  display_name: 'vnshmu7zra5v4b4z5g7k',
+  original_filename: '63e51023971653ce6f0f63ee8a8b28a8',
+  api_key: '995914146915358'
+}" (type Object) at path "mainPicture"
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    mainPicture: CastError: Cast to string failed for value "{
+      asset_id: '5624b53a6f403edfc117746d67fea5c3',
+      public_id: 'vnshmu7zra5v4b4z5g7k',
+      version: 1730000110,
+      version_id: '9ce5102a9b2f5fba054e5edef95bd7ca',
+      signature: 'd4fb81e698e85ddfcc4037f6de3e9450343d993c',
+      width: 225,
+      height: 225,
+      format: 'jpg',
+      resource_type: 'image',
+      created_at: '2024-10-27T03:35:10Z',
+      tags: [],
+      bytes: 4080,
+      type: 'upload',
+      etag: '816d972d94f2b36633a31212c501de1d',
+      placeholder: false,
+      url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1730000110/vnshmu7zra5v4b4z5g7k.jpg',
+      secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1730000110/vnshmu7zra5v4b4z5g7k.jpg',
+      asset_folder: '',
+      display_name: 'vnshmu7zra5v4b4z5g7k',
+      original_filename: '63e51023971653ce6f0f63ee8a8b28a8',
+      api_key: '995914146915358'
+    }" (type Object) at path "mainPicture"
+        at SchemaString.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\string.js:606:11)
+        at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at model.$set (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:1432:22)
+        at model.set [as mainPicture] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\helpers\document\compile.js:205:19)
+        at Object.mainProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:37:37)
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at async setMainPicture (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:19:24) {
+      stringValue: '"{\n' +
+        "  asset_id: '5624b53a6f403edfc117746d67fea5c3',\n" +
+        "  public_id: 'vnshmu7zra5v4b4z5g7k',\n" +
+        '  version: 1730000110,\n' +
+        "  version_id: '9ce5102a9b2f5fba054e5edef95bd7ca',\n" +
+        "  signature: 'd4fb81e698e85ddfcc4037f6de3e9450343d993c',\n" +
+        '  width: 225,\n' +
+        '  height: 225,\n' +
+        "  format: 'jpg',\n" +
+        "  resource_type: 'image',\n" +
+        "  created_at: '2024-10-27T03:35:10Z',\n" +
+        '  tags: [],\n' +
+        '  bytes: 4080,\n' +
+        "  type: 'upload',\n" +
+        "  etag: '816d972d94f2b36633a31212c501de1d',\n" +
+        '  placeholder: false,\n' +
+        "  url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1730000110/vnshmu7zra5v4b4z5g7k.jpg',\n" +
+        "  secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1730000110/vnshmu7zra5v4b4z5g7k.jpg',\n" +
+        "  asset_folder: '',\n" +
+        "  display_name: 'vnshmu7zra5v4b4z5g7k',\n" +
+        "  original_filename: '63e51023971653ce6f0f63ee8a8b28a8',\n" +
+        "  api_key: '995914146915358'\n" +
+        '}"',
+      messageFormat: undefined,
+      kind: 'string',
+      value: [Object],
+      path: 'mainPicture',
+      reason: null,
+      valueType: 'Object'
+    }
+  },
+  _message: 'product validation failed'
+}
+[2024-10-27T12:35:04.128] [ERROR] default - Error: product validation failed: mainPicture: Cast to string failed for value "{
+  asset_id: '5f4d007dcc9f15405721457a2bdfad40',
+  public_id: 'drjk2q5dmzsf2k6jmfyh',
+  version: 1730043303,
+  version_id: '3def096a2f62cdbf79b3c96ca73fd190',
+  signature: '9561039845c5f61ecffed2c26dc35f2f535048b8',
+  width: 225,
+  height: 225,
+  format: 'jpg',
+  resource_type: 'image',
+  created_at: '2024-10-27T15:35:03Z',
+  tags: [],
+  bytes: 4080,
+  type: 'upload',
+  etag: '816d972d94f2b36633a31212c501de1d',
+  placeholder: false,
+  url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1730043303/drjk2q5dmzsf2k6jmfyh.jpg',
+  secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1730043303/drjk2q5dmzsf2k6jmfyh.jpg',
+  asset_folder: '',
+  display_name: 'drjk2q5dmzsf2k6jmfyh',
+  original_filename: 'c180ad292f1a8f2e6bfcc9cfe6a184cb',
+  api_key: '995914146915358'
+}" (type Object) at path "mainPicture"
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    mainPicture: CastError: Cast to string failed for value "{
+      asset_id: '5f4d007dcc9f15405721457a2bdfad40',
+      public_id: 'drjk2q5dmzsf2k6jmfyh',
+      version: 1730043303,
+      version_id: '3def096a2f62cdbf79b3c96ca73fd190',
+      signature: '9561039845c5f61ecffed2c26dc35f2f535048b8',
+      width: 225,
+      height: 225,
+      format: 'jpg',
+      resource_type: 'image',
+      created_at: '2024-10-27T15:35:03Z',
+      tags: [],
+      bytes: 4080,
+      type: 'upload',
+      etag: '816d972d94f2b36633a31212c501de1d',
+      placeholder: false,
+      url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1730043303/drjk2q5dmzsf2k6jmfyh.jpg',
+      secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1730043303/drjk2q5dmzsf2k6jmfyh.jpg',
+      asset_folder: '',
+      display_name: 'drjk2q5dmzsf2k6jmfyh',
+      original_filename: 'c180ad292f1a8f2e6bfcc9cfe6a184cb',
+      api_key: '995914146915358'
+    }" (type Object) at path "mainPicture"
+        at SchemaString.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\string.js:606:11)
+        at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at model.$set (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:1432:22)
+        at model.set [as mainPicture] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\helpers\document\compile.js:205:19)
+        at Object.mainProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:38:37)
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at async setMainPicture (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:19:24) {
+      stringValue: '"{\n' +
+        "  asset_id: '5f4d007dcc9f15405721457a2bdfad40',\n" +
+        "  public_id: 'drjk2q5dmzsf2k6jmfyh',\n" +
+        '  version: 1730043303,\n' +
+        "  version_id: '3def096a2f62cdbf79b3c96ca73fd190',\n" +
+        "  signature: '9561039845c5f61ecffed2c26dc35f2f535048b8',\n" +
+        '  width: 225,\n' +
+        '  height: 225,\n' +
+        "  format: 'jpg',\n" +
+        "  resource_type: 'image',\n" +
+        "  created_at: '2024-10-27T15:35:03Z',\n" +
+        '  tags: [],\n' +
+        '  bytes: 4080,\n' +
+        "  type: 'upload',\n" +
+        "  etag: '816d972d94f2b36633a31212c501de1d',\n" +
+        '  placeholder: false,\n' +
+        "  url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1730043303/drjk2q5dmzsf2k6jmfyh.jpg',\n" +
+        "  secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1730043303/drjk2q5dmzsf2k6jmfyh.jpg',\n" +
+        "  asset_folder: '',\n" +
+        "  display_name: 'drjk2q5dmzsf2k6jmfyh',\n" +
+        "  original_filename: 'c180ad292f1a8f2e6bfcc9cfe6a184cb',\n" +
+        "  api_key: '995914146915358'\n" +
+        '}"',
+      messageFormat: undefined,
+      kind: 'string',
+      value: [Object],
+      path: 'mainPicture',
+      reason: null,
+      valueType: 'Object'
+    }
+  },
+  _message: 'product validation failed'
+}
+[2024-10-27T12:36:18.060] [ERROR] default - Error: product validation failed: mainPicture: Cast to string failed for value "{
+  asset_id: '348ee327b56c48b2c393bc0b7cf7c08d',
+  public_id: 'r3o6hhhr8bywv3ntxfw9',
+  version: 1730043377,
+  version_id: '266a314e0078cc2ed3b8de5f906fc62f',
+  signature: '346bfe64c918b64c4a5b607d6ded2cf878edfb1e',
+  width: 225,
+  height: 225,
+  format: 'jpg',
+  resource_type: 'image',
+  created_at: '2024-10-27T15:36:17Z',
+  tags: [],
+  bytes: 4080,
+  type: 'upload',
+  etag: '816d972d94f2b36633a31212c501de1d',
+  placeholder: false,
+  url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1730043377/r3o6hhhr8bywv3ntxfw9.jpg',
+  secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1730043377/r3o6hhhr8bywv3ntxfw9.jpg',
+  asset_folder: '',
+  display_name: 'r3o6hhhr8bywv3ntxfw9',
+  original_filename: '4b56179f7db8af8a91e229f94af6a749',
+  api_key: '995914146915358'
+}" (type Object) at path "mainPicture"
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    mainPicture: CastError: Cast to string failed for value "{
+      asset_id: '348ee327b56c48b2c393bc0b7cf7c08d',
+      public_id: 'r3o6hhhr8bywv3ntxfw9',
+      version: 1730043377,
+      version_id: '266a314e0078cc2ed3b8de5f906fc62f',
+      signature: '346bfe64c918b64c4a5b607d6ded2cf878edfb1e',
+      width: 225,
+      height: 225,
+      format: 'jpg',
+      resource_type: 'image',
+      created_at: '2024-10-27T15:36:17Z',
+      tags: [],
+      bytes: 4080,
+      type: 'upload',
+      etag: '816d972d94f2b36633a31212c501de1d',
+      placeholder: false,
+      url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1730043377/r3o6hhhr8bywv3ntxfw9.jpg',
+      secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1730043377/r3o6hhhr8bywv3ntxfw9.jpg',
+      asset_folder: '',
+      display_name: 'r3o6hhhr8bywv3ntxfw9',
+      original_filename: '4b56179f7db8af8a91e229f94af6a749',
+      api_key: '995914146915358'
+    }" (type Object) at path "mainPicture"
+        at SchemaString.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\string.js:606:11)
+        at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at model.$set (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:1432:22)
+        at model.set [as mainPicture] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\helpers\document\compile.js:205:19)
+        at Object.mainProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:38:37)
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at async setMainPicture (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:19:24) {
+      stringValue: '"{\n' +
+        "  asset_id: '348ee327b56c48b2c393bc0b7cf7c08d',\n" +
+        "  public_id: 'r3o6hhhr8bywv3ntxfw9',\n" +
+        '  version: 1730043377,\n' +
+        "  version_id: '266a314e0078cc2ed3b8de5f906fc62f',\n" +
+        "  signature: '346bfe64c918b64c4a5b607d6ded2cf878edfb1e',\n" +
+        '  width: 225,\n' +
+        '  height: 225,\n' +
+        "  format: 'jpg',\n" +
+        "  resource_type: 'image',\n" +
+        "  created_at: '2024-10-27T15:36:17Z',\n" +
+        '  tags: [],\n' +
+        '  bytes: 4080,\n' +
+        "  type: 'upload',\n" +
+        "  etag: '816d972d94f2b36633a31212c501de1d',\n" +
+        '  placeholder: false,\n' +
+        "  url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1730043377/r3o6hhhr8bywv3ntxfw9.jpg',\n" +
+        "  secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1730043377/r3o6hhhr8bywv3ntxfw9.jpg',\n" +
+        "  asset_folder: '',\n" +
+        "  display_name: 'r3o6hhhr8bywv3ntxfw9',\n" +
+        "  original_filename: '4b56179f7db8af8a91e229f94af6a749',\n" +
+        "  api_key: '995914146915358'\n" +
+        '}"',
+      messageFormat: undefined,
+      kind: 'string',
+      value: [Object],
+      path: 'mainPicture',
+      reason: null,
+      valueType: 'Object'
+    }
+  },
+  _message: 'product validation failed'
+}
+[2024-10-27T12:40:41.856] [ERROR] default - Error: product validation failed: mainPicture: Cast to string failed for value "{
+  asset_id: '8895ec7c4da089aa174194c5fb526c94',
+  public_id: 'qyzdjikgktmvlkdfl1yg',
+  version: 1730043641,
+  version_id: '540068908f676e0c0f9bd4b7fc7716a4',
+  signature: 'd05f79ccff5033d2145fdda141d29fdc17206c68',
+  width: 225,
+  height: 225,
+  format: 'jpg',
+  resource_type: 'image',
+  created_at: '2024-10-27T15:40:41Z',
+  tags: [],
+  bytes: 4080,
+  type: 'upload',
+  etag: '816d972d94f2b36633a31212c501de1d',
+  placeholder: false,
+  url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1730043641/qyzdjikgktmvlkdfl1yg.jpg',
+  secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1730043641/qyzdjikgktmvlkdfl1yg.jpg',
+  asset_folder: '',
+  display_name: 'qyzdjikgktmvlkdfl1yg',
+  original_filename: '9e3c3149bfab4c2a6664e71f7973ac82',
+  api_key: '995914146915358'
+}" (type Object) at path "mainPicture"
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    mainPicture: CastError: Cast to string failed for value "{
+      asset_id: '8895ec7c4da089aa174194c5fb526c94',
+      public_id: 'qyzdjikgktmvlkdfl1yg',
+      version: 1730043641,
+      version_id: '540068908f676e0c0f9bd4b7fc7716a4',
+      signature: 'd05f79ccff5033d2145fdda141d29fdc17206c68',
+      width: 225,
+      height: 225,
+      format: 'jpg',
+      resource_type: 'image',
+      created_at: '2024-10-27T15:40:41Z',
+      tags: [],
+      bytes: 4080,
+      type: 'upload',
+      etag: '816d972d94f2b36633a31212c501de1d',
+      placeholder: false,
+      url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1730043641/qyzdjikgktmvlkdfl1yg.jpg',
+      secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1730043641/qyzdjikgktmvlkdfl1yg.jpg',
+      asset_folder: '',
+      display_name: 'qyzdjikgktmvlkdfl1yg',
+      original_filename: '9e3c3149bfab4c2a6664e71f7973ac82',
+      api_key: '995914146915358'
+    }" (type Object) at path "mainPicture"
+        at SchemaString.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\string.js:606:11)
+        at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at model.$set (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:1432:22)
+        at model.set [as mainPicture] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\helpers\document\compile.js:205:19)
+        at Object.mainProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:38:37)
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at async setMainPicture (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:19:24) {
+      stringValue: '"{\n' +
+        "  asset_id: '8895ec7c4da089aa174194c5fb526c94',\n" +
+        "  public_id: 'qyzdjikgktmvlkdfl1yg',\n" +
+        '  version: 1730043641,\n' +
+        "  version_id: '540068908f676e0c0f9bd4b7fc7716a4',\n" +
+        "  signature: 'd05f79ccff5033d2145fdda141d29fdc17206c68',\n" +
+        '  width: 225,\n' +
+        '  height: 225,\n' +
+        "  format: 'jpg',\n" +
+        "  resource_type: 'image',\n" +
+        "  created_at: '2024-10-27T15:40:41Z',\n" +
+        '  tags: [],\n' +
+        '  bytes: 4080,\n' +
+        "  type: 'upload',\n" +
+        "  etag: '816d972d94f2b36633a31212c501de1d',\n" +
+        '  placeholder: false,\n' +
+        "  url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1730043641/qyzdjikgktmvlkdfl1yg.jpg',\n" +
+        "  secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1730043641/qyzdjikgktmvlkdfl1yg.jpg',\n" +
+        "  asset_folder: '',\n" +
+        "  display_name: 'qyzdjikgktmvlkdfl1yg',\n" +
+        "  original_filename: '9e3c3149bfab4c2a6664e71f7973ac82',\n" +
+        "  api_key: '995914146915358'\n" +
+        '}"',
+      messageFormat: undefined,
+      kind: 'string',
+      value: [Object],
+      path: 'mainPicture',
+      reason: null,
+      valueType: 'Object'
+    }
+  },
+  _message: 'product validation failed'
+}
+[2024-10-27T12:41:22.730] [ERROR] default - TypeError: Cannot read properties of null (reading 'split')
+    at Object.mainProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:42:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async setMainPicture (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:19:24)
+[2024-10-27T12:42:21.267] [ERROR] default - TypeError: Cannot read properties of null (reading 'split')
+    at Object.mainProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:42:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async setMainPicture (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:19:24)
+[2024-10-27T12:46:59.925] [ERROR] default - Error: product validation failed: mainPicture: Cast to string failed for value "{
+  asset_id: 'e6e9f9278ad0cde109b669c3ee2cba3a',
+  public_id: 'nxj1ftuamnaid0ikndd3',
+  version: 1730044019,
+  version_id: 'bfd227d3a0196c6bae84206b0c709918',
+  signature: 'ce86c20bbb796cf6d4bd2d4df97e91cbc7877a43',
+  width: 225,
+  height: 225,
+  format: 'jpg',
+  resource_type: 'image',
+  created_at: '2024-10-27T15:46:59Z',
+  tags: [],
+  bytes: 4080,
+  type: 'upload',
+  etag: '816d972d94f2b36633a31212c501de1d',
+  placeholder: false,
+  url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1730044019/nxj1ftuamnaid0ikndd3.jpg',
+  secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1730044019/nxj1ftuamnaid0ikndd3.jpg',
+  asset_folder: '',
+  display_name: 'nxj1ftuamnaid0ikndd3',
+  original_filename: 'cee4d7df50a02dfde05a50a4a1298863',
+  api_key: '995914146915358'
+}" (type Object) at path "mainPicture"
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    mainPicture: CastError: Cast to string failed for value "{
+      asset_id: 'e6e9f9278ad0cde109b669c3ee2cba3a',
+      public_id: 'nxj1ftuamnaid0ikndd3',
+      version: 1730044019,
+      version_id: 'bfd227d3a0196c6bae84206b0c709918',
+      signature: 'ce86c20bbb796cf6d4bd2d4df97e91cbc7877a43',
+      width: 225,
+      height: 225,
+      format: 'jpg',
+      resource_type: 'image',
+      created_at: '2024-10-27T15:46:59Z',
+      tags: [],
+      bytes: 4080,
+      type: 'upload',
+      etag: '816d972d94f2b36633a31212c501de1d',
+      placeholder: false,
+      url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1730044019/nxj1ftuamnaid0ikndd3.jpg',
+      secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1730044019/nxj1ftuamnaid0ikndd3.jpg',
+      asset_folder: '',
+      display_name: 'nxj1ftuamnaid0ikndd3',
+      original_filename: 'cee4d7df50a02dfde05a50a4a1298863',
+      api_key: '995914146915358'
+    }" (type Object) at path "mainPicture"
+        at SchemaString.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\string.js:606:11)
+        at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at model.$set (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:1432:22)
+        at model.set [as mainPicture] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\helpers\document\compile.js:205:19)
+        at Object.mainProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:38:37)
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at async setMainPicture (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:19:24) {
+      stringValue: '"{\n' +
+        "  asset_id: 'e6e9f9278ad0cde109b669c3ee2cba3a',\n" +
+        "  public_id: 'nxj1ftuamnaid0ikndd3',\n" +
+        '  version: 1730044019,\n' +
+        "  version_id: 'bfd227d3a0196c6bae84206b0c709918',\n" +
+        "  signature: 'ce86c20bbb796cf6d4bd2d4df97e91cbc7877a43',\n" +
+        '  width: 225,\n' +
+        '  height: 225,\n' +
+        "  format: 'jpg',\n" +
+        "  resource_type: 'image',\n" +
+        "  created_at: '2024-10-27T15:46:59Z',\n" +
+        '  tags: [],\n' +
+        '  bytes: 4080,\n' +
+        "  type: 'upload',\n" +
+        "  etag: '816d972d94f2b36633a31212c501de1d',\n" +
+        '  placeholder: false,\n' +
+        "  url: 'http://res.cloudinary.com/dkp3sew2y/image/upload/v1730044019/nxj1ftuamnaid0ikndd3.jpg',\n" +
+        "  secure_url: 'https://res.cloudinary.com/dkp3sew2y/image/upload/v1730044019/nxj1ftuamnaid0ikndd3.jpg',\n" +
+        "  asset_folder: '',\n" +
+        "  display_name: 'nxj1ftuamnaid0ikndd3',\n" +
+        "  original_filename: 'cee4d7df50a02dfde05a50a4a1298863',\n" +
+        "  api_key: '995914146915358'\n" +
+        '}"',
+      messageFormat: undefined,
+      kind: 'string',
+      value: [Object],
+      path: 'mainPicture',
+      reason: null,
+      valueType: 'Object'
+    }
+  },
+  _message: 'product validation failed'
+}
+[2024-10-27T12:49:52.058] [INFO] default - ueuybp2ikmgutp25qwdy
+[2024-10-28T11:25:33.575] [ERROR] default - ReferenceError: Cannot access 'image' before initialization
+    at Object.newProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:63:64)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async addProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:34:24)
+[2024-10-28T12:13:34.506] [ERROR] default - ReferenceError: product is not defined
+    at Object.deleteImageFromProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:257:29)
+    at delProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:179:46)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\index.js:376:14)
+    at param (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\index.js:376:14)
+[2024-10-28T12:14:34.317] [INFO] default - 0
+[2024-10-28T12:14:50.482] [INFO] default - -1
+[2024-10-28T12:40:28.019] [INFO] default - https://res.cloudinary.com/dkp3sew2y/image/upload/v1730129945/alkdqa2otq5hgqole7ka.jpg

@@ -2,19 +2,71 @@ const ProductModel = require('../models/product.model')
 const CartModel = require('../models/cart.model')
 const FavModel = require('../models/favorite.model')
 const StockModel = require('../models/stock.model.js')
+const cloudinary = require('../helpers/cloudinary.js')
 const logger = require('../helpers/logger')
+const idGenerator = require('../helpers/idGenerator.js')
 
 const newProduct = async (body) => {
     try {
         const productExist = await ProductModel.findOne({ name: body.name })
         if (productExist === null) {
             const product = new ProductModel(body)
-            const productStock = new StockModel({productId: product._id})
+            const productStock = new StockModel({ productId: product._id })
             await product.save()
             await productStock.save()
             return 201
         } else {
             return 400
+        }
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
+const mainProductImage = async (productId, image) => {
+    try {
+        if (image === undefined) {
+            return 400
+        }
+        const product = await ProductModel.findById(productId)
+        if (product === null) {
+            return 404
+        } else {
+            const urlToDelete = product.mainPicture
+            const newImgUrl = await cloudinary.uploader.upload(image.path)
+            if (urlToDelete === null) {
+                product.mainPicture = newImgUrl.secure_url
+                await product.save()
+                return 200
+            } else {
+                const imgIdToDelete = urlToDelete.split('/').pop().split('.')[0];
+                product.mainPicture = newImgUrl.secure_url
+                await product.save()
+                await cloudinary.uploader.destroy(imgIdToDelete)
+                return 200
+            }
+        }
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
+const newProductImage = async (productId, image) => {
+    try {
+        if (image === undefined) {
+            return 400
+        }
+        const product = await ProductModel.findById(productId)
+        if (product === null) {
+            return 404
+        } else {
+            const newImgUrl = await cloudinary.uploader.upload(image.path)
+            const imageUrl = newImgUrl.secure_url
+            const imageId = idGenerator()
+            const newImage = { imageId, imageUrl }
+            product.galery.push(newImage)
+            await product.save()
+            return 200
         }
     } catch (error) {
         logger.error(error)
@@ -132,39 +184,39 @@ const deleteProductFromFavorite = async (userId, productId) => {
             return { statusCode: 200, msg: 'Producto eliminado de favoritos' }
         } else {
             return { statusCode: 404, msg: 'No encontramos el producto en favoritos' }
-            }
-    } catch (error) {
-        logger.error(error)
-    }
-}
-
-const getUserCart = async (userId) =>{
-    try {
-        const cart = await CartModel.findOne({userId})
-        if(cart === null){
-            return 404
-        } else{
-            return {products: cart.products}
         }
     } catch (error) {
         logger.error(error)
     }
 }
 
-const getUserFavorites = async (userId) =>{
+const getUserCart = async (userId) => {
     try {
-        const favorites = await FavModel.findOne({userId})
-        if(favorites === null){
+        const cart = await CartModel.findOne({ userId })
+        if (cart === null) {
             return 404
-        } else{
-            return {products: favorites.products}
+        } else {
+            return { products: cart.products }
         }
     } catch (error) {
         logger.error(error)
     }
 }
 
-const getAllProducts = async () =>{
+const getUserFavorites = async (userId) => {
+    try {
+        const favorites = await FavModel.findOne({ userId })
+        if (favorites === null) {
+            return 404
+        } else {
+            return { products: favorites.products }
+        }
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
+const getAllProducts = async () => {
     try {
         const products = await ProductModel.find()
         return products
@@ -173,12 +225,12 @@ const getAllProducts = async () =>{
     }
 }
 
-const getOneProduct = async (productId) =>{
+const getOneProduct = async (productId) => {
     try {
-        const product = await ProductModel.findById({_id: productId})
-        if(product === null){
+        const product = await ProductModel.findById({ _id: productId })
+        if (product === null) {
             return 404
-        } else{
+        } else {
             return product
         }
     } catch (error) {
@@ -187,12 +239,12 @@ const getOneProduct = async (productId) =>{
 }
 
 
-const productUpdate = async (productId, body) =>{
+const productUpdate = async (productId, body) => {
     try {
-        const productToUpdate = await ProductModel.findByIdAndUpdate({_id: productId}, body)
-        if(productToUpdate === null){
+        const productToUpdate = await ProductModel.findByIdAndUpdate({ _id: productId }, body)
+        if (productToUpdate === null) {
             return 404
-        } else{
+        } else {
             return 200
         }
     } catch (error) {
@@ -200,13 +252,35 @@ const productUpdate = async (productId, body) =>{
     }
 }
 
-const delProduct = async (productId) =>{
+const deleteImageFromProduct = async (productId, imgId) => {
     try {
         const product = await ProductModel.findById(productId)
-        if(product === null){
+        if (product === null) {
             return 404
-        } else{
-            const productStock = await StockModel.findOne({productId})
+        }
+        const imgPosition = product.galery.findIndex(obj => obj.imageId === imgId)
+        if (imgPosition === -1) {
+            return 400
+        } else {
+            const urlToDelete = product.galery.find(obj => obj.imageId === imgId).imageUrl
+            const imgIdToDelete = urlToDelete.split('/').pop().split('.')[0];
+            product.galery.splice(imgPosition, 1)
+            await cloudinary.uploader.destroy(imgIdToDelete)
+            await product.save()
+            return 200
+        }
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
+const delProduct = async (productId) => {
+    try {
+        const product = await ProductModel.findById(productId)
+        if (product === null) {
+            return 404
+        } else {
+            const productStock = await StockModel.findOne({ productId })
             await ProductModel.findByIdAndDelete(productId)
             await StockModel.findByIdAndDelete(productStock._id)
             return 200
@@ -218,6 +292,8 @@ const delProduct = async (productId) =>{
 
 module.exports = {
     newProduct,
+    mainProductImage,
+    newProductImage,
     changeState,
     addProductToCart,
     deleteProductFromCart,
@@ -228,5 +304,6 @@ module.exports = {
     getAllProducts,
     getOneProduct,
     productUpdate,
+    deleteImageFromProduct,
     delProduct
 }
