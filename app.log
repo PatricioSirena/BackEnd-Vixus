@@ -1667,3 +1667,155 @@
 [2024-10-28T12:14:34.317] [INFO] default - 0
 [2024-10-28T12:14:50.482] [INFO] default - -1
 [2024-10-28T12:40:28.019] [INFO] default - https://res.cloudinary.com/dkp3sew2y/image/upload/v1730129945/alkdqa2otq5hgqole7ka.jpg
+[2024-10-28T20:58:02.126] [INFO] default - [ Promise { <pending> }, Promise { <pending> } ]
+[2024-10-28T21:02:51.118] [INFO] default - [
+  {
+    title: 'Pantalon corte chino',
+    quantity: 2,
+    unit_price: 72000,
+    currency_id: 'ARS'
+  },
+  {
+    title: 'Chomba lisa',
+    quantity: 2,
+    unit_price: 48000,
+    currency_id: 'ARS'
+  }
+]
+[2024-10-29T09:59:13.784] [INFO] default - [
+  {
+    title: 'Pantalon corte chino',
+    quantity: 2,
+    unit_price: 72000,
+    currency_id: 'ARS'
+  },
+  {
+    title: 'Chomba lisa',
+    quantity: 2,
+    unit_price: 48000,
+    currency_id: 'ARS'
+  }
+]
+[2024-10-29T11:59:15.959] [ERROR] default - ReferenceError: OrdenModel is not defined
+    at Object.payWithMP (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:228:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async mpPayment (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:118:24)
+[2024-10-29T12:02:11.109] [ERROR] default - Error: order validation failed: paymentLink: Path `paymentLink` is required.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    paymentLink: ValidatorError: Path `paymentLink` is required.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'paymentLink',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'order validation failed'
+}
+[2024-10-29T12:05:37.315] [INFO] default - {
+  _id: new ObjectId('671128c00722e76114071e06'),
+  userId: '671128c00722e76114071e05',
+  products: [
+    {
+      quantity: 2,
+      idProduct: new ObjectId('671271cfb6cccd9eb8533a5e')
+    },
+    {
+      quantity: 2,
+      idProduct: new ObjectId('67127184b6cccd9eb8533a53')
+    }
+  ],
+  __v: 5
+}
+[2024-10-29T12:07:00.219] [INFO] default - {
+  _id: new ObjectId('671128c00722e76114071e06'),
+  userId: '671128c00722e76114071e05',
+  products: [
+    {
+      quantity: 2,
+      idProduct: new ObjectId('671271cfb6cccd9eb8533a5e')
+    },
+    {
+      quantity: 2,
+      idProduct: new ObjectId('67127184b6cccd9eb8533a53')
+    }
+  ],
+  __v: 5
+}
+[2024-10-29T12:08:18.467] [INFO] default - {
+  userId: '671128c00722e76114071e05',
+  date: 'Tue Oct 29 2024 12:08:18 GMT-0300 (hora estándar de Argentina)',
+  paymentStatus: 'pending',
+  products: [
+    {
+      quantity: 2,
+      idProduct: new ObjectId('671271cfb6cccd9eb8533a5e')
+    },
+    {
+      quantity: 2,
+      idProduct: new ObjectId('67127184b6cccd9eb8533a53')
+    }
+  ],
+  _id: new ObjectId('6720fa62f5cd75e6e6cecc3b')
+}
+[2024-10-29T12:08:18.480] [INFO] default - []
+[2024-10-29T12:09:25.946] [ERROR] default - Error: order validation failed: paymentLink: Path `paymentLink` is required.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    paymentLink: ValidatorError: Path `paymentLink` is required.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'paymentLink',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'order validation failed'
+}
+[2024-10-29T12:13:28.724] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.orders index: userId_1 dup key: { userId: "671128c00722e76114071e05" }
+    at InsertOneOperation.execute (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\collection.js:154:16) {
+  errorResponse: {
+    index: 0,
+    code: 11000,
+    errmsg: 'E11000 duplicate key error collection: test.orders index: userId_1 dup key: { userId: "671128c00722e76114071e05" }',
+    keyPattern: { userId: 1 },
+    keyValue: { userId: '671128c00722e76114071e05' }
+  },
+  index: 0,
+  code: 11000,
+  keyPattern: { userId: 1 },
+  keyValue: { userId: '671128c00722e76114071e05' },
+  [Symbol(errorLabels)]: Set(0) {}
+}

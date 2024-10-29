@@ -25,7 +25,7 @@ const OrderSchema = new Schema({
     products: []
 })
 
-const OrderModel = model('cart', OrderSchema)
+const OrderModel = model('order', OrderSchema)
 
 module.exports = OrderModel
 

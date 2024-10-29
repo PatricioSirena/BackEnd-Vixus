@@ -1,10 +1,14 @@
 const ProductModel = require('../models/product.model')
+const UserModel = require('../models/user.model.js')
 const CartModel = require('../models/cart.model')
 const FavModel = require('../models/favorite.model')
 const StockModel = require('../models/stock.model.js')
+const OrderModel = require('../models/order.model.js')
 const cloudinary = require('../helpers/cloudinary.js')
 const logger = require('../helpers/logger')
 const idGenerator = require('../helpers/idGenerator.js')
+const {envioDeOrdenDeCompra} = require('../helpers/nodemailer.messages')
+const { MercadoPagoConfig, Preference } = require('mercadopago')
 
 const newProduct = async (body) => {
     try {
@@ -190,6 +194,48 @@ const deleteProductFromFavorite = async (userId, productId) => {
     }
 }
 
+const payWithMP = async (userId) => {
+    try {
+        const client = await UserModel.findOne({ _id: userId })
+        if (client === null) {
+            return 404
+        }
+        const cart = await CartModel.findOne({ userId })
+        // const clientMP = new MercadoPagoConfig({ accessToken: process.env.MP_TOKEN })
+        // const preference = new Preference(clientMP)
+        // const buys = await Promise.all(cart.products.map(async (obj) => {
+        //     const product = await ProductModel.findById({ _id: obj.idProduct })
+        //     return {
+        //         title: product.name,
+        //         quantity: obj.quantity,
+        //         unit_price: product.price * obj.quantity,
+        //         currency_id: 'ARS'
+        //     }
+        // }))
+        // const result = await preference.create({
+        //     body: {
+        //         items: buys,
+        //         back_urls: {
+        //             success: 'myApp.netlify.com/carrito/success',
+        //             failure: 'myApp.netlify.com/carrito/failure',
+        //             pending: 'myApp.netlify.com/carrito/pending'
+        //         },
+        //         auto_return: 'approved'
+        //     }
+        // })
+
+        const orderDate = new Date().toString()
+        const order = new OrderModel({ userId, products: cart.products, date: orderDate, paymentLink: 'www.mercadopago.com.ar' })
+        cart.products = []
+        envioDeOrdenDeCompra(client.email, 'www.mercadopago.com.ar')
+        await order.save()
+        await cart.save()
+        return 200
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
 const getUserCart = async (userId) => {
     try {
         const cart = await CartModel.findOne({ userId })
@@ -299,6 +345,7 @@ module.exports = {
     deleteProductFromCart,
     addProductToFavorite,
     deleteProductFromFavorite,
+    payWithMP,
     getUserCart,
     getUserFavorites,
     getAllProducts,

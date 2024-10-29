@@ -8,6 +8,7 @@ const { createProduct,
     delFromCart,
     addToFavorite,
     delFromFavorite,
+    mpPayment,
     getCart,
     getFavorites,
     getProducts,
@@ -34,6 +35,8 @@ router.post('/delFromCart/:productId', auth('user'), delFromCart)
 router.post('/addToFavorite/:productId', auth('user'), addToFavorite)
 
 router.post('/delFromFavorite/:productId', auth('user'), delFromFavorite)
+
+router.post('/mpPayment', auth('user'), mpPayment)
 
 router.get('/getCart', auth('user'), getCart)
 
