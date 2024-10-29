@@ -113,6 +113,19 @@ const delFromFavorite = async (req, res) => {
     }
 }
 
+const mpPayment = async (req, res) =>{
+    try {
+        const result = await productServices.payWithMP(req.userId)
+        if (result === 404){
+            res.status(404).json({msg: 'Comunicate con un administrador'})
+        } else{
+            res.status(200).json({msg: 'Te enviamos un correo con el link de pago'})
+        }
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+
 const getCart = async (req, res) => {
     try {
         const result = await productServices.getUserCart(req.userId)
@@ -211,6 +224,7 @@ module.exports = {
     delFromCart,
     addToFavorite,
     delFromFavorite,
+    mpPayment,
     getCart,
     getFavorites,
     getProducts,
