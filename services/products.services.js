@@ -8,7 +8,7 @@ const cloudinary = require('../helpers/cloudinary.js')
 const logger = require('../helpers/logger')
 const idGenerator = require('../helpers/idGenerator.js')
 const {envioDeOrdenDeCompra} = require('../helpers/nodemailer.messages')
-const { MercadoPagoConfig, Preference } = require('mercadopago')
+// const { MercadoPagoConfig, Preference } = require('mercadopago')
 
 const newProduct = async (body) => {
     try {
@@ -197,10 +197,13 @@ const deleteProductFromFavorite = async (userId, productId) => {
 const payWithMP = async (userId) => {
     try {
         const client = await UserModel.findOne({ _id: userId })
-        if (client === null) {
-            return 404
-        }
         const cart = await CartModel.findOne({ userId })
+        if (cart === null) {
+            return {statusCode: 404, msg: 'Por favor comunicate con un administrador'}
+        }
+        if(cart.products.length === 0){
+            return {statusCode: 404, msg: 'No hay productos en el carrito'}
+        }
         // const clientMP = new MercadoPagoConfig({ accessToken: process.env.MP_TOKEN })
         // const preference = new Preference(clientMP)
         // const buys = await Promise.all(cart.products.map(async (obj) => {
@@ -287,6 +290,10 @@ const getOneProduct = async (productId) => {
 
 const productUpdate = async (productId, body) => {
     try {
+        const productExist = await ProductModel.findOne({name: body.name})
+        if (productExist !== null) {
+            return 400
+        }
         const productToUpdate = await ProductModel.findByIdAndUpdate({ _id: productId }, body)
         if (productToUpdate === null) {
             return 404
@@ -326,6 +333,11 @@ const delProduct = async (productId) => {
         if (product === null) {
             return 404
         } else {
+            product.galery.forEach(async (obj) =>{
+                const urlToDelete = obj.imageUrl
+                const imgIdToDelete = urlToDelete.split('/').pop().split('.')[0];
+                await cloudinary.uploader.destroy(imgIdToDelete)
+            })
             const productStock = await StockModel.findOne({ productId })
             await ProductModel.findByIdAndDelete(productId)
             await StockModel.findByIdAndDelete(productStock._id)

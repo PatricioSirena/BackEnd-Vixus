@@ -108,7 +108,7 @@ const getOneUser = async (userId) =>{
 
 const userToUpdate = async (userId, body) =>{
     try {
-        if (body.email || body.password || body.profilePicture || body.passwordToken || body.active || body.active === false || body.role || body.cartId || body.favoriteId ){
+        if (body.email || body.password || body.passwordToken || body.active || body.active === false || body.role || body.cartId || body.favoriteId ){
             return 401
         }
         const updatedUser = await UserModel.findByIdAndUpdate({_id: userId}, body, {new: true})

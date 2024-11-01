@@ -116,8 +116,8 @@ const delFromFavorite = async (req, res) => {
 const mpPayment = async (req, res) =>{
     try {
         const result = await productServices.payWithMP(req.userId)
-        if (result === 404){
-            res.status(404).json({msg: 'Comunicate con un administrador'})
+        if (result.statusCode === 404){
+            res.status(404).json({msg: result.msg})
         } else{
             res.status(200).json({msg: 'Te enviamos un correo con el link de pago'})
         }
@@ -177,7 +177,10 @@ const getOneProduct = async (req, res) => {
 const updateProduct = async (req, res) => {
     try {
         const result = await productServices.productUpdate(req.params.productId, req.body)
-        if(result === 404){
+        if(result === 400){
+            res.status(400).json({msg: `El producto ${req.body.name} ya existe en la base de datos`})
+        }
+        else if(result === 404){
             res.status(404).json({msg: 'No encontramos el producto en la base de datos'})
         } else{
             res.status(200).json({msg: 'Producto actualizado'})
