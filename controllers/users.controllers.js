@@ -22,7 +22,7 @@ const userState = async (req, res) => {
         if (result === 404) {
             res.status(404).json({ msg: 'No encontramos el usuario en la base de datos' })
         } else {
-            res.status(200).json(result)
+            res.status(200).json({msg: result.msg})
         }
     } catch (error) {
         res.status(500).json(error)
