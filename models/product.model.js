@@ -39,6 +39,10 @@ const ProductSchema = new Schema({
     },
     galery: {
         type: Array
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
     }
 })
 
