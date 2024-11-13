@@ -1978,3 +1978,75 @@
   path: 'C:\\Users\\patob\\AppData\\Local\\Temp\\5ca5555eb9198193593e5c43e25bdd4f',
   size: 4080
 }
+[2024-11-12T16:43:44.290] [ERROR] default - ReferenceError: typeOf is not defined
+    at Object.getOneProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:280:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOneProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:166:24)
+[2024-11-12T16:44:42.890] [INFO] default - object
+[2024-11-12T21:21:36.185] [INFO] default - [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda33'),
+    name: 'Remera Lisa',
+    price: 15400,
+    description: 'Remera de algodon Lisa',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-12T19:41:23.296Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee1fdc349fffd981765a'),
+    name: 'Chomba Lisa',
+    price: 27100,
+    description: 'Chomba de algodon Lisa',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:04.004Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd981765f'),
+    name: 'Chomba Rayada',
+    price: 36000,
+    description: 'Chomba de algodon Rayada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:24.353Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817664'),
+    name: 'Pantalon Corte Chino',
+    price: 36000,
+    description: 'Pantalon de gabardina corte chino',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:49.014Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee82dc349fffd9817669'),
+    name: 'Remera Estampada',
+    price: 17000,
+    description: 'Remera de algodon estampada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:10:42.165Z,
+    __v: 0
+  }
+]

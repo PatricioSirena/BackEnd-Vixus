@@ -1,6 +1,7 @@
 const productServices = require('../services/products.services')
 const logger = require('../helpers/logger')
 
+
 const createProduct = async (req, res) => {
     try {
         const result = await productServices.newProduct(req.body)
@@ -161,6 +162,15 @@ const getProducts = async (req, res) => {
     }
 }
 
+const getUltimateProducts = async (req, res) =>{
+    try {
+        const result = await productServices.getLatestProducts()
+        res.status(200).json(result)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+
 const getOneProduct = async (req, res) => {
     try {
         const result = await productServices.getOneProduct(req.params.productId)
@@ -231,6 +241,7 @@ module.exports = {
     getCart,
     getFavorites,
     getProducts,
+    getUltimateProducts,
     getOneProduct,
     updateProduct,
     delProductImage,

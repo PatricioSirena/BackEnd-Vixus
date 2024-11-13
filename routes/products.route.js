@@ -12,6 +12,7 @@ const { createProduct,
     getCart,
     getFavorites,
     getProducts,
+    getUltimateProducts,
     getOneProduct,
     updateProduct,
     delProductImage,
@@ -69,6 +70,8 @@ router.post('/mpPayment', auth('user'), mpPayment)
 router.get('/getCart', auth('user'), getCart)
 
 router.get('/getFavorites', auth('user'), getFavorites)
+
+router.get('/getUltimateProducts', getUltimateProducts)
 
 router.get('/', getProducts)
 

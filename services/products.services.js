@@ -7,8 +7,19 @@ const OrderModel = require('../models/order.model.js')
 const cloudinary = require('../helpers/cloudinary.js')
 const logger = require('../helpers/logger')
 const idGenerator = require('../helpers/idGenerator.js')
-const {envioDeOrdenDeCompra} = require('../helpers/nodemailer.messages')
+const { envioDeOrdenDeCompra } = require('../helpers/nodemailer.messages')
 // const { MercadoPagoConfig, Preference } = require('mercadopago')
+
+const getLatestProducts = async () => {
+    try {
+        const products = await ProductModel.find()
+        const orderedProducts = products.sort((a, b) => a.createAt - b.createAt)
+        const latestProducts = orderedProducts.slice(0, 10)
+        return latestProducts
+    } catch (error) {
+        logger.info(error)
+    }
+}
 
 const newProduct = async (body) => {
     try {
@@ -199,10 +210,10 @@ const payWithMP = async (userId) => {
         const client = await UserModel.findOne({ _id: userId })
         const cart = await CartModel.findOne({ userId })
         if (cart === null) {
-            return {statusCode: 404, msg: 'Por favor comunicate con un administrador'}
+            return { statusCode: 404, msg: 'Por favor comunicate con un administrador' }
         }
-        if(cart.products.length === 0){
-            return {statusCode: 404, msg: 'No hay productos en el carrito'}
+        if (cart.products.length === 0) {
+            return { statusCode: 404, msg: 'No hay productos en el carrito' }
         }
         // const clientMP = new MercadoPagoConfig({ accessToken: process.env.MP_TOKEN })
         // const preference = new Preference(clientMP)
@@ -277,11 +288,12 @@ const getAllProducts = async () => {
 const getOneProduct = async (productId) => {
     try {
         const product = await ProductModel.findById({ _id: productId })
-        if (product === null) {
-            return 404
-        } else {
-            return product
-        }
+        logger.info(typeof (product.createdAt))
+        // if (product === null) {
+        //     return 404
+        // } else {
+        //     return product
+        // }
     } catch (error) {
         logger.error(error)
     }
@@ -290,7 +302,7 @@ const getOneProduct = async (productId) => {
 
 const productUpdate = async (productId, body) => {
     try {
-        const productExist = await ProductModel.findOne({name: body.name})
+        const productExist = await ProductModel.findOne({ name: body.name })
         if (productExist !== null) {
             return 400
         }
@@ -333,7 +345,7 @@ const delProduct = async (productId) => {
         if (product === null) {
             return 404
         } else {
-            product.galery.forEach(async (obj) =>{
+            product.galery.forEach(async (obj) => {
                 const urlToDelete = obj.imageUrl
                 const imgIdToDelete = urlToDelete.split('/').pop().split('.')[0];
                 await cloudinary.uploader.destroy(imgIdToDelete)
@@ -361,8 +373,9 @@ module.exports = {
     getUserCart,
     getUserFavorites,
     getAllProducts,
+    getLatestProducts,
     getOneProduct,
     productUpdate,
     deleteImageFromProduct,
-    delProduct
+    delProduct,
 }
