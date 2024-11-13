@@ -10,16 +10,6 @@ const idGenerator = require('../helpers/idGenerator.js')
 const { envioDeOrdenDeCompra } = require('../helpers/nodemailer.messages')
 // const { MercadoPagoConfig, Preference } = require('mercadopago')
 
-const getLatestProducts = async () => {
-    try {
-        const products = await ProductModel.find()
-        const orderedProducts = products.sort((a, b) => a.createAt - b.createAt)
-        const latestProducts = orderedProducts.slice(0, 10)
-        return latestProducts
-    } catch (error) {
-        logger.info(error)
-    }
-}
 
 const newProduct = async (body) => {
     try {
@@ -285,15 +275,25 @@ const getAllProducts = async () => {
     }
 }
 
+const getLatestProducts = async () => {
+    try {
+        const products = await ProductModel.find()
+        const orderedProducts = products.sort((a, b) => a.createAt - b.createAt)
+        const latestProducts = orderedProducts.slice(0, 10)
+        return latestProducts
+    } catch (error) {
+        logger.info(error)
+    }
+}
+
 const getOneProduct = async (productId) => {
     try {
         const product = await ProductModel.findById({ _id: productId })
-        logger.info(typeof (product.createdAt))
-        // if (product === null) {
-        //     return 404
-        // } else {
-        //     return product
-        // }
+        if (product === null) {
+            return 404
+        } else {
+            return product
+        }
     } catch (error) {
         logger.error(error)
     }
