@@ -127,6 +127,19 @@ const mpPayment = async (req, res) =>{
     }
 }
 
+const changeProductStock = async (req, res) =>{
+    try {
+        const result = await productServices.updateProductStock(req.params.productId, req.body)
+        if(result === 404){
+            res.status(404).json({msg: 'No encontramos el producto en la base de datos, intenta nuevamente'})
+        } else{
+            res.status(200).json({msg: 'Stock actualizado'})
+        }
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+
 const getCart = async (req, res) => {
     try {
         const result = await productServices.getUserCart(req.userId)
@@ -153,18 +166,27 @@ const getFavorites = async (req, res) => {
     }
 }
 
-const getProducts = async (req, res) => {
+const getUltimateProducts = async (req, res) =>{
     try {
-        const result = await productServices.getAllProducts()
+        const result = await productServices.getLatestProducts()
         res.status(200).json(result)
     } catch (error) {
         res.status(500).json(error)
     }
 }
 
-const getUltimateProducts = async (req, res) =>{
+const getStock = async (req, res) =>{
     try {
-        const result = await productServices.getLatestProducts()
+        const result = await productServices.getProductsStock()
+        res.status(200).json(result)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+
+const getProducts = async (req, res) => {
+    try {
+        const result = await productServices.getAllProducts()
         res.status(200).json(result)
     } catch (error) {
         res.status(500).json(error)
@@ -238,10 +260,12 @@ module.exports = {
     addToFavorite,
     delFromFavorite,
     mpPayment,
+    changeProductStock,
     getCart,
     getFavorites,
-    getProducts,
     getUltimateProducts,
+    getStock,
+    getProducts,
     getOneProduct,
     updateProduct,
     delProductImage,

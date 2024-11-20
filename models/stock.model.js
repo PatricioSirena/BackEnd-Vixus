@@ -12,5 +12,10 @@ const StockSchema = new Schema({
     }
 })
 
+StockSchema.methods.toJSON = function(){
+    const { __v, ...stock} = this.toObject()
+    return stock
+}
+
 const StockModel = model('stock', StockSchema)
 module.exports = StockModel
