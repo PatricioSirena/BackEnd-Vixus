@@ -2050,3 +2050,57 @@
     __v: 0
   }
 ]
+[2024-11-19T09:42:17.218] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.users index: email_1 dup key: { email: "patobsirena3@gmail.com" }
+    at InsertOneOperation.execute (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\collection.js:154:16) {
+  errorResponse: {
+    index: 0,
+    code: 11000,
+    errmsg: 'E11000 duplicate key error collection: test.users index: email_1 dup key: { email: "patobsirena3@gmail.com" }',
+    keyPattern: { email: 1 },
+    keyValue: { email: 'patobsirena3@gmail.com' }
+  },
+  index: 0,
+  code: 11000,
+  keyPattern: { email: 1 },
+  keyValue: { email: 'patobsirena3@gmail.com' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2024-11-19T09:42:20.735] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.users index: email_1 dup key: { email: "patobsirena3@gmail.com" }
+    at InsertOneOperation.execute (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\collection.js:154:16) {
+  errorResponse: {
+    index: 0,
+    code: 11000,
+    errmsg: 'E11000 duplicate key error collection: test.users index: email_1 dup key: { email: "patobsirena3@gmail.com" }',
+    keyPattern: { email: 1 },
+    keyValue: { email: 'patobsirena3@gmail.com' }
+  },
+  index: 0,
+  code: 11000,
+  keyPattern: { email: 1 },
+  keyValue: { email: 'patobsirena3@gmail.com' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2024-11-19T09:42:25.654] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.users index: email_1 dup key: { email: "patobsirena3@gmail.com" }
+    at InsertOneOperation.execute (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\collection.js:154:16) {
+  errorResponse: {
+    index: 0,
+    code: 11000,
+    errmsg: 'E11000 duplicate key error collection: test.users index: email_1 dup key: { email: "patobsirena3@gmail.com" }',
+    keyPattern: { email: 1 },
+    keyValue: { email: 'patobsirena3@gmail.com' }
+  },
+  index: 0,
+  code: 11000,
+  keyPattern: { email: 1 },
+  keyValue: { email: 'patobsirena3@gmail.com' },
+  [Symbol(errorLabels)]: Set(0) {}
+}

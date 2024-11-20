@@ -240,6 +240,21 @@ const payWithMP = async (userId) => {
     }
 }
 
+const updateProductStock = async (productId, body) =>{
+    try {
+        const product = await StockModel.findOne({productId})
+        if(product === null){
+            return 404
+        } else{
+            product.quantity = body.quantity
+            await product.save()
+            return 200
+        }
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
 const getUserCart = async (userId) => {
     try {
         const cart = await CartModel.findOne({ userId })
@@ -266,15 +281,6 @@ const getUserFavorites = async (userId) => {
     }
 }
 
-const getAllProducts = async () => {
-    try {
-        const products = await ProductModel.find()
-        return products
-    } catch (error) {
-        logger.error(error)
-    }
-}
-
 const getLatestProducts = async () => {
     try {
         const products = await ProductModel.find()
@@ -283,6 +289,24 @@ const getLatestProducts = async () => {
         return latestProducts
     } catch (error) {
         logger.info(error)
+    }
+}
+
+const getProductsStock = async () =>{
+    try {
+        const stock = await StockModel.find()
+        return stock
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
+const getAllProducts = async () => {
+    try {
+        const products = await ProductModel.find()
+        return products
+    } catch (error) {
+        logger.error(error)
     }
 }
 
@@ -298,7 +322,6 @@ const getOneProduct = async (productId) => {
         logger.error(error)
     }
 }
-
 
 const productUpdate = async (productId, body) => {
     try {
@@ -370,10 +393,12 @@ module.exports = {
     addProductToFavorite,
     deleteProductFromFavorite,
     payWithMP,
+    updateProductStock,
     getUserCart,
     getUserFavorites,
-    getAllProducts,
     getLatestProducts,
+    getProductsStock,
+    getAllProducts,
     getOneProduct,
     productUpdate,
     deleteImageFromProduct,
