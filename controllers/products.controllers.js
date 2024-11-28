@@ -197,7 +197,7 @@ const getOneProduct = async (req, res) => {
     try {
         const result = await productServices.getOneProduct(req.params.productId)
         if(result === 404){
-            res.status(404).json({msg: 'No encontramos el producto en la base de datos'})
+            res.status(404).json({msg: 'Hubo un problema, intenta nuevamente'})
         } else{
             res.status(200).json(result)
         }
@@ -210,7 +210,7 @@ const updateProduct = async (req, res) => {
     try {
         const result = await productServices.productUpdate(req.params.productId, req.body)
         if(result === 400){
-            res.status(400).json({msg: `El producto ${req.body.name} ya existe en la base de datos`})
+            res.status(400).json({msg: 'Hubo un problema al actualizar el producto, intenta nuevamente'})
         }
         else if(result === 404){
             res.status(404).json({msg: 'No encontramos el producto en la base de datos'})
