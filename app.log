@@ -2104,3 +2104,1338 @@
   keyValue: { email: 'patobsirena3@gmail.com' },
   [Symbol(errorLabels)]: Set(0) {}
 }
+[2024-11-25T10:44:09.953] [INFO] default - {
+  _id: new ObjectId('6733af6319d1a380a1ddda34'),
+  productId: '6733af6319d1a380a1ddda33',
+  quantity: 3,
+  __v: 0
+} null
+[2024-11-25T10:44:38.008] [ERROR] default - ObjectParameterError: Parameter "filter" to findOne() must be an object, got "6733af6319d1a380a1ddda33" (type string)
+    at Query.findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2666:16)
+    at Function.findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:2039:13)
+    at Object.productUpdate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:330:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async updateProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:211:24)
+[2024-11-25T10:45:12.212] [INFO] default - {
+  _id: new ObjectId('6733af6319d1a380a1ddda34'),
+  productId: '6733af6319d1a380a1ddda33',
+  quantity: 3,
+  __v: 0
+} null
+[2024-11-25T10:45:59.939] [ERROR] default - CastError: Cast to ObjectId failed for value "{ id_: '6733af6319d1a380a1ddda33' }" (type Object) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.productUpdate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:330:30) {
+  stringValue: `"{ id_: '6733af6319d1a380a1ddda33' }"`,
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: { id_: '6733af6319d1a380a1ddda33' },
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'Object'
+}
+[2024-11-25T10:46:37.197] [INFO] default - {
+  _id: new ObjectId('6733af6319d1a380a1ddda34'),
+  productId: '6733af6319d1a380a1ddda33',
+  quantity: 3,
+  __v: 0
+} {
+  _id: new ObjectId('6733af6319d1a380a1ddda33'),
+  name: 'Remera Lisa',
+  price: 15400,
+  description: 'Remera de algodon Lisa',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-12T19:41:23.296Z,
+  __v: 0
+}
+[2024-11-25T10:46:48.882] [INFO] default - null null
+[2024-11-25T10:51:59.690] [INFO] default - {
+  _id: new ObjectId('6733af6319d1a380a1ddda34'),
+  productId: '6733af6319d1a380a1ddda33',
+  quantity: 4,
+  __v: 0
+}
+[2024-11-25T10:53:53.598] [INFO] default - {
+  _id: new ObjectId('6733af6319d1a380a1ddda34'),
+  productId: '6733af6319d1a380a1ddda33',
+  quantity: 4,
+  __v: 0
+} {
+  _id: new ObjectId('6733af6319d1a380a1ddda33'),
+  name: 'Remera Lisa',
+  price: 15400,
+  description: 'Remera de algodon Lisa',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-12T19:41:23.296Z,
+  __v: 0
+}
+[2024-11-25T11:01:58.010] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'quantity')
+    at Object.getAllProducts (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:288:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getProducts (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:189:24)
+[2024-11-25T11:03:49.403] [INFO] default - {
+  _id: new ObjectId('6733af6319d1a380a1ddda33'),
+  name: 'Remera Lisa',
+  price: 25000,
+  description: 'Remera de algodon',
+  color: 'Blanca',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-12T19:41:23.296Z,
+  __v: 0
+} []
+[2024-11-25T11:03:49.420] [INFO] default - {
+  _id: new ObjectId('6733ee1fdc349fffd981765a'),
+  name: 'Chomba Lisa',
+  price: 27100,
+  description: 'Chomba de algodon Lisa',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-13T00:09:04.004Z,
+  __v: 0
+} []
+[2024-11-25T11:03:49.428] [INFO] default - {
+  _id: new ObjectId('6733ee34dc349fffd981765f'),
+  name: 'Chomba Rayada',
+  price: 36000,
+  description: 'Chomba de algodon Rayada',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-13T00:09:24.353Z,
+  __v: 0
+} []
+[2024-11-25T11:03:49.433] [INFO] default - {
+  _id: new ObjectId('6733ee4ddc349fffd9817664'),
+  name: 'Pantalon Corte Chino',
+  price: 36000,
+  description: 'Pantalon de gabardina corte chino',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-13T00:09:49.014Z,
+  __v: 0
+} []
+[2024-11-25T11:03:49.437] [INFO] default - {
+  _id: new ObjectId('6733ee82dc349fffd9817669'),
+  name: 'Remera Estampada',
+  price: 17000,
+  description: 'Remera de algodon estampada',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-13T00:10:42.165Z,
+  __v: 0
+} []
+[2024-11-25T11:05:35.630] [INFO] default - [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda34'),
+    productId: '6733af6319d1a380a1ddda33',
+    quantity: 8,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee20dc349fffd981765b'),
+    productId: '6733ee1fdc349fffd981765a',
+    quantity: 0,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd9817660'),
+    productId: '6733ee34dc349fffd981765f',
+    quantity: 0,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817665'),
+    productId: '6733ee4ddc349fffd9817664',
+    quantity: 0,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee82dc349fffd981766a'),
+    productId: '6733ee82dc349fffd9817669',
+    quantity: 0,
+    __v: 0
+  }
+]
+[2024-11-25T11:05:35.651] [INFO] default - {
+  _id: new ObjectId('6733af6319d1a380a1ddda33'),
+  name: 'Remera Lisa',
+  price: 25000,
+  description: 'Remera de algodon',
+  color: 'Blanca',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-12T19:41:23.296Z,
+  __v: 0
+} []
+[2024-11-25T11:05:35.659] [INFO] default - {
+  _id: new ObjectId('6733ee1fdc349fffd981765a'),
+  name: 'Chomba Lisa',
+  price: 27100,
+  description: 'Chomba de algodon Lisa',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-13T00:09:04.004Z,
+  __v: 0
+} []
+[2024-11-25T11:05:35.663] [INFO] default - {
+  _id: new ObjectId('6733ee34dc349fffd981765f'),
+  name: 'Chomba Rayada',
+  price: 36000,
+  description: 'Chomba de algodon Rayada',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-13T00:09:24.353Z,
+  __v: 0
+} []
+[2024-11-25T11:05:35.667] [INFO] default - {
+  _id: new ObjectId('6733ee4ddc349fffd9817664'),
+  name: 'Pantalon Corte Chino',
+  price: 36000,
+  description: 'Pantalon de gabardina corte chino',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-13T00:09:49.014Z,
+  __v: 0
+} []
+[2024-11-25T11:05:35.678] [INFO] default - {
+  _id: new ObjectId('6733ee82dc349fffd9817669'),
+  name: 'Remera Estampada',
+  price: 17000,
+  description: 'Remera de algodon estampada',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-13T00:10:42.165Z,
+  __v: 0
+} []
+[2024-11-25T11:07:18.923] [INFO] default - {
+  _id: new ObjectId('6733af6319d1a380a1ddda33'),
+  name: 'Remera Lisa',
+  price: 25000,
+  description: 'Remera de algodon',
+  color: 'Blanca',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-12T19:41:23.296Z,
+  __v: 0
+} [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda34'),
+    productId: '6733af6319d1a380a1ddda33',
+    quantity: 8,
+    __v: 0
+  }
+]
+[2024-11-25T11:07:18.934] [INFO] default - {
+  _id: new ObjectId('6733ee1fdc349fffd981765a'),
+  name: 'Chomba Lisa',
+  price: 27100,
+  description: 'Chomba de algodon Lisa',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-13T00:09:04.004Z,
+  __v: 0
+} [
+  {
+    _id: new ObjectId('6733ee20dc349fffd981765b'),
+    productId: '6733ee1fdc349fffd981765a',
+    quantity: 0,
+    __v: 0
+  }
+]
+[2024-11-25T11:07:18.941] [INFO] default - {
+  _id: new ObjectId('6733ee34dc349fffd981765f'),
+  name: 'Chomba Rayada',
+  price: 36000,
+  description: 'Chomba de algodon Rayada',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-13T00:09:24.353Z,
+  __v: 0
+} [
+  {
+    _id: new ObjectId('6733ee34dc349fffd9817660'),
+    productId: '6733ee34dc349fffd981765f',
+    quantity: 0,
+    __v: 0
+  }
+]
+[2024-11-25T11:07:18.945] [INFO] default - {
+  _id: new ObjectId('6733ee4ddc349fffd9817664'),
+  name: 'Pantalon Corte Chino',
+  price: 36000,
+  description: 'Pantalon de gabardina corte chino',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-13T00:09:49.014Z,
+  __v: 0
+} [
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817665'),
+    productId: '6733ee4ddc349fffd9817664',
+    quantity: 0,
+    __v: 0
+  }
+]
+[2024-11-25T11:07:18.948] [INFO] default - {
+  _id: new ObjectId('6733ee82dc349fffd9817669'),
+  name: 'Remera Estampada',
+  price: 17000,
+  description: 'Remera de algodon estampada',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-13T00:10:42.165Z,
+  __v: 0
+} [
+  {
+    _id: new ObjectId('6733ee82dc349fffd981766a'),
+    productId: '6733ee82dc349fffd9817669',
+    quantity: 0,
+    __v: 0
+  }
+]
+[2024-11-25T11:09:11.298] [INFO] default - [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda33'),
+    name: 'Remera Lisa',
+    price: 25000,
+    description: 'Remera de algodon',
+    color: 'Blanca',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-12T19:41:23.296Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee1fdc349fffd981765a'),
+    name: 'Chomba Lisa',
+    price: 27100,
+    description: 'Chomba de algodon Lisa',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:04.004Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd981765f'),
+    name: 'Chomba Rayada',
+    price: 36000,
+    description: 'Chomba de algodon Rayada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:24.353Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817664'),
+    name: 'Pantalon Corte Chino',
+    price: 36000,
+    description: 'Pantalon de gabardina corte chino',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:49.014Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee82dc349fffd9817669'),
+    name: 'Remera Estampada',
+    price: 17000,
+    description: 'Remera de algodon estampada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:10:42.165Z,
+    __v: 0
+  }
+]
+[2024-11-25T11:09:51.835] [INFO] default - [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda33'),
+    name: 'Remera Lisa',
+    price: 25000,
+    description: 'Remera de algodon',
+    color: 'Blanca',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-12T19:41:23.296Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee1fdc349fffd981765a'),
+    name: 'Chomba Lisa',
+    price: 27100,
+    description: 'Chomba de algodon Lisa',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:04.004Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd981765f'),
+    name: 'Chomba Rayada',
+    price: 36000,
+    description: 'Chomba de algodon Rayada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:24.353Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817664'),
+    name: 'Pantalon Corte Chino',
+    price: 36000,
+    description: 'Pantalon de gabardina corte chino',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:49.014Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee82dc349fffd9817669'),
+    name: 'Remera Estampada',
+    price: 17000,
+    description: 'Remera de algodon estampada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:10:42.165Z,
+    __v: 0
+  }
+]
+[2024-11-25T11:15:28.302] [INFO] default - [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda33'),
+    name: 'Remera Lisa',
+    price: 25000,
+    description: 'Remera de algodon',
+    color: 'Blanca',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-12T19:41:23.296Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee1fdc349fffd981765a'),
+    name: 'Chomba Lisa',
+    price: 27100,
+    description: 'Chomba de algodon Lisa',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:04.004Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd981765f'),
+    name: 'Chomba Rayada',
+    price: 36000,
+    description: 'Chomba de algodon Rayada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:24.353Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817664'),
+    name: 'Pantalon Corte Chino',
+    price: 36000,
+    description: 'Pantalon de gabardina corte chino',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:49.014Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee82dc349fffd9817669'),
+    name: 'Remera Estampada',
+    price: 17000,
+    description: 'Remera de algodon estampada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:10:42.165Z,
+    __v: 0
+  }
+]
+[2024-11-25T11:18:51.190] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'quantity')
+    at Object.getAllProducts (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:288:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getProducts (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:189:24)
+[2024-11-25T11:21:25.182] [INFO] default - {
+  _id: new ObjectId('6733af6319d1a380a1ddda34'),
+  productId: '6733af6319d1a380a1ddda33',
+  quantity: 8,
+  __v: 0
+}
+[2024-11-25T11:21:25.194] [INFO] default - {
+  _id: new ObjectId('6733ee20dc349fffd981765b'),
+  productId: '6733ee1fdc349fffd981765a',
+  quantity: 0,
+  __v: 0
+}
+[2024-11-25T11:21:25.197] [INFO] default - {
+  _id: new ObjectId('6733ee34dc349fffd9817660'),
+  productId: '6733ee34dc349fffd981765f',
+  quantity: 0,
+  __v: 0
+}
+[2024-11-25T11:21:25.199] [INFO] default - {
+  _id: new ObjectId('6733ee4ddc349fffd9817665'),
+  productId: '6733ee4ddc349fffd9817664',
+  quantity: 0,
+  __v: 0
+}
+[2024-11-25T11:21:25.203] [INFO] default - {
+  _id: new ObjectId('6733ee82dc349fffd981766a'),
+  productId: '6733ee82dc349fffd9817669',
+  quantity: 0,
+  __v: 0
+}
+[2024-11-25T11:26:08.024] [INFO] default - [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda33'),
+    name: 'Remera Lisa',
+    price: 25000,
+    description: 'Remera de algodon',
+    color: 'Blanca',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-12T19:41:23.296Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee1fdc349fffd981765a'),
+    name: 'Chomba Lisa',
+    price: 27100,
+    description: 'Chomba de algodon Lisa',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:04.004Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd981765f'),
+    name: 'Chomba Rayada',
+    price: 36000,
+    description: 'Chomba de algodon Rayada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:24.353Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817664'),
+    name: 'Pantalon Corte Chino',
+    price: 36000,
+    description: 'Pantalon de gabardina corte chino',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:49.014Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee82dc349fffd9817669'),
+    name: 'Remera Estampada',
+    price: 17000,
+    description: 'Remera de algodon estampada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:10:42.165Z,
+    __v: 0
+  }
+]
+[2024-11-25T11:33:28.664] [INFO] default - [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda33'),
+    name: 'Remera Lisa',
+    price: 25000,
+    description: 'Remera de algodon',
+    color: 'Blanca',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-12T19:41:23.296Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee1fdc349fffd981765a'),
+    name: 'Chomba Lisa',
+    price: 27100,
+    description: 'Chomba de algodon Lisa',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:04.004Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd981765f'),
+    name: 'Chomba Rayada',
+    price: 36000,
+    description: 'Chomba de algodon Rayada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:24.353Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817664'),
+    name: 'Pantalon Corte Chino',
+    price: 36000,
+    description: 'Pantalon de gabardina corte chino',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:49.014Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee82dc349fffd9817669'),
+    name: 'Remera Estampada',
+    price: 17000,
+    description: 'Remera de algodon estampada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:10:42.165Z,
+    __v: 0
+  }
+]
+[2024-11-25T11:34:47.866] [INFO] default - [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda33'),
+    name: 'Remera Lisa',
+    price: 25000,
+    description: 'Remera de algodon',
+    color: 'Blanca',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-12T19:41:23.296Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee1fdc349fffd981765a'),
+    name: 'Chomba Lisa',
+    price: 27100,
+    description: 'Chomba de algodon Lisa',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:04.004Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd981765f'),
+    name: 'Chomba Rayada',
+    price: 36000,
+    description: 'Chomba de algodon Rayada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:24.353Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817664'),
+    name: 'Pantalon Corte Chino',
+    price: 36000,
+    description: 'Pantalon de gabardina corte chino',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:49.014Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee82dc349fffd9817669'),
+    name: 'Remera Estampada',
+    price: 17000,
+    description: 'Remera de algodon estampada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:10:42.165Z,
+    __v: 0
+  }
+]
+[2024-11-25T11:35:34.141] [INFO] default - [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda33'),
+    name: 'Remera Lisa',
+    price: 25000,
+    description: 'Remera de algodon',
+    color: 'Blanca',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-12T19:41:23.296Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee1fdc349fffd981765a'),
+    name: 'Chomba Lisa',
+    price: 27100,
+    description: 'Chomba de algodon Lisa',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:04.004Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd981765f'),
+    name: 'Chomba Rayada',
+    price: 36000,
+    description: 'Chomba de algodon Rayada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:24.353Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817664'),
+    name: 'Pantalon Corte Chino',
+    price: 36000,
+    description: 'Pantalon de gabardina corte chino',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:49.014Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee82dc349fffd9817669'),
+    name: 'Remera Estampada',
+    price: 17000,
+    description: 'Remera de algodon estampada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:10:42.165Z,
+    __v: 0
+  }
+]
+[2024-11-25T11:39:46.191] [INFO] default - [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda33'),
+    name: 'Remera Lisa',
+    price: 25000,
+    description: 'Remera de algodon',
+    color: 'Blanca',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-12T19:41:23.296Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee1fdc349fffd981765a'),
+    name: 'Chomba Lisa',
+    price: 27100,
+    description: 'Chomba de algodon Lisa',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:04.004Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd981765f'),
+    name: 'Chomba Rayada',
+    price: 36000,
+    description: 'Chomba de algodon Rayada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:24.353Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817664'),
+    name: 'Pantalon Corte Chino',
+    price: 36000,
+    description: 'Pantalon de gabardina corte chino',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:49.014Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee82dc349fffd9817669'),
+    name: 'Remera Estampada',
+    price: 17000,
+    description: 'Remera de algodon estampada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:10:42.165Z,
+    __v: 0
+  }
+] [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda34'),
+    productId: '6733af6319d1a380a1ddda33',
+    quantity: 8,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee20dc349fffd981765b'),
+    productId: '6733ee1fdc349fffd981765a',
+    quantity: 0,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd9817660'),
+    productId: '6733ee34dc349fffd981765f',
+    quantity: 0,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817665'),
+    productId: '6733ee4ddc349fffd9817664',
+    quantity: 0,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee82dc349fffd981766a'),
+    productId: '6733ee82dc349fffd9817669',
+    quantity: 0,
+    __v: 0
+  }
+]
+[2024-11-25T11:43:51.111] [INFO] default - [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda33'),
+    name: 'Remera Lisa',
+    price: 25000,
+    description: 'Remera de algodon',
+    color: 'Blanca',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-12T19:41:23.296Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee1fdc349fffd981765a'),
+    name: 'Chomba Lisa',
+    price: 27100,
+    description: 'Chomba de algodon Lisa',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:04.004Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd981765f'),
+    name: 'Chomba Rayada',
+    price: 36000,
+    description: 'Chomba de algodon Rayada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:24.353Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817664'),
+    name: 'Pantalon Corte Chino',
+    price: 36000,
+    description: 'Pantalon de gabardina corte chino',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:49.014Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee82dc349fffd9817669'),
+    name: 'Remera Estampada',
+    price: 17000,
+    description: 'Remera de algodon estampada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:10:42.165Z,
+    __v: 0
+  }
+]
+[2024-11-25T11:46:23.234] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'quantity')
+    at Object.getAllProducts (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:288:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getProducts (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:189:24)
+[2024-11-25T11:47:23.115] [INFO] default - {
+  _id: new ObjectId('6733af6319d1a380a1ddda34'),
+  productId: '6733af6319d1a380a1ddda33',
+  quantity: 8,
+  __v: 0
+}
+[2024-11-25T11:47:23.125] [INFO] default - {
+  _id: new ObjectId('6733ee20dc349fffd981765b'),
+  productId: '6733ee1fdc349fffd981765a',
+  quantity: 0,
+  __v: 0
+}
+[2024-11-25T11:47:23.128] [INFO] default - {
+  _id: new ObjectId('6733ee34dc349fffd9817660'),
+  productId: '6733ee34dc349fffd981765f',
+  quantity: 0,
+  __v: 0
+}
+[2024-11-25T11:47:23.132] [INFO] default - {
+  _id: new ObjectId('6733ee4ddc349fffd9817665'),
+  productId: '6733ee4ddc349fffd9817664',
+  quantity: 0,
+  __v: 0
+}
+[2024-11-25T11:47:23.134] [INFO] default - {
+  _id: new ObjectId('6733ee82dc349fffd981766a'),
+  productId: '6733ee82dc349fffd9817669',
+  quantity: 0,
+  __v: 0
+}
+[2024-11-25T11:47:23.136] [INFO] default - []
+[2024-11-25T11:51:59.238] [INFO] default - [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda33'),
+    name: 'Remera Lisa',
+    price: 25000,
+    description: 'Remera de algodon',
+    color: 'Blanca',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-12T19:41:23.296Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee1fdc349fffd981765a'),
+    name: 'Chomba Lisa',
+    price: 27100,
+    description: 'Chomba de algodon Lisa',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:04.004Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd981765f'),
+    name: 'Chomba Rayada',
+    price: 36000,
+    description: 'Chomba de algodon Rayada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:24.353Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817664'),
+    name: 'Pantalon Corte Chino',
+    price: 36000,
+    description: 'Pantalon de gabardina corte chino',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:49.014Z,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee82dc349fffd9817669'),
+    name: 'Remera Estampada',
+    price: 17000,
+    description: 'Remera de algodon estampada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:10:42.165Z,
+    __v: 0
+  }
+] [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda34'),
+    productId: '6733af6319d1a380a1ddda33',
+    quantity: 8,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee20dc349fffd981765b'),
+    productId: '6733ee1fdc349fffd981765a',
+    quantity: 0,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd9817660'),
+    productId: '6733ee34dc349fffd981765f',
+    quantity: 0,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817665'),
+    productId: '6733ee4ddc349fffd9817664',
+    quantity: 0,
+    __v: 0
+  },
+  {
+    _id: new ObjectId('6733ee82dc349fffd981766a'),
+    productId: '6733ee82dc349fffd9817669',
+    quantity: 0,
+    __v: 0
+  }
+]
+[2024-11-25T12:10:58.491] [INFO] default - [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda33'),
+    name: 'Remera Lisa',
+    price: 25000,
+    description: 'Remera de algodon',
+    color: 'Blanca',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-12T19:41:23.296Z,
+    __v: 0,
+    quantity: 8
+  },
+  {
+    _id: new ObjectId('6733ee1fdc349fffd981765a'),
+    name: 'Chomba Lisa',
+    price: 27100,
+    description: 'Chomba de algodon Lisa',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:04.004Z,
+    __v: 0,
+    quantity: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd981765f'),
+    name: 'Chomba Rayada',
+    price: 36000,
+    description: 'Chomba de algodon Rayada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:24.353Z,
+    __v: 0,
+    quantity: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817664'),
+    name: 'Pantalon Corte Chino',
+    price: 36000,
+    description: 'Pantalon de gabardina corte chino',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:49.014Z,
+    __v: 0,
+    quantity: 0
+  },
+  {
+    _id: new ObjectId('6733ee82dc349fffd9817669'),
+    name: 'Remera Estampada',
+    price: 17000,
+    description: 'Remera de algodon estampada',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:10:42.165Z,
+    __v: 0,
+    quantity: 0
+  }
+]
+[2024-11-26T09:45:25.781] [INFO] default - {
+  _id: new ObjectId('6733ee20dc349fffd981765b'),
+  productId: '6733ee1fdc349fffd981765a',
+  quantity: 0,
+  __v: 0
+}
+[2024-11-26T09:46:07.189] [INFO] default - 0
+[2024-11-26T09:48:03.679] [INFO] default - 0 {
+  _id: new ObjectId('6733ee1fdc349fffd981765a'),
+  name: 'Chomba Lisa',
+  price: 27100,
+  description: 'Chomba de algodon Lisa',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-13T00:09:04.004Z,
+  __v: 0
+}
+[2024-11-26T09:56:29.145] [INFO] default - 0 {
+  _id: new ObjectId('6733ee1fdc349fffd981765a'),
+  name: 'Chomba Lisa',
+  price: 27100,
+  description: 'Chomba de algodon Lisa',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-13T00:09:04.004Z,
+  __v: 0
+}
+[2024-11-26T09:58:14.354] [INFO] default - {
+  '$__': InternalCache {
+    activePaths: ctor { paths: [Object], states: [Object] },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId('6733af6319d1a380a1ddda33'),
+    name: 'Remera Lisa',
+    price: 25000,
+    description: 'Remera de algodon',
+    color: 'Blanca',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-12T19:41:23.296Z,
+    __v: 0
+  },
+  quantity: 8
+}
+[2024-11-26T10:00:53.446] [INFO] default - {
+  _id: new ObjectId('6733af6319d1a380a1ddda33'),
+  name: 'Remera Lisa',
+  price: 25000,
+  description: 'Remera de algodon',
+  color: 'Blanca',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-12T19:41:23.296Z,
+  quantity: 8
+}
+[2024-11-26T10:09:08.879] [INFO] default - {
+  _id: new ObjectId('6733af6319d1a380a1ddda33'),
+  name: 'Remera Lisa',
+  price: 25000,
+  description: 'Remera de algodon',
+  color: 'Blanca',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-12T19:41:23.296Z,
+  quantity: 8
+}
+[2024-11-28T12:25:06.861] [INFO] default - {
+  _id: new ObjectId('6733af6319d1a380a1ddda33'),
+  name: 'Remera Lisa',
+  price: 25000,
+  description: 'Remera de algodon',
+  color: 'Blanca',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-12T19:41:23.296Z,
+  quantity: 8
+}
+[2024-11-28T12:25:20.471] [INFO] default - {
+  _id: new ObjectId('6733ee1fdc349fffd981765a'),
+  name: 'Chomba Lisa',
+  price: 27100,
+  description: 'Chomba de algodon Lisa',
+  color: '',
+  size: '',
+  active: true,
+  mainPicture: null,
+  galery: [],
+  createdAt: 2024-11-13T00:09:04.004Z,
+  quantity: 0
+}

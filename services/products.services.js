@@ -240,20 +240,6 @@ const payWithMP = async (userId) => {
     }
 }
 
-const updateProductStock = async (productId, body) =>{
-    try {
-        const product = await StockModel.findOne({productId})
-        if(product === null){
-            return 404
-        } else{
-            product.quantity = body.quantity
-            await product.save()
-            return 200
-        }
-    } catch (error) {
-        logger.error(error)
-    }
-}
 
 const getUserCart = async (userId) => {
     try {
@@ -292,19 +278,18 @@ const getLatestProducts = async () => {
     }
 }
 
-const getProductsStock = async () =>{
-    try {
-        const stock = await StockModel.find()
-        return stock
-    } catch (error) {
-        logger.error(error)
-    }
-}
-
 const getAllProducts = async () => {
     try {
         const products = await ProductModel.find()
-        return products
+        const stock = await StockModel.find()
+        const productsWithStock = products.map(product => {
+            const productCopy = product.toObject();
+            const stockOfProduct = stock.find(obj => obj.productId.toString() === productCopy._id.toString());
+            productCopy.quantity = stockOfProduct ? stockOfProduct.quantity : 0;
+            const {__v, ...productToReturn} = productCopy
+            return productToReturn;
+        });
+        return productsWithStock
     } catch (error) {
         logger.error(error)
     }
@@ -313,10 +298,15 @@ const getAllProducts = async () => {
 const getOneProduct = async (productId) => {
     try {
         const product = await ProductModel.findById({ _id: productId })
-        if (product === null) {
+        const stock = await StockModel.findOne({productId})
+        const productCopy = product.toObject();
+        const {__v, ...productToReturn} = productCopy
+        productToReturn.quantity = stock.quantity
+        logger.info(productToReturn)
+        if (product === null || stock === null) {
             return 404
         } else {
-            return product
+            return productToReturn
         }
     } catch (error) {
         logger.error(error)
@@ -325,14 +315,15 @@ const getOneProduct = async (productId) => {
 
 const productUpdate = async (productId, body) => {
     try {
-        const productExist = await ProductModel.findOne({ name: body.name })
-        if (productExist !== null) {
-            return 400
-        }
-        const productToUpdate = await ProductModel.findByIdAndUpdate({ _id: productId }, body)
-        if (productToUpdate === null) {
+        const { quantity, ...newBody } = body
+        const productStock = await StockModel.findOne({ productId })
+        const productExist = await ProductModel.findOne({ _id: productId })
+        if (productExist === null || productStock === null) {
             return 404
         } else {
+            await ProductModel.findByIdAndUpdate({ _id: productId }, newBody)
+            productStock.quantity = quantity
+            await productStock.save()
             return 200
         }
     } catch (error) {
@@ -393,11 +384,9 @@ module.exports = {
     addProductToFavorite,
     deleteProductFromFavorite,
     payWithMP,
-    updateProductStock,
     getUserCart,
     getUserFavorites,
     getLatestProducts,
-    getProductsStock,
     getAllProducts,
     getOneProduct,
     productUpdate,

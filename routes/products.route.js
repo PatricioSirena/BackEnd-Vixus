@@ -9,11 +9,9 @@ const { createProduct,
     addToFavorite,
     delFromFavorite,
     mpPayment,
-    changeProductStock,
     getCart,
     getFavorites,
     getUltimateProducts,
-    getStock,
     getProducts,
     getOneProduct,
     updateProduct,
@@ -69,18 +67,11 @@ router.post('/delFromFavorite/:productId', [
 
 router.post('/mpPayment', auth('user'), mpPayment)
 
-router.post('/changeProductStock/:productId', [
-    check('productId', 'No es un ID valido de un producto').isMongoId(),
-    validateFields
-], auth('admin'), changeProductStock)
-
 router.get('/getCart', auth('user'), getCart)
 
 router.get('/getFavorites', auth('user'), getFavorites)
 
 router.get('/getUltimateProducts', getUltimateProducts)
-
-router.get('/getStock', getStock)
 
 router.get('/', getProducts)
 
