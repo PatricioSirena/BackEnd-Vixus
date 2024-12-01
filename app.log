@@ -3439,3 +3439,138 @@
   createdAt: 2024-11-13T00:09:04.004Z,
   quantity: 0
 }
+[2024-11-30T21:48:51.468] [ERROR] default - Error: product validation failed: size: `M` is not a valid enum value for path `size`.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    size: ValidatorError: `M` is not a valid enum value for path `size`.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'size',
+      value: 'M',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'product validation failed'
+}
+[2024-11-30T21:49:13.415] [ERROR] default - Error: product validation failed: size: `M` is not a valid enum value for path `size`.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    size: ValidatorError: `M` is not a valid enum value for path `size`.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'size',
+      value: 'M',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'product validation failed'
+}
+[2024-11-30T21:49:44.095] [ERROR] default - Error: product validation failed: size: `M` is not a valid enum value for path `size`.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    size: ValidatorError: `M` is not a valid enum value for path `size`.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'size',
+      value: 'M',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'product validation failed'
+}
+[2024-11-30T21:59:39.110] [ERROR] default - Error: product validation failed: size: `M` is not a valid enum value for path `size`.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    size: ValidatorError: `M` is not a valid enum value for path `size`.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'size',
+      value: 'M',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'product validation failed'
+}
+[2024-11-30T22:01:59.852] [ERROR] default - Error: product validation failed: size: `M` is not a valid enum value for path `size`.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    size: ValidatorError: `M` is not a valid enum value for path `size`.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'size',
+      value: 'M',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'product validation failed'
+}
