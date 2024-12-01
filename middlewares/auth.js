@@ -1,5 +1,4 @@
 const jwt = require('jsonwebtoken')
-const logger = require('../helpers/logger')
 
 module.exports = (role) => (req, res, next) => {
     const token = req.header('auth')

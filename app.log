@@ -3574,3 +3574,208 @@
   },
   _message: 'product validation failed'
 }
+[2024-12-01T13:11:46.730] [INFO] default - [
+  {
+    _id: new ObjectId('670fc462a4de336c6a69ad84'),
+    email: 'patoadmin@gmail.com',
+    password: '$2b$10$3EmSNOjxKRo9kRlKeJemyuYQKscNVQY0Y0gB5aWysIkLHTj/8kTaG',
+    phone: 1234567,
+    profilePicture: '',
+    passwordToken: null,
+    active: true,
+    role: 'admin',
+    cartId: '670fc462a4de336c6a69ad85',
+    favoriteId: '670fc462a4de336c6a69ad86',
+    __v: 0,
+    fullName: 'Patricio'
+  },
+  {
+    _id: new ObjectId('671128c00722e76114071e05'),
+    email: 'patobsirena@gmail.com',
+    password: '$2b$10$3nZHpLQZEB1IIBRH8K1x..aU.algbSs/eq935yf9N/SFTav2txP/S',
+    phone: 1234567,
+    profilePicture: '',
+    passwordToken: null,
+    active: true,
+    role: 'user',
+    cartId: '671128c00722e76114071e06',
+    favoriteId: '671128c00722e76114071e07',
+    __v: 0,
+    fullName: 'Patricio'
+  },
+  {
+    _id: new ObjectId('673c88c687330817f63f5388'),
+    fullName: 'Patricio Benjamin Sirena',
+    email: 'patobsirena3@gmail.com',
+    password: '$2b$10$B4OBY.M0u9shhxSLY2eGl.XVAlYyX5ni93gxhikHYEv/aM99OokwK',
+    phone: 3814641643,
+    passwordToken: null,
+    active: true,
+    role: 'user',
+    cartId: '673c88c687330817f63f5389',
+    favoriteId: '673c88c687330817f63f538a',
+    __v: 0
+  }
+]
+[2024-12-01T13:12:27.749] [INFO] default - [
+  {
+    _id: new ObjectId('670fc462a4de336c6a69ad84'),
+    email: 'patoadmin@gmail.com',
+    password: '$2b$10$3EmSNOjxKRo9kRlKeJemyuYQKscNVQY0Y0gB5aWysIkLHTj/8kTaG',
+    phone: 1234567,
+    profilePicture: '',
+    passwordToken: null,
+    active: true,
+    role: 'admin',
+    cartId: '670fc462a4de336c6a69ad85',
+    favoriteId: '670fc462a4de336c6a69ad86',
+    __v: 0,
+    fullName: 'Patricio'
+  },
+  undefined,
+  {
+    _id: new ObjectId('673c88c687330817f63f5388'),
+    fullName: 'Patricio Benjamin Sirena',
+    email: 'patobsirena3@gmail.com',
+    password: '$2b$10$B4OBY.M0u9shhxSLY2eGl.XVAlYyX5ni93gxhikHYEv/aM99OokwK',
+    phone: 3814641643,
+    passwordToken: null,
+    active: true,
+    role: 'user',
+    cartId: '673c88c687330817f63f5389',
+    favoriteId: '673c88c687330817f63f538a',
+    __v: 0
+  }
+]
+[2024-12-01T13:13:47.105] [INFO] default - [
+  {
+    _id: new ObjectId('670fc462a4de336c6a69ad84'),
+    email: 'patoadmin@gmail.com',
+    password: '$2b$10$3EmSNOjxKRo9kRlKeJemyuYQKscNVQY0Y0gB5aWysIkLHTj/8kTaG',
+    phone: 1234567,
+    profilePicture: '',
+    passwordToken: null,
+    active: true,
+    role: 'admin',
+    cartId: '670fc462a4de336c6a69ad85',
+    favoriteId: '670fc462a4de336c6a69ad86',
+    __v: 0,
+    fullName: 'Patricio'
+  },
+  undefined,
+  {
+    _id: new ObjectId('673c88c687330817f63f5388'),
+    fullName: 'Patricio Benjamin Sirena',
+    email: 'patobsirena3@gmail.com',
+    password: '$2b$10$B4OBY.M0u9shhxSLY2eGl.XVAlYyX5ni93gxhikHYEv/aM99OokwK',
+    phone: 3814641643,
+    passwordToken: null,
+    active: true,
+    role: 'user',
+    cartId: '673c88c687330817f63f5389',
+    favoriteId: '673c88c687330817f63f538a',
+    __v: 0
+  }
+]
+[2024-12-01T13:16:33.193] [INFO] default - [
+  {
+    _id: new ObjectId('670fc462a4de336c6a69ad84'),
+    email: 'patoadmin@gmail.com',
+    password: '$2b$10$3EmSNOjxKRo9kRlKeJemyuYQKscNVQY0Y0gB5aWysIkLHTj/8kTaG',
+    phone: 1234567,
+    profilePicture: '',
+    passwordToken: null,
+    active: true,
+    role: 'admin',
+    cartId: '670fc462a4de336c6a69ad85',
+    favoriteId: '670fc462a4de336c6a69ad86',
+    __v: 0,
+    fullName: 'Patricio'
+  },
+  {
+    _id: new ObjectId('671128c00722e76114071e05'),
+    email: 'patobsirena@gmail.com',
+    password: '$2b$10$3nZHpLQZEB1IIBRH8K1x..aU.algbSs/eq935yf9N/SFTav2txP/S',
+    phone: 1234567,
+    profilePicture: '',
+    passwordToken: null,
+    active: true,
+    role: 'mainAdmin',
+    cartId: '671128c00722e76114071e06',
+    favoriteId: '671128c00722e76114071e07',
+    __v: 0,
+    fullName: 'Patricio'
+  },
+  {
+    _id: new ObjectId('673c88c687330817f63f5388'),
+    fullName: 'Patricio Benjamin Sirena',
+    email: 'patobsirena3@gmail.com',
+    password: '$2b$10$B4OBY.M0u9shhxSLY2eGl.XVAlYyX5ni93gxhikHYEv/aM99OokwK',
+    phone: 3814641643,
+    passwordToken: null,
+    active: true,
+    role: 'user',
+    cartId: '673c88c687330817f63f5389',
+    favoriteId: '673c88c687330817f63f538a',
+    __v: 0
+  }
+]
+[2024-12-01T13:16:33.216] [INFO] default - [
+  {
+    _id: new ObjectId('670fc462a4de336c6a69ad84'),
+    email: 'patoadmin@gmail.com',
+    password: '$2b$10$3EmSNOjxKRo9kRlKeJemyuYQKscNVQY0Y0gB5aWysIkLHTj/8kTaG',
+    phone: 1234567,
+    profilePicture: '',
+    passwordToken: null,
+    active: true,
+    role: 'admin',
+    cartId: '670fc462a4de336c6a69ad85',
+    favoriteId: '670fc462a4de336c6a69ad86',
+    __v: 0,
+    fullName: 'Patricio'
+  },
+  undefined,
+  {
+    _id: new ObjectId('673c88c687330817f63f5388'),
+    fullName: 'Patricio Benjamin Sirena',
+    email: 'patobsirena3@gmail.com',
+    password: '$2b$10$B4OBY.M0u9shhxSLY2eGl.XVAlYyX5ni93gxhikHYEv/aM99OokwK',
+    phone: 3814641643,
+    passwordToken: null,
+    active: true,
+    role: 'user',
+    cartId: '673c88c687330817f63f5389',
+    favoriteId: '673c88c687330817f63f538a',
+    __v: 0
+  }
+]
+[2024-12-01T13:20:41.313] [INFO] default - [
+  {
+    _id: new ObjectId('670fc462a4de336c6a69ad84'),
+    email: 'patoadmin@gmail.com',
+    password: '$2b$10$3EmSNOjxKRo9kRlKeJemyuYQKscNVQY0Y0gB5aWysIkLHTj/8kTaG',
+    phone: 1234567,
+    profilePicture: '',
+    passwordToken: null,
+    active: true,
+    role: 'admin',
+    cartId: '670fc462a4de336c6a69ad85',
+    favoriteId: '670fc462a4de336c6a69ad86',
+    __v: 0,
+    fullName: 'Patricio'
+  },
+  {
+    _id: new ObjectId('673c88c687330817f63f5388'),
+    fullName: 'Patricio Benjamin Sirena',
+    email: 'patobsirena3@gmail.com',
+    password: '$2b$10$B4OBY.M0u9shhxSLY2eGl.XVAlYyX5ni93gxhikHYEv/aM99OokwK',
+    phone: 3814641643,
+    passwordToken: null,
+    active: true,
+    role: 'user',
+    cartId: '673c88c687330817f63f5389',
+    favoriteId: '673c88c687330817f63f538a',
+    __v: 0
+  }
+]

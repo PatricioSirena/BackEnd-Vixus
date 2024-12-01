@@ -1,5 +1,4 @@
 const userServices = require('../services/users.services')
-const logger = require('../helpers/logger')
 
 const createUser = async (req, res) => {
     try {
@@ -40,6 +39,19 @@ const login = async (req, res) => {
             res.status(406).json({ msg: 'Contraseña incorrecta' })
         } else {
             res.status(200).json({ msg: result.msg, token: result.token, role: result.role, id: result.id })
+        }
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+
+const changeUserRole = async (req, res) =>{
+    try {
+        const result = await userServices.changeUserCondition(req.params.userId)
+        if (result === 404) {
+            res.status(404).json({ msg: 'No encontramos el usuario en la base de'})
+        } else{
+            res.status(200).json({msg: 'Usuario actualizado'})
         }
     } catch (error) {
         res.status(500).json(error)
@@ -100,6 +112,7 @@ module.exports = {
     createUser,
     userState,
     login,
+    changeUserRole,
     getUsers,
     getOneUser,
     updateUser,

@@ -84,10 +84,29 @@ const signIn = async (body) =>{
     }
 }
 
+const changeUserCondition = async (userId) =>{
+    try {
+        const user = await UserModel.findById({_id: userId})
+        if (user === null) {
+            return 404
+        } 
+        if(user.role === 'admin'){
+            user.role = 'user'
+            return 200
+        } else{
+            user.role = 'admin'
+            return 200
+        }
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
 const getAllUsers = async () =>{
     try {
         const users = await UserModel.find()
-        return users
+        const usersToReturn = users.filter(user => user.role !== 'mainAdmin')
+        return usersToReturn
     } catch (error) {
         logger.error(error)
     }
@@ -142,6 +161,7 @@ module.exports = {
     register,
     changeUserState,
     signIn,
+    changeUserCondition,
     getAllUsers,
     getOneUser,
     userToUpdate,
