@@ -26,7 +26,7 @@ router.post('/', [
 router.post('/userState/:userId', [
     check('userId', 'No es un ID valido').isMongoId(),
     validateFields
-], auth('admin'), userState)
+], auth(['admin', 'mainAdmin']), userState)
 
 router.post('/login', [
     check('email', 'No es un correo electronico valido').isEmail(),
@@ -39,7 +39,7 @@ router.post('/changeUserRole/:userId', [
     validateFields
 ], auth('mainAdmin'), changeUserRole)
 
-router.get('/', auth('admin' || 'mainAdmin'), getUsers)
+router.get('/', auth(['admin', 'mainAdmin']), getUsers)
 
 router.get('/getUser', auth('user'), getOneUser)
 
@@ -52,6 +52,6 @@ router.put('/', [
 router.delete('/:userId', [
     check('userId', 'No es un ID valido').isMongoId(),
     validateFields
-], auth('admin' || 'mainAdmin'), deleteUser)
+], auth(['admin', 'mainAdmin']), deleteUser)
 
 module.exports = router

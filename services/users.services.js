@@ -43,9 +43,9 @@ const changeUserState = async (userId) => {
             user.active = !user.active
             await user.save()
             if (user.active) {
-                return { msg: 'Usuario activado' }
+                return { msg: 'Usuario desbloqueado' }
             } else {
-                return { msg: 'Usuario desactivado' }
+                return { msg: 'Usuario bloqueado' }
             }
         }
     } catch (error) {
@@ -92,9 +92,11 @@ const changeUserCondition = async (userId) =>{
         } 
         if(user.role === 'admin'){
             user.role = 'user'
+            user.save()
             return 200
         } else{
             user.role = 'admin'
+            user.save()
             return 200
         }
     } catch (error) {

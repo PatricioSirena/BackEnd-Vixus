@@ -1,13 +1,13 @@
 const jwt = require('jsonwebtoken')
 
-module.exports = (role) => (req, res, next) => {
+module.exports = (roles) => (req, res, next) => {
     const token = req.header('auth')
     if (!token) {
         return res.status(409).json({ msg: 'No recibimos el token para autorizarlo' })
     }
     try {         
             const verify = jwt.verify(token, process.env.JWT_KEY)
-            if(role === verify.role) {
+            if(roles.includes(verify.role)) {
                 req.userId = verify.id
                 return next()
             } else {
