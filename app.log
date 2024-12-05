@@ -3779,3 +3779,112 @@
     __v: 0
   }
 ]
+[2024-12-05T09:41:25.189] [INFO] default - Promise { <pending> }
+[2024-12-05T09:41:55.492] [INFO] default - [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda33'),
+    name: 'Remera Lisa',
+    price: 22000,
+    description: 'Remera de algodon',
+    color: 'Negra',
+    size: 'M',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-12T19:41:23.296Z,
+    quantity: 2323
+  },
+  {
+    _id: new ObjectId('6733ee1fdc349fffd981765a'),
+    name: 'Chomba Lisa',
+    price: 27100,
+    description: 'Chomba de algodon Lisa',
+    color: '',
+    size: 'XL',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:04.004Z,
+    quantity: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd981765f'),
+    name: 'Chomba Rayada',
+    price: 36000,
+    description: 'Chomba de algodon Rayada',
+    color: '',
+    size: 'S',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:24.353Z,
+    quantity: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817664'),
+    name: 'Pantalon Corte Chino',
+    price: 36000,
+    description: 'Pantalon de gabardina corte chino',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:49.014Z,
+    quantity: 0
+  }
+]
+[2024-12-05T09:42:56.572] [INFO] default - [
+  {
+    _id: new ObjectId('6733af6319d1a380a1ddda33'),
+    name: 'Remera Lisa',
+    price: 22000,
+    description: 'Remera de algodon',
+    color: 'Negra',
+    size: 'M',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-12T19:41:23.296Z,
+    quantity: 2323
+  },
+  {
+    _id: new ObjectId('6733ee1fdc349fffd981765a'),
+    name: 'Chomba Lisa',
+    price: 27100,
+    description: 'Chomba de algodon Lisa',
+    color: '',
+    size: 'XL',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:04.004Z,
+    quantity: 0
+  },
+  {
+    _id: new ObjectId('6733ee34dc349fffd981765f'),
+    name: 'Chomba Rayada',
+    price: 36000,
+    description: 'Chomba de algodon Rayada',
+    color: '',
+    size: 'S',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:24.353Z,
+    quantity: 0
+  },
+  {
+    _id: new ObjectId('6733ee4ddc349fffd9817664'),
+    name: 'Pantalon Corte Chino',
+    price: 36000,
+    description: 'Pantalon de gabardina corte chino',
+    color: '',
+    size: '',
+    active: true,
+    mainPicture: null,
+    galery: [],
+    createdAt: 2024-11-13T00:09:49.014Z,
+    quantity: 0
+  }
+]

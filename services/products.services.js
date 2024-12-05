@@ -269,12 +269,12 @@ const getUserFavorites = async (userId) => {
 
 const getLatestProducts = async () => {
     try {
-        const products = await ProductModel.find()
+        const products = await getAllProducts()
         const orderedProducts = products.sort((a, b) => a.createAt - b.createAt)
-        const latestProducts = orderedProducts.slice(0, 10)
+        const latestProducts = orderedProducts.slice(0, 2)
         return latestProducts
     } catch (error) {
-        logger.info(error)
+        logger.error(error)
     }
 }
 
