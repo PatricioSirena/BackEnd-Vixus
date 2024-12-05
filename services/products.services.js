@@ -271,7 +271,7 @@ const getLatestProducts = async () => {
     try {
         const products = await getAllProducts()
         const orderedProducts = products.sort((a, b) => a.createAt - b.createAt)
-        const latestProducts = orderedProducts.slice(0, 2)
+        const latestProducts = orderedProducts.slice(0, 10)
         return latestProducts
     } catch (error) {
         logger.error(error)
