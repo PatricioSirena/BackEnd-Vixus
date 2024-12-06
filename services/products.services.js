@@ -104,7 +104,7 @@ const addProductToCart = async (userId, productId) => {
         if (cart === null) {
             return { statusCode: 400, msg: 'Por favor comunicate con un administrador' }
         } else if (product === null) {
-            return { statusCode: 400, msg: 'No encontramos el producto en la base de datos' }
+            return { statusCode: 404, msg: 'No encontramos el producto en la base de datos' }
         } else {
             const productInCart = cart.products.find((obj) => obj.idProduct.toString() === productId)
             if (productInCart === undefined) {
@@ -129,7 +129,7 @@ const deleteProductFromCart = async (userId, productId) => {
         if (cart === null) {
             return { statusCode: 400, msg: 'Por favor comunicate con un administrador' }
         } else if (product === null) {
-            return { statusCode: 400, msg: 'No encontramos el producto en la base de datos' }
+            return { statusCode: 404, msg: 'No encontramos el producto en la base de datos' }
         }
         const productInCart = cart.products.find((obj) => obj.idProduct.toString() === productId)
         if (productInCart === undefined) {
@@ -158,7 +158,7 @@ const addProductToFavorite = async (userId, productId) => {
         if (favorite === null) {
             return { statusCode: 400, msg: 'Por favor comunicate con un administrador' }
         } else if (product === null) {
-            return { statusCode: 400, msg: 'No encontramos el producto en la base de datos' }
+            return { statusCode: 404, msg: 'No encontramos el producto en la base de datos' }
         } else {
             if (favorite.products.includes(productId)) {
                 return { statusCode: 401, msg: 'El producto ya se encuentra en favoritos' }
@@ -180,7 +180,7 @@ const deleteProductFromFavorite = async (userId, productId) => {
         if (favorite === null) {
             return { statusCode: 400, msg: 'Por favor comunicate con un administrador' }
         } else if (product === null) {
-            return { statusCode: 400, msg: 'No encontramos el producto en la base de datos' }
+            return { statusCode: 404, msg: 'No encontramos el producto en la base de datos' }
         }
         if (favorite.products.includes(productId)) {
             const newFavorite = favorite.products.filter(item => item !== productId)
@@ -270,7 +270,7 @@ const getUserFavorites = async (userId) => {
 const getLatestProducts = async () => {
     try {
         const products = await getAllProducts()
-        const orderedProducts = products.sort((a, b) => a.createAt - b.createAt)
+        const orderedProducts = products.sort((a, b) => a.createdAt - b.createdAt).reverse()
         const latestProducts = orderedProducts.slice(0, 10)
         return latestProducts
     } catch (error) {
@@ -302,7 +302,6 @@ const getOneProduct = async (productId) => {
         const productCopy = product.toObject();
         const {__v, ...productToReturn} = productCopy
         productToReturn.quantity = stock.quantity
-        logger.info(productToReturn)
         if (product === null || stock === null) {
             return 404
         } else {

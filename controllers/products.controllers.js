@@ -91,6 +91,8 @@ const addToFavorite = async (req, res) => {
             res.status(400).json({msg: result.msg})
         } else if(result.statusCode === 401){
             res.status(401).json({msg: result.msg})
+        } else if(result.statusCode === 404){
+            res.status(404).json({msg: result.msg})
         } else {
             res.status(200).json({ msg: result.msg })
         }
@@ -169,15 +171,6 @@ const getFavorites = async (req, res) => {
 const getUltimateProducts = async (req, res) =>{
     try {
         const result = await productServices.getLatestProducts()
-        res.status(200).json(result)
-    } catch (error) {
-        res.status(500).json(error)
-    }
-}
-
-const getStock = async (req, res) =>{
-    try {
-        const result = await productServices.getProductsStock()
         res.status(200).json(result)
     } catch (error) {
         res.status(500).json(error)
@@ -264,7 +257,6 @@ module.exports = {
     getCart,
     getFavorites,
     getUltimateProducts,
-    getStock,
     getProducts,
     getOneProduct,
     updateProduct,
