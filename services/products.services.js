@@ -101,10 +101,13 @@ const addProductToCart = async (userId, productId) => {
     try {
         const product = await ProductModel.findById(productId)
         const cart = await CartModel.findOne({ userId })
+        const productStock = await StockModel.findOne({ productId })
         if (cart === null) {
             return { statusCode: 400, msg: 'Por favor comunicate con un administrador' }
-        } else if (product === null) {
+        } else if (product === null || productStock === null) {
             return { statusCode: 404, msg: 'No encontramos el producto en la base de datos' }
+        } else if (productStock.quantity === 0) {
+            return { statusCode: 400, msg: 'Producto sin stock' }
         } else {
             const productInCart = cart.products.find((obj) => obj.idProduct.toString() === productId)
             if (productInCart === undefined) {
@@ -286,7 +289,7 @@ const getAllProducts = async () => {
             const productCopy = product.toObject();
             const stockOfProduct = stock.find(obj => obj.productId.toString() === productCopy._id.toString());
             productCopy.quantity = stockOfProduct ? stockOfProduct.quantity : 0;
-            const {__v, ...productToReturn} = productCopy
+            const { __v, ...productToReturn } = productCopy
             return productToReturn;
         });
         return productsWithStock
@@ -298,9 +301,9 @@ const getAllProducts = async () => {
 const getOneProduct = async (productId) => {
     try {
         const product = await ProductModel.findById({ _id: productId })
-        const stock = await StockModel.findOne({productId})
+        const stock = await StockModel.findOne({ productId })
         const productCopy = product.toObject();
-        const {__v, ...productToReturn} = productCopy
+        const { __v, ...productToReturn } = productCopy
         productToReturn.quantity = stock.quantity
         if (product === null || stock === null) {
             return 404
