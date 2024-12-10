@@ -315,6 +315,24 @@ const getOneProduct = async (productId) => {
     }
 }
 
+const searchProducts = async (keyword) =>{
+    try {
+        const searchRule = new RegExp(keyword, 'i')
+        const products = await ProductModel.find({ name: searchRule, description: searchRule })
+        const stock = await StockModel.find()
+        const productsWithStock = products.map(product => {
+            const productCopy = product.toObject();
+            const stockOfProduct = stock.find(obj => obj.productId.toString() === productCopy._id.toString());
+            productCopy.quantity = stockOfProduct ? stockOfProduct.quantity : 0;
+            const { __v, ...productToReturn } = productCopy
+            return productToReturn;
+        });
+        return productsWithStock
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
 const productUpdate = async (productId, body) => {
     try {
         const { quantity, ...newBody } = body
@@ -391,6 +409,7 @@ module.exports = {
     getLatestProducts,
     getAllProducts,
     getOneProduct,
+    searchProducts,
     productUpdate,
     deleteImageFromProduct,
     delProduct,

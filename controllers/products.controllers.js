@@ -199,6 +199,15 @@ const getOneProduct = async (req, res) => {
     }
 }
 
+const searchByWord = async (req, res) =>{
+    try {
+        const result = await productServices.searchProducts(req.params.keyWord)
+        res.status(200).json(result)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+
 const updateProduct = async (req, res) => {
     try {
         const result = await productServices.productUpdate(req.params.productId, req.body)
@@ -259,6 +268,7 @@ module.exports = {
     getUltimateProducts,
     getProducts,
     getOneProduct,
+    searchByWord,
     updateProduct,
     delProductImage,
     deleteProduct

@@ -14,6 +14,7 @@ const { createProduct,
     getUltimateProducts,
     getProducts,
     getOneProduct,
+    searchByWord,
     updateProduct,
     delProductImage,
     deleteProduct } = require('../controllers/products.controllers')
@@ -79,6 +80,8 @@ router.get('/:productId', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),
     validateFields
 ], getOneProduct)
+
+router.get('/search/:keyWord', searchByWord)
 
 router.put('/:productId', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),
