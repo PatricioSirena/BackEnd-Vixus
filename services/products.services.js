@@ -90,8 +90,7 @@ const newProductImage = async (productId, body) => {
         if (product === null) {
             return 404
         } else {
-            const url = imageUrl
-            const newImage = { imageId, url }
+            const newImage = { imageId, url: imageUrl }
             product.galery.push(newImage)
             await product.save()
             return 200

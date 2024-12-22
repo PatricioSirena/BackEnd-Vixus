@@ -7645,3 +7645,14 @@
   },
   _message: 'product validation failed'
 }
+[2024-12-22T00:44:49.624] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'split')
+    at Object.cloudDelete (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:48:40)
+    at deleteFromCloud (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:33:46)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\middlewares\auth.js:12:24
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\index.js:284:15
