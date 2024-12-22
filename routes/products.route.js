@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const { createProduct,
+    uploadToCloud,
+    deleteFromCloud,
     setMainPicture,
     addProductImage,
     productState,
@@ -31,15 +33,19 @@ router.post('/', [
     validateFields
 ], auth(['admin', 'mainAdmin']), createProduct)
 
+router.post('/uploadToCloud', auth(['admin', 'mainAdmin']), multer.single('image'), uploadToCloud)
+
+router.post('/deleteFromCloud', auth(['admin', 'mainAdmin']), deleteFromCloud)
+
 router.post('/mainPicture/:productId', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),
     validateFields
-], auth(['admin', 'mainAdmin']), multer.single('image'), setMainPicture)
+], auth(['admin', 'mainAdmin']), setMainPicture)
 
 router.post('/addProductImage/:productId', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),
     validateFields
-], auth(['admin', 'mainAdmin']), multer.single('image'), addProductImage)
+], auth(['admin', 'mainAdmin']), addProductImage)
 
 router.post('/productState/:productId', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),

@@ -6,7 +6,6 @@ const StockModel = require('../models/stock.model.js')
 const OrderModel = require('../models/order.model.js')
 const cloudinary = require('../helpers/cloudinary.js')
 const logger = require('../helpers/logger')
-const idGenerator = require('../helpers/idGenerator.js')
 const { envioDeOrdenDeCompra } = require('../helpers/nodemailer.messages')
 // const { MercadoPagoConfig, Preference } = require('mercadopago')
 
@@ -28,9 +27,35 @@ const newProduct = async (body) => {
     }
 }
 
-const mainProductImage = async (productId, image) => {
+const cloudUpload = async (image) => {
     try {
         if (image === undefined) {
+            return 400
+        } else{
+            const upload = await cloudinary.uploader.upload(image.path)
+            return (upload.secure_url)
+        }
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
+const cloudDelete = async (body) => {
+    try {
+        if(body.url === ''){
+            return 400
+        }
+        const imgIdToDelete = body.url.split('/').pop().split('.')[0];
+        await cloudinary.uploader.destroy(imgIdToDelete)
+        return 200
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
+const mainProductImage = async (productId, body) => {
+    try {
+        if (body.imageUrl === '') {
             return 400
         }
         const product = await ProductModel.findById(productId)
@@ -38,14 +63,13 @@ const mainProductImage = async (productId, image) => {
             return 404
         } else {
             const urlToDelete = product.mainPicture
-            const newImgUrl = await cloudinary.uploader.upload(image.path)
             if (urlToDelete === null) {
-                product.mainPicture = newImgUrl.secure_url
+                product.mainPicture = body.imageUrl
                 await product.save()
                 return 200
             } else {
                 const imgIdToDelete = urlToDelete.split('/').pop().split('.')[0];
-                product.mainPicture = newImgUrl.secure_url
+                product.mainPicture = body.imageUrl
                 await product.save()
                 await cloudinary.uploader.destroy(imgIdToDelete)
                 return 200
@@ -56,19 +80,18 @@ const mainProductImage = async (productId, image) => {
     }
 }
 
-const newProductImage = async (productId, image) => {
+const newProductImage = async (productId, body) => {
     try {
-        if (image === undefined) {
+        const {imageUrl, imageId} = body
+        if (imageUrl === '') {
             return 400
         }
         const product = await ProductModel.findById(productId)
         if (product === null) {
             return 404
         } else {
-            const newImgUrl = await cloudinary.uploader.upload(image.path)
-            const imageUrl = newImgUrl.secure_url
-            const imageId = idGenerator()
-            const newImage = { imageId, imageUrl }
+            const url = imageUrl
+            const newImage = { imageId, url }
             product.galery.push(newImage)
             await product.save()
             return 200
@@ -315,7 +338,7 @@ const getOneProduct = async (productId) => {
     }
 }
 
-const searchProducts = async (keyword) =>{
+const searchProducts = async (keyword) => {
     try {
         const searchRule = new RegExp(keyword, 'i')
         const products = await ProductModel.find({ name: searchRule, description: searchRule })
@@ -361,7 +384,7 @@ const deleteImageFromProduct = async (productId, imgId) => {
         if (imgPosition === -1) {
             return 400
         } else {
-            const urlToDelete = product.galery.find(obj => obj.imageId === imgId).imageUrl
+            const urlToDelete = product.galery.find(obj => obj.imageId === imgId).url
             const imgIdToDelete = urlToDelete.split('/').pop().split('.')[0];
             product.galery.splice(imgPosition, 1)
             await cloudinary.uploader.destroy(imgIdToDelete)
@@ -396,6 +419,8 @@ const delProduct = async (productId) => {
 
 module.exports = {
     newProduct,
+    cloudUpload,
+    cloudDelete,
     mainProductImage,
     newProductImage,
     changeState,

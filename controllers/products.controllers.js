@@ -15,9 +15,35 @@ const createProduct = async (req, res) => {
     }
 }
 
+const uploadToCloud = async (req, res) =>{
+    try {
+        const result = await productServices.cloudUpload(req.file)
+        if(result === 400){
+            res.status(400).json({msg: 'No recibimos la imagen'})
+        } else{
+            res.status(200).json(result)
+        }
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+
+const deleteFromCloud = async (req, res) =>{
+    try {
+        const result = await productServices.cloudDelete(req.body)
+        if(result === 400){
+            res.status(400).json({msg: 'No recibimos la url de la imagen'})
+        } else{
+            res.status(200).json({msg: 'Imagen eliminada de la nube'})
+        }
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+
 const setMainPicture = async (req, res) =>{
     try {
-        const result = await productServices.mainProductImage(req.params.productId, req.file)
+        const result = await productServices.mainProductImage(req.params.productId, req.body)
         if(result === 400){
             res.status(400).json({msg: 'No recibimos ninguna imagen'})
         } else if(result === 404){
@@ -32,7 +58,7 @@ const setMainPicture = async (req, res) =>{
 
 const addProductImage = async (req, res) =>{
     try {
-        const result = await productServices.newProductImage(req.params.productId, req.file)
+        const result = await productServices.newProductImage(req.params.productId, req.body)
         if(result === 400){
             res.status(400).json({msg: 'No recibimos ninguna imagen'})
         } else if(result === 404){
@@ -254,6 +280,8 @@ const deleteProduct = async (req, res) => {
 
 module.exports = {
     createProduct,
+    uploadToCloud,
+    deleteFromCloud,
     setMainPicture,
     addProductImage,
     productState,

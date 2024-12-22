@@ -7606,3 +7606,42 @@
   createdAt: 2024-11-12T19:41:23.296Z,
   quantity: 2323
 }
+[2024-12-10T11:30:58.977] [ERROR] default - Error: read ECONNRESET
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:217:20) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+[2024-12-13T12:18:08.418] [INFO] default - https://res.cloudinary.com/dkp3sew2y/image/upload/v1734103087/zydb8n0r1jczx9ilamfi.jpg
+[2024-12-13T12:36:42.002] [INFO] default - https://res.cloudinary.com/dkp3sew2y/image/upload/v1734103087/zydb8n0r1jczx9ilamfi.jpg
+[2024-12-15T23:19:21.273] [ERROR] default - Error: product validation failed: mainPicture: Cast to string failed for value "{ imageUrl: '' }" (type Object) at path "mainPicture"
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    mainPicture: CastError: Cast to string failed for value "{ imageUrl: '' }" (type Object) at path "mainPicture"
+        at SchemaString.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\string.js:606:11)
+        at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at model.$set (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:1432:22)
+        at model.set [as mainPicture] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\helpers\document\compile.js:205:19)
+        at Object.mainProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:68:37)
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at async setMainPicture (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:46:24) {
+      stringValue: `"{ imageUrl: '' }"`,
+      messageFormat: undefined,
+      kind: 'string',
+      value: [Object],
+      path: 'mainPicture',
+      reason: null,
+      valueType: 'Object'
+    }
+  },
+  _message: 'product validation failed'
+}
