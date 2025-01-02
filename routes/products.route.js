@@ -55,28 +55,28 @@ router.post('/productState/:productId', [
 router.post('/addToCart/:productId', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),
     validateFields
-], auth('user'), addToCart)
+], auth(['user']), addToCart)
 
 router.post('/delFromCart/:productId', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),
     validateFields
-], auth('user'), delFromCart)
+], auth(['user']), delFromCart)
 
 router.post('/addToFavorite/:productId', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),
     validateFields
-], auth('user'), addToFavorite)
+], auth(['user']), addToFavorite)
 
 router.post('/delFromFavorite/:productId', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),
     validateFields
-], auth('user'), delFromFavorite)
+], auth(['user']), delFromFavorite)
 
-router.post('/mpPayment', auth('user'), mpPayment)
+router.post('/mpPayment', auth(['user']), mpPayment)
 
-router.get('/getCart', auth('user'), getCart)
+router.get('/getCart', auth(['user']), getCart)
 
-router.get('/getFavorites', auth('user'), getFavorites)
+router.get('/getFavorites', auth(['user']), getFavorites)
 
 router.get('/getUltimateProducts', getUltimateProducts)
 

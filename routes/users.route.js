@@ -37,17 +37,17 @@ router.post('/login', [
 router.post('/changeUserRole/:userId', [
     check('userId', 'No es un ID valido').isMongoId(),
     validateFields
-], auth('mainAdmin'), changeUserRole)
+], auth(['mainAdmin']), changeUserRole)
 
 router.get('/', auth(['admin', 'mainAdmin']), getUsers)
 
-router.get('/getUser', auth('user'), getOneUser)
+router.get('/getUser', auth(['user']), getOneUser)
 
 router.put('/', [
     check('fullName', 'El nombre es requerido y debe tener entre 4 y 50 caracteres').isLength({ min: 4, max: 50 }),
     check('phone', 'El telefono debe ser un numero y tener entre 6 y 20 caracteres').isLength({ min: 6, max: 20 }).isNumeric(),
     validateFields
-], auth('user'), updateUser)
+], auth(['user']), updateUser)
 
 router.delete('/:userId', [
     check('userId', 'No es un ID valido').isMongoId(),
