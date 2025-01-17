@@ -18,7 +18,7 @@ const newProduct = async (body) => {
             const productStock = new StockModel({ productId: product._id })
             await product.save()
             await productStock.save()
-            return 201
+            return {statusCode: 201, productId: product._id}
         } else {
             return 400
         }

@@ -5,8 +5,8 @@ const logger = require('../helpers/logger')
 const createProduct = async (req, res) => {
     try {
         const result = await productServices.newProduct(req.body)
-        if (result === 201) {
-            res.status(201).json({ msg: 'Producto creado con exito' })
+        if (result.statusCode === 201) {
+            res.status(201).json({ msg: 'Producto creado con exito', productId: result.productId})
         } else {
             res.status(400).json({ msg: `El producto ${req.body.name} ya existe en la base de datos` })
         }
