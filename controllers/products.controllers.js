@@ -225,6 +225,19 @@ const getOneProduct = async (req, res) => {
     }
 }
 
+const getOrders = async (req, res) =>{
+    try {
+        const response = await productServices.getUserOrders(req.userId)
+        if(response.statusCode === 404){
+            res.status(404).json({msg: response.msg})
+        } else{
+            res.status(200).json(response.orders)
+        }
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+
 const searchByWord = async (req, res) =>{
     try {
         const result = await productServices.searchProducts(req.params.keyWord)
@@ -296,6 +309,7 @@ module.exports = {
     getUltimateProducts,
     getProducts,
     getOneProduct,
+    getOrders,
     searchByWord,
     updateProduct,
     delProductImage,

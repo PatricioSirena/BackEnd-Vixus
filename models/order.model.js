@@ -24,6 +24,11 @@ const OrderSchema = new Schema({
     products: []
 })
 
+OrderSchema.methods.toJSON = function(){
+    const {__v, userId, ...order} = this.toObject()
+    return order
+}
+
 const OrderModel = model('order', OrderSchema)
 
 module.exports = OrderModel

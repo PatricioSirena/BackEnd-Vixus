@@ -16,6 +16,7 @@ const { createProduct,
     getUltimateProducts,
     getProducts,
     getOneProduct,
+    getOrders,
     searchByWord,
     updateProduct,
     delProductImage,
@@ -80,12 +81,15 @@ router.get('/getFavorites', auth(['user']), getFavorites)
 
 router.get('/getUltimateProducts', getUltimateProducts)
 
+router.get('/getOrders', auth(['user', 'mainAdmin']), getOrders)
+
 router.get('/', getProducts)
 
 router.get('/:productId', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),
     validateFields
 ], getOneProduct)
+
 
 router.get('/search/:keyWord', searchByWord)
 

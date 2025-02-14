@@ -337,6 +337,19 @@ const getOneProduct = async (productId) => {
     }
 }
 
+const getUserOrders = async (userId) => {
+    try {
+        const orders = await OrderModel.find({userId})
+        if(orders.length === 0){
+            return { statusCode: 404, msg: 'No encontramos ordenes de compra' }
+        } else{
+            return { statusCode: 200, orders }
+        }
+    } catch (error){
+        logger.error(error)
+    }
+}
+
 const searchProducts = async (keyword) => {
     try {
         const searchRule = new RegExp(keyword, 'i')
@@ -433,6 +446,7 @@ module.exports = {
     getLatestProducts,
     getAllProducts,
     getOneProduct,
+    getUserOrders,
     searchProducts,
     productUpdate,
     deleteImageFromProduct,
