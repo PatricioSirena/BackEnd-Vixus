@@ -148,7 +148,7 @@ const mpPayment = async (req, res) =>{
         if (result.statusCode === 404){
             res.status(404).json({msg: result.msg})
         } else{
-            res.status(200).json({msg: 'Te enviamos un correo con el link de pago'})
+            res.status(200).json(result)
         }
     } catch (error) {
         res.status(500).json(error)

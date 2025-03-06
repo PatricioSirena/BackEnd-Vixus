@@ -7,7 +7,7 @@ const OrderModel = require('../models/order.model.js')
 const cloudinary = require('../helpers/cloudinary.js')
 const logger = require('../helpers/logger')
 const { envioDeOrdenDeCompra } = require('../helpers/nodemailer.messages')
-// const { MercadoPagoConfig, Preference } = require('mercadopago')
+const { MercadoPagoConfig, Preference } = require('mercadopago')
 
 
 const newProduct = async (body) => {
@@ -230,36 +230,35 @@ const payWithMP = async (userId) => {
         if (cart.products.length === 0) {
             return { statusCode: 404, msg: 'No hay productos en el carrito' }
         }
-        // const clientMP = new MercadoPagoConfig({ accessToken: process.env.MP_TOKEN })
-        // const preference = new Preference(clientMP)
-        // const buys = await Promise.all(cart.products.map(async (obj) => {
-        //     const product = await ProductModel.findById({ _id: obj.idProduct })
-        //     return {
-        //         title: product.name,
-        //         quantity: obj.quantity,
-        //         unit_price: product.price * obj.quantity,
-        //         currency_id: 'ARS'
-        //     }
-        // }))
-        // const result = await preference.create({
-        //     body: {
-        //         items: buys,
-        //         back_urls: {
-        //             success: 'myApp.netlify.com/carrito/success',
-        //             failure: 'myApp.netlify.com/carrito/failure',
-        //             pending: 'myApp.netlify.com/carrito/pending'
-        //         },
-        //         auto_return: 'approved'
-        //     }
-        // })
-
+        const clientMP = new MercadoPagoConfig({ accessToken: process.env.MP_TOKEN })
+        const preference = new Preference(clientMP)
+        const buys = await Promise.all(cart.products.map(async (obj) => {
+            const product = await ProductModel.findById({ _id: obj.idProduct })
+            return {
+                title: product.name,
+                quantity: obj.quantity,
+                unit_price: product.price,
+                currency_id: 'ARS'
+            }
+        }))
+        const result = await preference.create({
+            body: {
+                items: buys,
+                back_urls: {
+                    success: 'http://localhost:5173/userCart',
+                    failure: 'http://localhost:5173/userCart',
+                    pending: 'http://localhost:5173/userCart'
+                },
+                auto_return: 'approved'
+            }
+        })        
         const orderDate = new Date().toString()
-        const order = new OrderModel({ userId, products: cart.products, date: orderDate, paymentLink: 'www.mercadopago.com.ar' })
+        const order = new OrderModel({ userId, products: cart.products, date: orderDate, paymentLink: result.init_point })
         cart.products = []
-        envioDeOrdenDeCompra(client.email, 'www.mercadopago.com.ar')
+        envioDeOrdenDeCompra(client.email, result.init_point)
         await order.save()
         await cart.save()
-        return 200
+        return {mpLink: result.init_point}
     } catch (error) {
         logger.error(error)
     }
