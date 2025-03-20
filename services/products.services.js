@@ -4,6 +4,7 @@ const CartModel = require('../models/cart.model')
 const FavModel = require('../models/favorite.model')
 const StockModel = require('../models/stock.model.js')
 const OrderModel = require('../models/order.model.js')
+const CategoryModel = require('../models/category.model.js')
 const cloudinary = require('../helpers/cloudinary.js')
 const logger = require('../helpers/logger')
 const { envioDeOrdenDeCompra } = require('../helpers/nodemailer.messages')
@@ -18,7 +19,23 @@ const newProduct = async (body) => {
             const productStock = new StockModel({ productId: product._id })
             await product.save()
             await productStock.save()
-            return {statusCode: 201, productId: product._id}
+            return { statusCode: 201, productId: product._id }
+        } else {
+            return 400
+        }
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
+const newCategory = async (body) => {
+    try {
+        const nameToLowerCase = body.name.toLowerCase()
+        const categoryExist = await CategoryModel.findOne({ name: nameToLowerCase })
+        if (categoryExist === null) {
+            const category = new CategoryModel({name: nameToLowerCase})
+            await category.save()
+            return 201
         } else {
             return 400
         }
@@ -31,7 +48,7 @@ const cloudUpload = async (image) => {
     try {
         if (image === undefined) {
             return 400
-        } else{
+        } else {
             const upload = await cloudinary.uploader.upload(image.path)
             return (upload.secure_url)
         }
@@ -42,7 +59,7 @@ const cloudUpload = async (image) => {
 
 const cloudDelete = async (body) => {
     try {
-        if(body.url === ''){
+        if (body.url === '') {
             return 400
         }
         const imgIdToDelete = body.url.split('/').pop().split('.')[0];
@@ -82,7 +99,7 @@ const mainProductImage = async (productId, body) => {
 
 const newProductImage = async (productId, body) => {
     try {
-        const {imageUrl, imageId} = body
+        const { imageUrl, imageId } = body
         if (imageUrl === '') {
             return 400
         }
@@ -251,19 +268,55 @@ const payWithMP = async (userId) => {
                 },
                 auto_return: 'approved'
             }
-        })        
+        })
         const orderDate = new Date().toString()
         const order = new OrderModel({ userId, products: cart.products, date: orderDate, paymentLink: result.init_point })
         cart.products = []
         envioDeOrdenDeCompra(client.email, result.init_point)
         await order.save()
         await cart.save()
-        return {mpLink: result.init_point}
+        return { mpLink: result.init_point }
     } catch (error) {
         logger.error(error)
     }
 }
 
+const addCategoryToProduct = async (productId, categoryId) => {
+    try {
+        const product = await ProductModel.findOne({ _id: productId })
+        const category = await CategoryModel.findOne({ _id: categoryId })
+        if (product === null || category === null) {
+            return 404
+        } else if (product.categories.includes(category.name)) {
+            return 400
+        } else {
+            product.categories.push(category.name)
+            await product.save()
+            return 200
+        }
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
+const delCategoryFromProduct = async (productId, categoryId) => {
+    try {
+        const product = await ProductModel.findOne({ _id: productId })
+        const category = await CategoryModel.findOne({ _id: categoryId })
+        if (product === null || category === null) {
+            return 404
+        } else if (!product.categories.includes(category.name)) {
+            return 400
+        } else {
+            product.categories = product.categories.filter(cat => cat !== category.name)
+            await product.save()
+            return 200
+        }
+    }
+    catch (error) {
+        logger.error(error)
+    }
+}
 
 const getUserCart = async (userId) => {
     try {
@@ -338,13 +391,33 @@ const getOneProduct = async (productId) => {
 
 const getUserOrders = async (userId) => {
     try {
-        const orders = await OrderModel.find({userId})
-        if(orders.length === 0){
+        const orders = await OrderModel.find({ userId })
+        if (orders.length === 0) {
             return { statusCode: 404, msg: 'No encontramos ordenes de compra' }
-        } else{
+        } else {
             return { statusCode: 200, orders }
         }
-    } catch (error){
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
+const getAllCategories = async () => {
+    try {
+        const categories = await CategoryModel.find()
+        return categories
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
+const getProductsByCategory = async (categoryName) => {
+    try {
+        const allProducts = await getAllProducts()
+        categoryName = categoryName.toLowerCase()
+        const productsByCategory = allProducts.filter(product => product.categories.includes(categoryName))
+        return productsByCategory
+    } catch (error) {
         logger.error(error)
     }
 }
@@ -428,8 +501,22 @@ const delProduct = async (productId) => {
     }
 }
 
+const delCategory = async (categoryId) => {
+    try {
+        const category = await CategoryModel.findByIdAndDelete({ _id: categoryId })
+        if (category === null) {
+            return 404
+        } else {
+            return 200
+        }
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
 module.exports = {
     newProduct,
+    newCategory,
     cloudUpload,
     cloudDelete,
     mainProductImage,
@@ -440,14 +527,19 @@ module.exports = {
     addProductToFavorite,
     deleteProductFromFavorite,
     payWithMP,
+    addCategoryToProduct,
+    delCategoryFromProduct,
     getUserCart,
     getUserFavorites,
     getLatestProducts,
     getAllProducts,
     getOneProduct,
     getUserOrders,
+    getAllCategories,
+    getProductsByCategory,
     searchProducts,
     productUpdate,
     deleteImageFromProduct,
     delProduct,
+    delCategory
 }

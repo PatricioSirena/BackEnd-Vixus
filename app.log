@@ -7798,3 +7798,57 @@
     at Object.payWithMP (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:233:26)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async mpPayment (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:147:24)
+[2025-03-13T12:15:33.927] [ERROR] default - ReferenceError: nameToUppercase is not defined
+    at Object.newCategory (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:34:67)
+    at createCategory (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:18:46)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\middlewares\auth.js:12:24
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at module.exports (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\helpers\validateFields.js:12:5)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+[2025-03-14T10:17:54.292] [ERROR] default - MongooseError: Operation `products.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:185:23)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[2025-03-19T19:23:07.744] [ERROR] default - TypeError: First argument to `Model` constructor must be an object, **not** a string. Make sure you're calling `mongoose.model()`, not `mongoose.Model()`.
+    at model.Model (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:120:11)
+    at new model (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:4574:15)
+    at Object.newCategory (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:36:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createCategory (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:18:24)
+[2025-03-19T19:37:27.311] [ERROR] default - TypeError: First argument to `Model` constructor must be an object, **not** a string. Make sure you're calling `mongoose.model()`, not `mongoose.Model()`.
+    at model.Model (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:120:11)
+    at new model (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:4574:15)
+    at Object.newCategory (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:36:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createCategory (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:18:24)
+[2025-03-19T19:40:08.892] [ERROR] default - Error: category validation failed: name: Path `name` is required.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    name: ValidatorError: Path `name` is required.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'name',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'category validation failed'
+}
