@@ -41,7 +41,7 @@ router.post('/', [
 ], auth(['admin', 'mainAdmin']), createProduct)
 
 router.post('/createCategory', [
-    check('name', 'El nombre de la categoría es requerido, debe tener entre 4 y 20 caracteres').isLength({ min: 4, max: 20}),
+    check('name', 'El nombre de la categoría es requerido, debe tener entre 4 y 30 caracteres').isLength({ min: 4, max: 30}),
     validateFields
 ], auth(['admin', 'mainAdmin']), createCategory)
 
