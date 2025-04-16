@@ -281,10 +281,10 @@ const payWithMP = async (userId) => {
     }
 }
 
-const addCategoryToProduct = async (productId, categoryId) => {
+const addCategoryToProduct = async (productId, categoryName) => {
     try {
         const product = await ProductModel.findOne({ _id: productId })
-        const category = await CategoryModel.findOne({ _id: categoryId })
+        const category = await CategoryModel.findOne({ name: categoryName })
         if (product === null || category === null) {
             return 404
         } else if (product.categories.includes(category.name)) {
@@ -299,10 +299,10 @@ const addCategoryToProduct = async (productId, categoryId) => {
     }
 }
 
-const delCategoryFromProduct = async (productId, categoryId) => {
+const delCategoryFromProduct = async (productId, categoryName) => {
     try {
         const product = await ProductModel.findOne({ _id: productId })
-        const category = await CategoryModel.findOne({ _id: categoryId })
+        const category = await CategoryModel.findOne({ name: categoryName })
         if (product === null || category === null) {
             return 404
         } else if (!product.categories.includes(category.name)) {

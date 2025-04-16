@@ -86,15 +86,15 @@ router.post('/delFromFavorite/:productId', [
 
 router.post('/mpPayment', auth(['user']), mpPayment)
 
-router.post('/addCategoryToProd/:productId/:categoryId', [
+router.post('/addCategoryToProd/:productId/:categoryName', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),
-    check('categoryId', 'No es un ID valido de una categoría').isMongoId(),
+    check('categoryName', 'No recibimos la categoria para agregar al producto').isLength({min: 1}),
     validateFields
 ], auth(['admin', 'mainAdmin']), addCategoryToProd)
 
-router.post('/delCategoryFromProd/:productId/:categoryId', [
+router.post('/delCategoryFromProd/:productId/:categoryName', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),
-    check('categoryId', 'No es un ID valido de una categoría').isMongoId(),
+    check('categoryName', 'No recibimos el nombre de la categoria').isLength({min: 1}),
     validateFields
 ], auth(['admin', 'mainAdmin']), delCategoryFromProd)
 

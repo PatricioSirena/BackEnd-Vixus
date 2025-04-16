@@ -168,7 +168,7 @@ const mpPayment = async (req, res) => {
 
 const addCategoryToProd = async (req, res) => {
     try {
-        const result = await productServices.addCategoryToProduct(req.params.productId, req.params.categoryId)
+        const result = await productServices.addCategoryToProduct(req.params.productId, req.params.categoryName)
         if (result === 404) {
             res.status(404).json({ msg: 'No encontramos el producto o la categoria en la base de datos, intenta nuevamente' })
         }
@@ -184,7 +184,7 @@ const addCategoryToProd = async (req, res) => {
 
 const delCategoryFromProd = async (req, res) => {
     try {
-        const result = await productServices.delCategoryFromProduct(req.params.productId, req.params.categoryId)
+        const result = await productServices.delCategoryFromProduct(req.params.productId, req.params.categoryName)
         if (result === 404) {
             res.status(404).json({ msg: 'No encontramos el producto o la categoria en la base de datos, intenta nuevamente' })
         } else if (result === 400) {
@@ -307,6 +307,7 @@ const searchByWord = async (req, res) => {
         res.status(500).json(error)
     }
 }
+
 
 const updateProduct = async (req, res) => {
     try {
