@@ -1,16 +1,32 @@
-const {model, Schema} = require('mongoose')
+const mongoose = require('mongoose')
 
-const FavoriteSchema = new Schema({
+const productInFavSchema = new mongoose.Schema({
+    idProduct: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    variantId: {
+        type: String,
+        required: true,
+        trim: true
+    }
+})
+
+const FavoriteSchema = new mongoose.Schema({
     userId: {
         type: String,
         required: true,
         unique: true,
         trim: true
     },
-    products: []
+    products: {
+        type: [productInFavSchema],
+        default: []
+    }
 })
 
-const FavModel = model('favorite', FavoriteSchema)
+const FavModel = mongoose.model('favorite', FavoriteSchema)
 
 module.exports = FavModel
 

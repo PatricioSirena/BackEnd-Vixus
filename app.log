@@ -7852,3 +7852,233 @@
   },
   _message: 'category validation failed'
 }
+[2025-05-02T20:20:25.416] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'push')
+    at Object.newStockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:68:44)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async stockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:34:24)
+[2025-05-02T20:21:15.972] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'push')
+    at Object.newStockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:68:44)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async stockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:34:24)
+[2025-05-02T20:25:52.627] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'push')
+    at Object.newStockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:68:44)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async stockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:34:24)
+[2025-05-05T10:29:32.898] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'find')
+    at Object.newStockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:60:54)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async stockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:34:24)
+[2025-05-05T10:30:31.614] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'find')
+    at Object.newStockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:61:54)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async stockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:34:24)
+[2025-05-05T10:33:54.341] [ERROR] default - TypeError: Cannot read properties of undefined (reading '0')
+    at Object.newStockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:66:59)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async stockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:34:24)
+[2025-05-05T10:40:09.240] [ERROR] default - TypeError: Cannot read properties of undefined (reading '0')
+    at Object.newStockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:67:45)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async stockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:34:24)
+[2025-05-05T10:41:33.601] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'findIndex')
+    at Object.newStockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:64:66)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async stockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:34:24)
+[2025-05-05T12:13:23.614] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'toString')
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:56:74
+    at Proxy.find (<anonymous>)
+    at Object.newStockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:56:46)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async stockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:34:24)
+[2025-05-05T12:14:34.117] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'toString')
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:56:74
+    at Proxy.find (<anonymous>)
+    at Object.newStockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:56:46)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async stockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:34:24)
+[2025-05-05T12:16:40.966] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'sizes')
+    at Object.newStockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:61:69)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async stockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:34:24)
+[2025-05-05T12:18:16.291] [ERROR] default - TypeError: obj._id.toObject is not a function
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:60:85
+    at Proxy.findIndex (<anonymous>)
+    at Object.newStockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:60:58)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async stockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:34:24)
+[2025-05-06T10:00:33.934] [ERROR] default - ReferenceError: newImage is not defined
+    at Object.newProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:137:63)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async addProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:93:24)
+[2025-05-06T10:36:46.016] [ERROR] default - Error: product validation failed: variants.0.galery.1.imageUrl: Path `imageUrl` is required.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    'variants.0.galery.1.imageUrl': ValidatorError: Path `imageUrl` is required.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'imageUrl',
+      value: '',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'product validation failed'
+}
+[2025-05-06T11:33:15.210] [ERROR] default - Error: product validation failed: variants.0.galery.1._id: Cast to ObjectId failed for value "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSb9DQYQd8rpuF46h6gntRxaOR-uD9rR8PGA&s" (type string) at path "_id" because of "BSONError", variants.0.galery.1.imageUrl: Path `imageUrl` is required.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    'variants.0.galery.1._id': CastError: Cast to ObjectId failed for value "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSb9DQYQd8rpuF46h6gntRxaOR-uD9rR8PGA&s" (type string) at path "_id" because of "BSONError"
+        at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+        at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at EmbeddedDocument.$set (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:1432:22)
+        at EmbeddedDocument.$set (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:1128:16)
+        at EmbeddedDocument.Document (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:177:12)
+        at EmbeddedDocument.Subdocument (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\types\subdocument.js:34:12)
+        at EmbeddedDocument.ArraySubdocument [as constructor] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\types\arraySubdocument.js:44:15)
+        at new EmbeddedDocument (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\documentArray.js:130:17)
+        at Proxy._cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\types\documentArray\methods\index.js:103:17)
+        at Proxy._mapCast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\types\array\methods\index.js:263:17) {
+      stringValue: '"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSb9DQYQd8rpuF46h6gntRxaOR-uD9rR8PGA&s"',
+      messageFormat: undefined,
+      kind: 'ObjectId',
+      value: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSb9DQYQd8rpuF46h6gntRxaOR-uD9rR8PGA&s',
+      path: '_id',
+      reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+          at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+          at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:25:12)
+          at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+          at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+          at EmbeddedDocument.$set (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:1432:22)
+          at EmbeddedDocument.$set (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:1128:16)
+          at EmbeddedDocument.Document (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:177:12)
+          at EmbeddedDocument.Subdocument (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\types\subdocument.js:34:12)
+          at EmbeddedDocument.ArraySubdocument [as constructor] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\types\arraySubdocument.js:44:15)
+          at new EmbeddedDocument (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\documentArray.js:130:17),
+      valueType: 'string'
+    },
+    'variants.0.galery.1.imageUrl': ValidatorError: Path `imageUrl` is required.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'imageUrl',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'product validation failed'
+}
+[2025-05-10T20:50:17.813] [ERROR] default - Error: cart validation failed: products.0.productId: Path `productId` is required.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    'products.0.productId': ValidatorError: Path `productId` is required.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'productId',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'cart validation failed'
+}
+[2025-05-19T20:16:46.831] [ERROR] default - ReferenceError: variantId is not defined
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:54:92
+    at Proxy.findIndex (<anonymous>)
+    at Object.newStockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:54:50)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async stockPerSize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:34:24)
+[2025-05-22T00:22:57.547] [ERROR] default - Error: product validation failed: variants.0.galery.0._id: Cast to ObjectId failed for value "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSb9DQYQd8rpuF46h6gntRxaOR-uD9rR8PGA&s" (type string) at path "_id" because of "BSONError", variants.0.galery.0.imageUrl: Path `imageUrl` is required.
+    at ValidationError.inspect (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2298:40)
+    at Object.format (node:internal/util/inspect:2155:10)
+    at basicLayout (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    'variants.0.galery.0._id': CastError: Cast to ObjectId failed for value "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSb9DQYQd8rpuF46h6gntRxaOR-uD9rR8PGA&s" (type string) at path "_id" because of "BSONError"
+        at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+        at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at EmbeddedDocument.$set (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:1432:22)
+        at EmbeddedDocument.$set (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:1128:16)
+        at EmbeddedDocument.Document (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:177:12)
+        at EmbeddedDocument.Subdocument (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\types\subdocument.js:34:12)
+        at EmbeddedDocument.ArraySubdocument [as constructor] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\types\arraySubdocument.js:44:15)
+        at new EmbeddedDocument (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\documentArray.js:130:17)
+        at Proxy._cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\types\documentArray\methods\index.js:103:17)
+        at Proxy._mapCast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\types\array\methods\index.js:263:17) {
+      stringValue: '"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSb9DQYQd8rpuF46h6gntRxaOR-uD9rR8PGA&s"',
+      messageFormat: undefined,
+      kind: 'ObjectId',
+      value: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSb9DQYQd8rpuF46h6gntRxaOR-uD9rR8PGA&s',
+      path: '_id',
+      reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+          at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+          at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:25:12)
+          at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+          at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+          at EmbeddedDocument.$set (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:1432:22)
+          at EmbeddedDocument.$set (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:1128:16)
+          at EmbeddedDocument.Document (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:177:12)
+          at EmbeddedDocument.Subdocument (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\types\subdocument.js:34:12)
+          at EmbeddedDocument.ArraySubdocument [as constructor] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\types\arraySubdocument.js:44:15)
+          at new EmbeddedDocument (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\documentArray.js:130:17),
+      valueType: 'string'
+    },
+    'variants.0.galery.0.imageUrl': ValidatorError: Path `imageUrl` is required.
+        at validate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\document.js:3065:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'imageUrl',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'product validation failed'
+}

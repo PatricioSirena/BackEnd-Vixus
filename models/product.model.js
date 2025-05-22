@@ -1,6 +1,21 @@
-const {model, Schema} = require('mongoose')
+const mongoose = require('mongoose')
 
-const ProductSchema = new Schema({
+const sizeSchema = new mongoose.Schema({
+    size: { type: String, required: true },
+    stock: { type: Number, default: 0 }
+});
+
+const imageSchema = new mongoose.Schema({
+    imageUrl: { type: String, required: true }
+});
+
+const variantSchema = new mongoose.Schema({
+    color: { type: String, required: true },
+    sizes: { type: [sizeSchema], default: [] },
+    galery: { type: [imageSchema], default: [] },
+});
+
+const ProductSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -17,39 +32,24 @@ const ProductSchema = new Schema({
         required: true,
         trim: true
     },
-    categories:{
+    categories: {
         type: Array,
-        required: true
-    },
-    color: {
-        type: String,
-        default: ''
-    },
-    size: {
-        type: String,
-        default: '',
-        enum: ['','S', 'M', 'L', 'XL', '2XL', '3XL', '4XL', '5XL', '6XL', '7XL', '10', '12', '14', '16',
-            '38', '40', '42', '44', '46', '48', '50', '52', '54', '56', '58', '60',
-            '85', '90', '95', '100', '105', '110', '115', '120'
-        ]
+        default: []
     },
     active: {
         type: Boolean,
         default: true
     },
-    mainPicture:{
-        type: String,
-        default: null
-    },
-    galery: {
-        type: Array
-    },
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    variants: {
+        type: [variantSchema],
+        default: []
     }
 })
 
-const ProductModel = model('product', ProductSchema)
+const ProductModel = mongoose.model('product', ProductSchema)
 
 module.exports = ProductModel
