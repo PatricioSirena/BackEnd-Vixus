@@ -405,13 +405,13 @@ const productUpdate = async (productId, body) => {
     }
 }
 
-const deleteImageFromProduct = async (body) => {
+const deleteImageFromProduct = async (productId, variantId, imageId) => {
     try {
-        const product = await ProductModel.findById({ _id: body.productId })
+        const product = await ProductModel.findById({ _id: productId })
         if (product === null) return 404
-        const variantPosition = product.variants.findIndex(obj => obj._id.toString() === body.variantId)
+        const variantPosition = product.variants.findIndex(obj => obj._id.toString() === variantId)
         if (variantPosition < 0) return 404
-        const imgPosition = product.variants[variantPosition].galery.findIndex(obj => obj._id.toString() === body.imageId)
+        const imgPosition = product.variants[variantPosition].galery.findIndex(obj => obj._id.toString() === imageId)
         if (imgPosition < 0) return 400
         const imgIdToDelete = product.variants[variantPosition].galery[imgPosition].imageUrl.split('/').pop().split('.')[0];
         product.variants[variantPosition].galery.splice(imgPosition, 1)

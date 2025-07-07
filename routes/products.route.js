@@ -143,7 +143,7 @@ router.put('/:productId', [
     validateFields
 ], auth(['admin', 'mainAdmin']), updateProduct)
 
-router.delete('/delProductImage', [
+router.delete('/delProductImage/:productId/:variantId/:imageId', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),
     check('variantId', 'El ID de la variante no es valido').isMongoId(),
     check('imageId', 'El ID de la imagen no es valido').isMongoId(),

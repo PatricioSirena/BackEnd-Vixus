@@ -321,7 +321,7 @@ const updateProduct = async (req, res) => {
 
 const delProductImage = async (req, res) => {
     try {
-        const result = await productServices.deleteImageFromProduct(req.body)
+        const result = await productServices.deleteImageFromProduct(req.params.productId, req.params.variantId, req.params.imageId)
         if (result === 404) {
             res.status(404).json({ msg: 'No encontramos el producto en la base de datos' })
         } else if (result === 400) {

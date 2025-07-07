@@ -8082,3 +8082,215 @@
   },
   _message: 'product validation failed'
 }
+[2025-06-12T11:36:27.118] [ERROR] default - MongooseError: Operation `products.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:185:23)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[2025-06-12T11:36:27.132] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'sort')
+    at Object.getLatestProducts (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:329:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getUltimateProducts (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:244:24)
+[2025-06-12T11:36:30.337] [ERROR] default - MongooseError: Operation `products.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:185:23)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[2025-06-24T19:18:04.439] [ERROR] default - VersionError: No matching document found for id "68212d7bddf64efae8eb2a9f" version 10 modifiedPaths "variants, variants.1, variants.1.galery"
+    at generateVersionError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:507:10)
+    at model.save (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:565:28)
+    at Object.newProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:120:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async addProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:88:24) {
+  version: 10,
+  modifiedPaths: [ 'variants', 'variants.1', 'variants.1.galery' ]
+}
+[2025-06-24T19:18:04.474] [ERROR] default - VersionError: No matching document found for id "68212d7bddf64efae8eb2a9f" version 10 modifiedPaths "variants, variants.0, variants.0.galery"
+    at generateVersionError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:507:10)
+    at model.save (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:565:28)
+    at Object.newProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:120:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async addProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:88:24) {
+  version: 10,
+  modifiedPaths: [ 'variants', 'variants.0', 'variants.0.galery' ]
+}
+[2025-06-24T19:18:04.506] [ERROR] default - VersionError: No matching document found for id "68212d7bddf64efae8eb2a9f" version 10 modifiedPaths "variants, variants.1, variants.1.galery"
+    at generateVersionError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:507:10)
+    at model.save (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:565:28)
+    at Object.newProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:120:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async addProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:88:24) {
+  version: 10,
+  modifiedPaths: [ 'variants', 'variants.1', 'variants.1.galery' ]
+}
+[2025-06-24T19:18:04.733] [ERROR] default - VersionError: No matching document found for id "68212d7bddf64efae8eb2a9f" version 11 modifiedPaths "variants, variants.0, variants.0.galery"
+    at generateVersionError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:507:10)
+    at model.save (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:565:28)
+    at Object.newProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:120:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async addProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:88:24) {
+  version: 11,
+  modifiedPaths: [ 'variants', 'variants.0', 'variants.0.galery' ]
+}
+[2025-06-24T19:18:04.765] [ERROR] default - VersionError: No matching document found for id "68212d7bddf64efae8eb2a9f" version 11 modifiedPaths "variants, variants.0, variants.0.galery"
+    at generateVersionError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:507:10)
+    at model.save (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:565:28)
+    at Object.newProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:120:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async addProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:88:24) {
+  version: 11,
+  modifiedPaths: [ 'variants', 'variants.0', 'variants.0.galery' ]
+}
+[2025-06-24T19:18:04.794] [ERROR] default - VersionError: No matching document found for id "68212d7bddf64efae8eb2a9f" version 11 modifiedPaths "variants, variants.1, variants.1.galery"
+    at generateVersionError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:507:10)
+    at model.save (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\model.js:565:28)
+    at Object.newProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:120:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async addProductImage (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:88:24) {
+  version: 11,
+  modifiedPaths: [ 'variants', 'variants.1', 'variants.1.galery' ]
+}
+[2025-06-27T12:50:14.656] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'split')
+    at Object.cloudDelete (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:105:40)
+    at deleteFromCloud (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:75:46)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\middlewares\auth.js:12:24
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\index.js:284:15
+[2025-06-27T12:50:14.683] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'split')
+    at Object.cloudDelete (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:105:40)
+    at deleteFromCloud (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:75:46)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\middlewares\auth.js:12:24
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\index.js:284:15
+[2025-06-27T12:50:14.693] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'split')
+    at Object.cloudDelete (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:105:40)
+    at deleteFromCloud (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:75:46)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\middlewares\auth.js:12:24
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\index.js:284:15
+[2025-06-27T12:50:14.724] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'split')
+    at Object.cloudDelete (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:105:40)
+    at deleteFromCloud (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:75:46)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\middlewares\auth.js:12:24
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\index.js:284:15
+[2025-06-27T12:50:14.766] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'split')
+    at Object.cloudDelete (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:105:40)
+    at deleteFromCloud (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:75:46)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\middlewares\auth.js:12:24
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\index.js:284:15
+[2025-06-27T12:50:14.795] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'split')
+    at Object.cloudDelete (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:105:40)
+    at deleteFromCloud (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:75:46)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\middlewares\auth.js:12:24
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\index.js:284:15
+[2025-06-27T12:50:14.809] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'split')
+    at Object.cloudDelete (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:105:40)
+    at deleteFromCloud (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:75:46)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\middlewares\auth.js:12:24
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\index.js:284:15
+[2025-06-27T12:50:14.845] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'split')
+    at Object.cloudDelete (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:105:40)
+    at deleteFromCloud (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:75:46)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\middlewares\auth.js:12:24
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\express\lib\router\index.js:284:15
+[2025-07-07T19:07:00.460] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.deleteImageFromProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:410:25) {
+  stringValue: '"{ _id: undefined }"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: { _id: undefined },
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'Object'
+}
+[2025-07-07T19:08:42.325] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "product"
+    at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+    at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+    at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+    at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+    at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.deleteImageFromProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:410:25) {
+  stringValue: '"{ _id: undefined }"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: { _id: undefined },
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\cast.js:308:34)
+      at Query.cast (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'Object'
+}
