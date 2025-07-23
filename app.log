@@ -8294,3 +8294,11 @@
       at model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:80),
   valueType: 'Object'
 }
+[2025-07-22T11:59:07.767] [ERROR] default - TypeError: Cannot read properties of null (reading 'variants')
+    at Object.deleteProductVariant (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:411:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async delProductVariant (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:324:24)
+[2025-07-22T12:10:45.962] [ERROR] default - TypeError: Cannot read properties of null (reading 'variants')
+    at Object.deleteProductVariant (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:411:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async delProductVariant (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:324:24)

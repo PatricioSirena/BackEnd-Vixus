@@ -319,6 +319,19 @@ const updateProduct = async (req, res) => {
     }
 }
 
+const delProductVariant = async (req, res) => {
+    try {
+        const result = await productServices.deleteProductVariant(req.params.productId, req.params.variantId)
+        if (result === 404) {
+            res.status(404).json({ msg: 'No encontramos el producto o la variante en la base de datos'})
+        } else {
+            res.status(200).json({ msg: 'Variante eliminada del producto' })
+        }
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+
 const delProductImage = async (req, res) => {
     try {
         const result = await productServices.deleteImageFromProduct(req.params.productId, req.params.variantId, req.params.imageId)
@@ -387,6 +400,7 @@ module.exports = {
     productsByCategory,
     searchByWord,
     updateProduct,
+    delProductVariant,
     delProductImage,
     deleteProduct,
     deleteCategory

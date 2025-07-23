@@ -25,6 +25,7 @@ const { createProduct,
     getCategories,
     searchByWord,
     updateProduct,
+    delProductVariant,
     delProductImage,
     deleteProduct,
     deleteCategory } = require('../controllers/products.controllers')
@@ -54,7 +55,6 @@ router.post('/stockPerSize', [
     check('stock', 'El stock es requerido y debe ser un número').isNumeric(),
     validateFields
 ], auth(['admin', 'mainAdmin']), stockPerSize)
-
 
 router.post('/createCategory', [
     check('name', 'El nombre de la categoría es requerido, debe tener entre 4 y 30 caracteres').isLength({ min: 4, max: 30 }),
@@ -142,6 +142,12 @@ router.put('/:productId', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),
     validateFields
 ], auth(['admin', 'mainAdmin']), updateProduct)
+
+router.delete('/delproductVariant/:productId/:variantId', [
+    check('productId', 'No es un ID valido de un producto').isMongoId(),
+    check('variantId', 'El ID de la variante no es valido').isMongoId(),
+    validateFields
+], auth(['admin', 'mainAdmin']), delProductVariant)
 
 router.delete('/delProductImage/:productId/:variantId/:imageId', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),

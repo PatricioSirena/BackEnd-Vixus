@@ -405,6 +405,20 @@ const productUpdate = async (productId, body) => {
     }
 }
 
+const deleteProductVariant = async (productId, variantId) => {
+    try {
+        const product = await ProductModel.findById({ _id: productId })
+        if (product === null) return 404
+        const variantPosition = product.variants.findIndex(obj => obj._id.toString() === variantId)
+        if (variantPosition < 0) return 404
+        product.variants.splice(variantPosition, 1)
+        await product.save()
+        return 200
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
 const deleteImageFromProduct = async (productId, variantId, imageId) => {
     try {
         const product = await ProductModel.findById({ _id: productId })
@@ -476,6 +490,7 @@ module.exports = {
     getProductsByCategory,
     searchProducts,
     productUpdate,
+    deleteProductVariant,
     deleteImageFromProduct,
     delProduct,
     delCategory
