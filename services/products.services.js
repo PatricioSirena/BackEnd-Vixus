@@ -28,19 +28,13 @@ const newProduct = async (body) => {
 const newVariant = async (productId, body) => {
     try {
         const product = await ProductModel.findById(productId)
-        if (product === null) {
-            return { statusCode: 404 }
-        } else {
-            body.color = body.color.toLowerCase().trim()
-            const variantExist = product.variants.find((obj) => obj.color === body.color)
-            if (variantExist === undefined) {
-                product.variants.push(body)
-                await product.save()
-                return { statusCode: 201, product }
-            } else {
-                return { statusCode: 400 }
-            }
-        }
+        if (product === null) return 404
+        body.color = body.color.toLowerCase().trim()
+        const variantExist = product.variants.find((obj) => obj.color === body.color)
+        if (variantExist !== undefined) return 400
+        product.variants.push(body)
+        await product.save()
+        return 201
     } catch (error) {
         logger.error(error)
     }

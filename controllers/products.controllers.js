@@ -16,9 +16,9 @@ const createProduct = async (req, res) => {
 const createVariant = async (req, res) => {
     try {
         const result = await productServices.newVariant(req.params.productId, req.body)
-        if (result.statusCode === 404) {
+        if (result === 404) {
             res.status(404).json({ msg: 'No encontramos el producto en la base de datos' })
-        } else if (result.statusCode === 400) {
+        } else if (result === 400) {
             res.status(400).json({ msg: 'Ya existe esta variante de este product' })
         } else {
             res.status(201).json({ msg: 'Variante creada con exito', product: result.product })
