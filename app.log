@@ -8302,3 +8302,697 @@
     at Object.deleteProductVariant (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:411:41)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async delProductVariant (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:324:24)
+[2025-08-13T20:28:10.154] [ERROR] default - ReferenceError: category is not defined
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:284:75
+    at Array.filter (<anonymous>)
+    at methods.<computed> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\types\array\methods\index.js:1028:24)
+    at Object.delCategoryFromProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:284:53)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async delCategoryFromProd (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:202:24)
+[2025-08-13T20:28:16.975] [ERROR] default - ReferenceError: category is not defined
+    at C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:284:75
+    at Array.filter (<anonymous>)
+    at methods.<computed> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\types\array\methods\index.js:1028:24)
+    at Object.delCategoryFromProduct (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\services\products.services.js:284:53)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async delCategoryFromProd (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\controllers\products.controllers.js:202:24)
+[2025-09-17T09:17:18.995] [ERROR] default - MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+    at Topology.selectServer (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async FindCursor._initialize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\find_cursor.js:51:26)
+    at async FindCursor.cursorInit (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:471:27)
+    at async FindCursor.fetchBatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:503:13)
+    at async FindCursor.next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:228:13)
+    at async [Symbol.asyncIterator] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:159:34)
+    at async FindCursor.toArray (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:284:26)
+    at async model.Query._find (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2322:14)
+    at async model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:63) {
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'cluster0-shard-00-00.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-01.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-02.qwuax.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-c6yoyw-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000046'),
+    maxSetVersion: 11,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+      at connectionFailureError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:353:20)
+      at TLSSocket.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:268:44)
+      at Object.onceWrapper (node:events:633:26)
+      at TLSSocket.emit (node:events:518:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+    [cause]: Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'cluster0-shard-00-00.qwuax.mongodb.net'
+    }
+  }
+}
+[2025-09-17T09:17:19.028] [ERROR] default - MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+    at Topology.selectServer (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async FindCursor._initialize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\find_cursor.js:51:26)
+    at async FindCursor.cursorInit (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:471:27)
+    at async FindCursor.fetchBatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:503:13)
+    at async FindCursor.next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:228:13)
+    at async [Symbol.asyncIterator] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:159:34)
+    at async FindCursor.toArray (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:284:26)
+    at async model.Query._find (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2322:14)
+    at async model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:63) {
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'cluster0-shard-00-00.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-01.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-02.qwuax.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-c6yoyw-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000046'),
+    maxSetVersion: 11,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+      at connectionFailureError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:353:20)
+      at TLSSocket.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:268:44)
+      at Object.onceWrapper (node:events:633:26)
+      at TLSSocket.emit (node:events:518:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+    [cause]: Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'cluster0-shard-00-00.qwuax.mongodb.net'
+    }
+  }
+}
+[2025-09-17T09:17:30.164] [ERROR] default - MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+    at Topology.selectServer (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async FindCursor._initialize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\find_cursor.js:51:26)
+    at async FindCursor.cursorInit (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:471:27)
+    at async FindCursor.fetchBatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:503:13)
+    at async FindCursor.next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:228:13)
+    at async [Symbol.asyncIterator] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:159:34)
+    at async FindCursor.toArray (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:284:26)
+    at async model.Query._find (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2322:14)
+    at async model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:63) {
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'cluster0-shard-00-00.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-01.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-02.qwuax.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-c6yoyw-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000046'),
+    maxSetVersion: 11,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+      at connectionFailureError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:353:20)
+      at TLSSocket.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:268:44)
+      at Object.onceWrapper (node:events:633:26)
+      at TLSSocket.emit (node:events:518:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+    [cause]: Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'cluster0-shard-00-00.qwuax.mongodb.net'
+    }
+  }
+}
+[2025-09-17T09:17:30.188] [ERROR] default - MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+    at Topology.selectServer (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async FindCursor._initialize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\find_cursor.js:51:26)
+    at async FindCursor.cursorInit (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:471:27)
+    at async FindCursor.fetchBatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:503:13)
+    at async FindCursor.next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:228:13)
+    at async [Symbol.asyncIterator] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:159:34)
+    at async FindCursor.toArray (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:284:26)
+    at async model.Query._find (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2322:14)
+    at async model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:63) {
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'cluster0-shard-00-00.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-01.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-02.qwuax.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-c6yoyw-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000046'),
+    maxSetVersion: 11,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+      at connectionFailureError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:353:20)
+      at TLSSocket.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:268:44)
+      at Object.onceWrapper (node:events:633:26)
+      at TLSSocket.emit (node:events:518:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+    [cause]: Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'cluster0-shard-00-00.qwuax.mongodb.net'
+    }
+  }
+}
+[2025-09-17T09:17:50.199] [ERROR] default - MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+    at Topology.selectServer (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async FindCursor._initialize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\find_cursor.js:51:26)
+    at async FindCursor.cursorInit (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:471:27)
+    at async FindCursor.fetchBatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:503:13)
+    at async FindCursor.next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:228:13)
+    at async [Symbol.asyncIterator] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:159:34)
+    at async FindCursor.toArray (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:284:26)
+    at async model.Query._find (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2322:14)
+    at async model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:63) {
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'cluster0-shard-00-00.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-01.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-02.qwuax.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-c6yoyw-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000046'),
+    maxSetVersion: 11,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+      at connectionFailureError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:353:20)
+      at TLSSocket.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:268:44)
+      at Object.onceWrapper (node:events:633:26)
+      at TLSSocket.emit (node:events:518:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+    [cause]: Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'cluster0-shard-00-00.qwuax.mongodb.net'
+    }
+  }
+}
+[2025-09-17T09:17:50.213] [ERROR] default - MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+    at Topology.selectServer (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async FindCursor._initialize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\find_cursor.js:51:26)
+    at async FindCursor.cursorInit (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:471:27)
+    at async FindCursor.fetchBatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:503:13)
+    at async FindCursor.next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:228:13)
+    at async [Symbol.asyncIterator] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:159:34)
+    at async FindCursor.toArray (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:284:26)
+    at async model.Query._find (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2322:14)
+    at async model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:63) {
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'cluster0-shard-00-00.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-01.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-02.qwuax.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-c6yoyw-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000046'),
+    maxSetVersion: 11,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+      at connectionFailureError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:353:20)
+      at TLSSocket.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:268:44)
+      at Object.onceWrapper (node:events:633:26)
+      at TLSSocket.emit (node:events:518:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+    [cause]: Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'cluster0-shard-00-00.qwuax.mongodb.net'
+    }
+  }
+}
+[2025-09-17T09:18:35.697] [ERROR] default - MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+    at Topology.selectServer (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:540:9)
+    at process.processTimers (node:internal/timers:514:7)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async FindCursor._initialize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\find_cursor.js:51:26)
+    at async FindCursor.cursorInit (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:471:27)
+    at async FindCursor.fetchBatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:503:13)
+    at async FindCursor.next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:228:13)
+    at async [Symbol.asyncIterator] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:159:34) {
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'cluster0-shard-00-00.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-01.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-02.qwuax.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-c6yoyw-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000046'),
+    maxSetVersion: 11,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+      at connectionFailureError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:353:20)
+      at TLSSocket.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:268:44)
+      at Object.onceWrapper (node:events:633:26)
+      at TLSSocket.emit (node:events:518:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+    [cause]: Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'cluster0-shard-00-00.qwuax.mongodb.net'
+    }
+  }
+}
+[2025-09-17T09:18:35.704] [ERROR] default - MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+    at Topology.selectServer (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async FindCursor._initialize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\find_cursor.js:51:26)
+    at async FindCursor.cursorInit (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:471:27)
+    at async FindCursor.fetchBatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:503:13)
+    at async FindCursor.next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:228:13)
+    at async [Symbol.asyncIterator] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:159:34)
+    at async FindCursor.toArray (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:284:26)
+    at async model.Query._find (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2322:14)
+    at async model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:63) {
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'cluster0-shard-00-00.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-01.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-02.qwuax.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-c6yoyw-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000046'),
+    maxSetVersion: 11,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+      at connectionFailureError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:353:20)
+      at TLSSocket.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:268:44)
+      at Object.onceWrapper (node:events:633:26)
+      at TLSSocket.emit (node:events:518:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+    [cause]: Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'cluster0-shard-00-00.qwuax.mongodb.net'
+    }
+  }
+}
+[2025-09-17T09:18:40.834] [ERROR] default - MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+    at Topology.selectServer (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async FindCursor._initialize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\find_cursor.js:51:26)
+    at async FindCursor.cursorInit (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:471:27)
+    at async FindCursor.fetchBatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:503:13)
+    at async FindCursor.next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:228:13)
+    at async [Symbol.asyncIterator] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:159:34)
+    at async FindCursor.toArray (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:284:26)
+    at async model.Query._find (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2322:14)
+    at async model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:63) {
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'cluster0-shard-00-00.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-01.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-02.qwuax.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-c6yoyw-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000046'),
+    maxSetVersion: 11,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+      at connectionFailureError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:353:20)
+      at TLSSocket.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:268:44)
+      at Object.onceWrapper (node:events:633:26)
+      at TLSSocket.emit (node:events:518:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+    [cause]: Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'cluster0-shard-00-00.qwuax.mongodb.net'
+    }
+  }
+}
+[2025-09-17T09:18:40.898] [ERROR] default - MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+    at Topology.selectServer (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async FindCursor._initialize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\find_cursor.js:51:26)
+    at async FindCursor.cursorInit (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:471:27)
+    at async FindCursor.fetchBatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:503:13)
+    at async FindCursor.next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:228:13)
+    at async [Symbol.asyncIterator] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:159:34)
+    at async FindCursor.toArray (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:284:26)
+    at async model.Query._find (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2322:14)
+    at async model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:63) {
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'cluster0-shard-00-00.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-01.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-02.qwuax.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-c6yoyw-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000046'),
+    maxSetVersion: 11,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+      at connectionFailureError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:353:20)
+      at TLSSocket.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:268:44)
+      at Object.onceWrapper (node:events:633:26)
+      at TLSSocket.emit (node:events:518:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+    [cause]: Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'cluster0-shard-00-00.qwuax.mongodb.net'
+    }
+  }
+}
+[2025-09-17T09:19:00.837] [ERROR] default - MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+    at Topology.selectServer (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async FindCursor._initialize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\find_cursor.js:51:26)
+    at async FindCursor.cursorInit (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:471:27)
+    at async FindCursor.fetchBatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:503:13)
+    at async FindCursor.next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:228:13)
+    at async [Symbol.asyncIterator] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:159:34)
+    at async FindCursor.toArray (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:284:26)
+    at async model.Query._find (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2322:14)
+    at async model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:63) {
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'cluster0-shard-00-00.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-01.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-02.qwuax.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-c6yoyw-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000046'),
+    maxSetVersion: 11,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+      at connectionFailureError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:353:20)
+      at TLSSocket.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:268:44)
+      at Object.onceWrapper (node:events:633:26)
+      at TLSSocket.emit (node:events:518:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+    [cause]: Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'cluster0-shard-00-00.qwuax.mongodb.net'
+    }
+  }
+}
+[2025-09-17T09:19:00.879] [ERROR] default - MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+    at Topology.selectServer (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async FindCursor._initialize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\find_cursor.js:51:26)
+    at async FindCursor.cursorInit (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:471:27)
+    at async FindCursor.fetchBatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:503:13)
+    at async FindCursor.next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:228:13)
+    at async [Symbol.asyncIterator] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:159:34)
+    at async FindCursor.toArray (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:284:26)
+    at async model.Query._find (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2322:14)
+    at async model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:63) {
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'cluster0-shard-00-00.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-01.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-02.qwuax.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-c6yoyw-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000046'),
+    maxSetVersion: 11,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+      at connectionFailureError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:353:20)
+      at TLSSocket.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:268:44)
+      at Object.onceWrapper (node:events:633:26)
+      at TLSSocket.emit (node:events:518:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+    [cause]: Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.qwuax.mongodb.net
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'cluster0-shard-00-00.qwuax.mongodb.net'
+    }
+  }
+}
+[2025-09-26T11:05:44.391] [ERROR] default - MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-02.qwuax.mongodb.net
+    at Topology.selectServer (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async FindCursor._initialize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\find_cursor.js:51:26)
+    at async FindCursor.cursorInit (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:471:27)
+    at async FindCursor.fetchBatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:503:13)
+    at async FindCursor.next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:228:13)
+    at async [Symbol.asyncIterator] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:159:34)
+    at async FindCursor.toArray (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:284:26)
+    at async model.Query._find (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2322:14)
+    at async model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:63) {
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'cluster0-shard-00-02.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-00.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-01.qwuax.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-c6yoyw-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000047'),
+    maxSetVersion: 11,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-02.qwuax.mongodb.net
+      at connectionFailureError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:353:20)
+      at TLSSocket.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:268:44)
+      at Object.onceWrapper (node:events:633:26)
+      at TLSSocket.emit (node:events:518:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+    [cause]: Error: getaddrinfo ENOTFOUND cluster0-shard-00-02.qwuax.mongodb.net
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'cluster0-shard-00-02.qwuax.mongodb.net'
+    }
+  }
+}
+[2025-09-26T11:05:44.577] [ERROR] default - MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-02.qwuax.mongodb.net
+    at Topology.selectServer (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async FindCursor._initialize (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\find_cursor.js:51:26)
+    at async FindCursor.cursorInit (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:471:27)
+    at async FindCursor.fetchBatch (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:503:13)
+    at async FindCursor.next (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:228:13)
+    at async [Symbol.asyncIterator] (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:159:34)
+    at async FindCursor.toArray (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cursor\abstract_cursor.js:284:26)
+    at async model.Query._find (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:2322:14)
+    at async model.Query.exec (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\query.js:4412:63) {
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'cluster0-shard-00-02.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-00.qwuax.mongodb.net:27017' => [ServerDescription],
+      'cluster0-shard-00-01.qwuax.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-c6yoyw-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000047'),
+    maxSetVersion: 11,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [Symbol(errorLabels)]: Set(0) {},
+  [cause]: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-02.qwuax.mongodb.net
+      at connectionFailureError (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:353:20)
+      at TLSSocket.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongodb\lib\cmap\connect.js:268:44)
+      at Object.onceWrapper (node:events:633:26)
+      at TLSSocket.emit (node:events:518:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+    [cause]: Error: getaddrinfo ENOTFOUND cluster0-shard-00-02.qwuax.mongodb.net
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'cluster0-shard-00-02.qwuax.mongodb.net'
+    }
+  }
+}
+[2025-09-29T10:16:54.930] [ERROR] default - MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:185:23)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[2025-09-29T10:16:57.692] [ERROR] default - MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:185:23)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
