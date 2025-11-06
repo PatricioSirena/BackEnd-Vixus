@@ -27,6 +27,7 @@ const { createProduct,
     updateProduct,
     delProductVariant,
     delProductImage,
+    delSizeFromVariant,
     deleteProduct,
     deleteCategory } = require('../controllers/products.controllers')
 const auth = require('../middlewares/auth')
@@ -155,6 +156,13 @@ router.delete('/delProductImage/:productId/:variantId/:imageId', [
     check('imageId', 'El ID de la imagen no es valido').isMongoId(),
     validateFields
 ], auth(['admin', 'mainAdmin']), delProductImage)
+
+router.delete('/delSizeFromVariant/:productId/:variantId/:sizeId', [
+    check('productId', 'No es un ID valido de un producto').isMongoId(),
+    check('variantId', 'El ID de la variante no es valido').isMongoId(),
+    check('sizeId', 'El ID del talle no es valido').isMongoId(),
+    validateFields
+], auth(['admin', 'mainAdmin']), delSizeFromVariant)
 
 router.delete('/:productId', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),

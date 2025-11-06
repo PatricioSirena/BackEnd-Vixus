@@ -347,6 +347,21 @@ const delProductImage = async (req, res) => {
     }
 }
 
+const delSizeFromVariant = async (req, res) => {
+    try {
+        const result = await productServices.deleteSizeFromVariant(req.params.productId, req.params.variantId, req.params.sizeId)
+        if (result === 404) {
+            res.status(404).json({ msg: 'No encontramos el producto o la variante en la base de datos' })
+        } else if (result === 400) {
+            res.status(400).json({ msg: 'No encontramos el talle en la variante' })
+        } else {
+            res.status(200).json({ msg: 'Talle eliminado de la variante' })
+        }
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+
 const deleteProduct = async (req, res) => {
     try {
         const result = await productServices.delProduct(req.params.productId)
@@ -402,6 +417,7 @@ module.exports = {
     updateProduct,
     delProductVariant,
     delProductImage,
+    delSizeFromVariant,
     deleteProduct,
     deleteCategory
 }
