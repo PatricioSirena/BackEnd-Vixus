@@ -7,6 +7,7 @@ const { createProduct,
     uploadToCloud,
     deleteFromCloud,
     addProductImage,
+    setMainProductImage,
     productState,
     addToCart,
     delFromCart,
@@ -72,6 +73,12 @@ router.post('/addProductImage', [
     check('imageUrl', 'La URL de la imagen es requerida').isLength({ min: 1 }),
     validateFields
 ], auth(['admin', 'mainAdmin']), addProductImage)
+
+router.post('/setMainProductImage', [
+    check('productId', 'No es un ID valido de un producto').isMongoId(),
+    check('imageUrl', 'La URL de la imagen es requerida').isLength({ min: 1 }),
+    validateFields
+], auth(['admin', 'mainAdmin']), setMainProductImage)
 
 router.post('/productState/:productId', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),

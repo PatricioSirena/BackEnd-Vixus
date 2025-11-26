@@ -6,6 +6,7 @@ const OrderModel = require('../models/order.model.js')
 const CategoryModel = require('../models/category.model.js')
 const cloudinary = require('../helpers/cloudinary.js')
 const logger = require('../helpers/logger')
+const sharp = require('sharp');
 const { envioDeOrdenDeCompra } = require('../helpers/nodemailer.messages')
 const { MercadoPagoConfig, Preference } = require('mercadopago')
 
@@ -83,8 +84,20 @@ const cloudUpload = async (image) => {
         if (image === undefined) {
             return 400
         } else {
-            const upload = await cloudinary.uploader.upload(image.path)
-            return (upload.secure_url)
+            const buffer = image.buffer;
+            const processedBuffer = await sharp(buffer)
+                .resize(1000, 1000, {
+                    fit: 'cover',
+                })
+                .jpeg({ quality: 90 })
+                .toBuffer();
+            const upload = await new Promise((resolve, reject) => {
+                const stream = cloudinary.uploader.upload_stream((error, result) => {
+                        if (error) reject(error);
+                        else resolve(result);
+                    });
+                stream.end(processedBuffer);  // Envía el buffer procesado
+            }); return (upload.secure_url)
         }
     } catch (error) {
         logger.error(error)
@@ -111,6 +124,18 @@ const newProductImage = async (body) => {
         const variantPosition = product.variants.findIndex((obj) => obj._id.toString() === body.variantId)
         if (variantPosition < 0) return 404
         product.variants[variantPosition].galery.push({ imageUrl: body.imageUrl })
+        await product.save()
+        return 200
+    } catch (error) {
+        logger.error(error)
+    }
+}
+
+const setMainImage = async (productId, imageUrl) => {
+    try {
+        const product = await ProductModel.findById({ _id: productId })
+        if (product === null) return 404
+        product.mainPicture = imageUrl
         await product.save()
         return 200
     } catch (error) {
@@ -482,6 +507,7 @@ module.exports = {
     cloudUpload,
     cloudDelete,
     newProductImage,
+    setMainImage,
     changeState,
     addProductToCart,
     deleteProductFromCart,

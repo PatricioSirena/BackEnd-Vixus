@@ -93,6 +93,16 @@ const addProductImage = async (req, res) => {
     }
 }
 
+const setMainProductImage = async (req, res) => {
+    try {
+        const result = await productServices.setMainImage(req.body.productId, req.body.imageUrl)
+        if (result === 404) return res.status(404).json({ msg: 'No encontramos el producto en la base de datos' })
+        return res.status(200).json({ msg: 'Imagen principal del producto actualizada correctamente' })
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+
 const productState = async (req, res) => {
     try {
         const result = await productServices.changeState(req.params.productId)
@@ -323,7 +333,7 @@ const delProductVariant = async (req, res) => {
     try {
         const result = await productServices.deleteProductVariant(req.params.productId, req.params.variantId)
         if (result === 404) {
-            res.status(404).json({ msg: 'No encontramos el producto o la variante en la base de datos'})
+            res.status(404).json({ msg: 'No encontramos el producto o la variante en la base de datos' })
         } else {
             res.status(200).json({ msg: 'Variante eliminada del producto' })
         }
@@ -397,6 +407,7 @@ module.exports = {
     uploadToCloud,
     deleteFromCloud,
     addProductImage,
+    setMainProductImage,
     productState,
     addToCart,
     delFromCart,

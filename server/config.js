@@ -3,6 +3,7 @@ const express = require('express')
 const path = require('path')
 const cors = require('cors')
 const morgan = require('morgan')
+const multer = require('multer')
 
 class Server {
     constructor() {
@@ -10,6 +11,7 @@ class Server {
         this.port = process.env.PORT || 4041
         this.middlewares()
         this.routes()
+        this.errorHandler()
     }
 
     middlewares() {
@@ -22,6 +24,19 @@ class Server {
     routes() {
         this.app.use('/api/users', require('../routes/users.route'))
         this.app.use('/api/products', require('../routes/products.route'))
+    }
+
+    errorHandler() {
+        this.app.use((error, req, res, next) => {
+            console.log('Error capturado:', error.message);
+            if (error instanceof multer.MulterError) {
+                return res.status(400).json({ message: `Error de Multer: ${error.message}` });
+            }
+            if (error.message && error.message.includes('no es permitido')) {
+                return res.status(400).json({ message: error.message });
+            }
+            res.status(500).json({ message: 'Error interno del servidor' });
+        });
     }
 
     listen() {
