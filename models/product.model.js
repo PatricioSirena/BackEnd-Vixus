@@ -44,6 +44,10 @@ const ProductSchema = new mongoose.Schema({
         type: Boolean,
         default: true
     },
+    outOfStock: {
+        type: Boolean,
+        default: true
+    },
     createdAt: {
         type: Date,
         default: Date.now
@@ -53,6 +57,26 @@ const ProductSchema = new mongoose.Schema({
         default: []
     }
 })
+
+ProductSchema.pre('save', function (next) {
+    let hasStock = false;
+    if (this.variants.length > 0) {
+        for (const variant of this.variants) {
+            for (const size of variant.sizes) {
+                if (size.stock > 0) {
+                    hasStock = true;
+                    break;
+                }
+            }
+            if (hasStock) break;
+        }
+    } else {
+        hasStock = false;
+    }
+
+    this.outOfStock = !hasStock;
+    next();
+});
 
 const ProductModel = mongoose.model('product', ProductSchema)
 
