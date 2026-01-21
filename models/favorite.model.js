@@ -8,7 +8,6 @@ const productInFavSchema = new mongoose.Schema({
     },
     variantId: {
         type: String,
-        required: true,
         trim: true
     }
 })

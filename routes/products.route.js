@@ -99,12 +99,11 @@ router.post('/delFromCart/:productInCartId', [
 
 router.post('/addToFavorite', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),
-    check('variantId', 'El ID de la variante no es valido').isMongoId(),
     validateFields
 ], auth(['user']), addToFavorite)
 
-router.post('/delFromFavorite/:productInFavId', [
-    check('productInFavId', 'No es un ID valido de un producto').isMongoId(),
+router.post('/delFromFavorite', [
+    check('productId', 'No es un ID valido de un producto').isMongoId(),
     validateFields
 ], auth(['user']), delFromFavorite)
 

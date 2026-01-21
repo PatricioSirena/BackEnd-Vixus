@@ -203,8 +203,10 @@ const addProductToFavorite = async (userId, body) => {
     try {
         const product = await ProductModel.findOne({ _id: body.productId })
         if (!product) return 404
-        const variantExist = product.variants.find((obj) => obj._id.toString() === body.variantId)
-        if (variantExist === undefined) return 404
+        if(body.variantId === undefined){
+            const firstVariantId = product.variants[0]._id.toString();
+            body.variantId = firstVariantId;
+        }
         const favorite = await FavModel.findOne({ userId })
         if (!favorite) return 406
         const productInFavPosition = favorite.products.findIndex((obj) => obj.idProduct === body.productId && obj.variantId === body.variantId)
@@ -220,11 +222,11 @@ const addProductToFavorite = async (userId, body) => {
     }
 }
 
-const deleteProductFromFavorite = async (userId, productInFavId) => {
+const deleteProductFromFavorite = async (userId, body) => {
     try {
         const favorite = await FavModel.findOne({ userId })
         if (!favorite) return 400
-        const productInFavPosition = favorite.products.findIndex((obj) => obj._id.toString() === productInFavId)
+        const productInFavPosition = favorite.products.findIndex((obj) => obj.idProduct === body.productId && obj.variantId === body.variantId)
         if (productInFavPosition < 0) return 404
         favorite.products.splice(productInFavPosition, 1)
         await favorite.save()

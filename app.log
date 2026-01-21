@@ -8996,3 +8996,9 @@
     at Timeout.<anonymous> (C:\Users\patob\OneDrive\Documentos\GitHub\BackEnd-Vixus\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:185:23)
     at listOnTimeout (node:internal/timers:573:17)
     at process.processTimers (node:internal/timers:514:7)
+[2025-12-12T12:21:34.661] [ERROR] default - Error: read ECONNRESET
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:217:20) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}

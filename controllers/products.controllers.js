@@ -165,7 +165,7 @@ const addToFavorite = async (req, res) => {
 
 const delFromFavorite = async (req, res) => {
     try {
-        const result = await productServices.deleteProductFromFavorite(req.userId, req.params.productInFavId)
+        const result = await productServices.deleteProductFromFavorite(req.userId, req.body)
         if (result === 400) {
             res.status(400).json({ msg: 'Comunicate con un administrador' })
         } else if (result === 404) {
