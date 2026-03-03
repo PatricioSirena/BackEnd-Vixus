@@ -269,7 +269,7 @@ const getProducts = async (req, res) => {
 
 const getOneProduct = async (req, res) => {
     try {
-        const result = await productServices.getOneProduct(req.params.productId)
+        const result = await productServices.getSingleProduct(req.params.productId)
         if (result === 404) res.status(404).json({ msg: 'Hubo un problema, intenta nuevamente' })
         res.status(200).json(result)
     } catch (error) {

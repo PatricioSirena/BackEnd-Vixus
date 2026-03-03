@@ -93,9 +93,9 @@ const cloudUpload = async (image) => {
                 .toBuffer();
             const upload = await new Promise((resolve, reject) => {
                 const stream = cloudinary.uploader.upload_stream((error, result) => {
-                        if (error) reject(error);
-                        else resolve(result);
-                    });
+                    if (error) reject(error);
+                    else resolve(result);
+                });
                 stream.end(processedBuffer);  // Envía el buffer procesado
             }); return (upload.secure_url)
         }
@@ -172,7 +172,7 @@ const addProductToCart = async (userId, body) => {
         if (!cart) return 406
         const productInCartPosition = cart.products.findIndex((obj) => obj.idProduct === body.productId && obj.variantId === body.variantId && obj.sizeId === body.sizeId)
         if (productInCartPosition < 0) {
-            cart.products.push({ idProduct: body.productId, variantId: body.variantId, sizeId: body.sizeId, quantity: 1 })
+            cart.products.push({ idProduct: body.productId, variantId: body.variantId, sizeId: body.sizeId, addedPrice: body.addedPrice, quantity: 1 })
             await cart.save()
             return 201
         } else {
@@ -203,7 +203,7 @@ const addProductToFavorite = async (userId, body) => {
     try {
         const product = await ProductModel.findOne({ _id: body.productId })
         if (!product) return 404
-        if(body.variantId === undefined){
+        if (body.variantId === undefined) {
             const firstVariantId = product.variants[0]._id.toString();
             body.variantId = firstVariantId;
         }
@@ -364,7 +364,7 @@ const getAllProducts = async () => {
     }
 }
 
-const getOneProduct = async (productId) => {
+const getSingleProduct = async (productId) => {
     try {
         const product = await ProductModel.findById({ _id: productId })
         if (product === null) return 404
@@ -522,7 +522,7 @@ module.exports = {
     getUserFavorites,
     getLatestProducts,
     getAllProducts,
-    getOneProduct,
+    getSingleProduct,
     getUserOrders,
     getAllCategories,
     getProductsByCategory,

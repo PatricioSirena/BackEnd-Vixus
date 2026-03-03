@@ -89,6 +89,7 @@ router.post('/addToCart', [
     check('productId', 'No es un ID valido de un producto').isMongoId(),
     check('variantId', 'El ID de la variante no es valido').isMongoId(),
     check('sizeId', 'El ID del talle no es valido').isMongoId(),
+    check('addedPrice', 'El precio es requerido').isNumeric(),
     validateFields
 ], auth(['user']), addToCart)
 

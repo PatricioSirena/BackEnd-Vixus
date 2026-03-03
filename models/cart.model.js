@@ -15,6 +15,10 @@ const productInCartSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true
+    }, 
+    addedPrice:{
+        type: Number,
+        required: true
     },
     quantity: {
         type: Number,
